@@ -2,6 +2,7 @@ import About from "@/components/homepage/About";
 import BlogSection from "@/components/homepage/Blog";
 import CTA from "@/components/homepage/CTA";
 import Hero from "@/components/homepage/Hero";
+import Location from "@/components/homepage/Location";
 import Services from "@/components/homepage/Services";
 import Testimonials from "@/components/homepage/Testimonials";
 import ClinicTour from "@/components/homepage/Tour";
@@ -15,6 +16,7 @@ export default function Home() {
     <ClinicTour/>
     <Testimonials/>
     <BlogSection/>
+    <Location/>
     <CTA/>
     </>
   );

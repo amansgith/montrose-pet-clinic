@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { FaFacebookF, FaInstagram, FaBars, FaTimes, FaChevronDown  } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTimes, FaChevronDown  } from "react-icons/fa";
+import { RiBarChartHorizontalLine } from "react-icons/ri";
 import Image from "next/image";
 import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
@@ -83,7 +84,7 @@ const DeskNavbar = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md sticky top-0 z-50">
       {/* Top Bar */}
       <div className="flex justify-between items-center px-6 py-2 text-sm bg-gray-100">
         <div className="text-primary font-semibold">
@@ -222,8 +223,8 @@ const MobileNavbar = () => {
         <button className="bg-secondary text-white px-2 py-2 text-sm rounded-md font-semibold">
           Request an Appointment
         </button>
-        <button onClick={toggleMenu} className="text-gray-700">
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        <button onClick={toggleMenu} className="text-gray-700 hover:bg-gray-800 hover:text-white p-2 rounded-md">
+          <RiBarChartHorizontalLine size={24} />
         </button>
       </div>
 

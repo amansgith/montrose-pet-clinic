@@ -4,7 +4,7 @@ import { FaCat } from "react-icons/fa";
 
 const ClinicTour = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 bg-gray-100">
+    <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12">
       {/* Left Side - Text */}
       <div className="md:w-1/2 text-center md:text-left">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">

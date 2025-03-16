@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaBars, FaTimes, FaChevronDown  } from "react-icons/fa";
 import Image from "next/image";
 import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
@@ -54,14 +54,16 @@ const Navbar = () => {
   return (
     <>
       <div className="hidden md:block">
-        <Desknavbar />
+        <DeskNavbar />
       </div>
-      {/* mobile navbar  */}
+      <div className="md:hidden">
+        <MobileNavbar/>
+      </div>
     </>
   );
 };
 
-const Desknavbar = () => {
+const DeskNavbar = () => {
   const [dropdown, setDropdown] = useState(null);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
   const pathname = usePathname();
@@ -120,28 +122,6 @@ const Desknavbar = () => {
             />
           </Link>
         </div>
-
-        {/* Menu */}
-        {/* <div className="hidden md:flex space-x-8 font-semibold text-gray-700">
-          <Link href="/" className="text-primary hover:text-secondary">
-            HOME
-          </Link>
-          <Link href="/about" className="hover:text-secondary">
-            ABOUT CLINIC
-          </Link>
-          <Link href="/features" className="hover:text-secondary">
-            FEATURES
-          </Link>
-          <Link href="/services" className="hover:text-secondary">
-            SERVICES
-          </Link>
-          <Link href="/blog" className="hover:text-secondary">
-            OUR BLOG
-          </Link>
-          <Link href="/contact" className="hover:text-secondary">
-            CONTACTS
-          </Link>
-        </div> */}
 
         <div className="hidden md:flex space-x-8 font-semibold text-gray-700">
         <ul className="flex space-x-6 z-40">
@@ -211,6 +191,98 @@ const Desknavbar = () => {
           <button className="bg-secondary text-white p-4 rounded-md font-semibold">
             Book an Appointment
           </button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+
+const MobileNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(null);
+  const pathname = usePathname();
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleDropdown = (index) => {
+    setDropdown(dropdown === index ? null : index);
+  };
+
+  const isActive = (path) => pathname === path;
+
+  return (
+    <nav className="bg-white shadow-md md:hidden relative">
+      <div className="flex justify-between items-center px-4 py-2">
+        <Link href="/">
+          <Image src={logo} alt="Montrose Pet Clinic Logo" width={100} height={30} />
+        </Link>
+        <button className="bg-secondary text-white px-2 py-2 text-sm rounded-md font-semibold">
+          Request an Appointment
+        </button>
+        <button onClick={toggleMenu} className="text-gray-700">
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
+
+      {/* Overlay */}
+      {isOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={toggleMenu}></div>}
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-screen w-64 bg-white shadow-lg transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out z-50 overflow-y-auto`}
+      >
+        <div className="p-4 h-full">
+          <button onClick={toggleMenu} className="text-gray-700 absolute top-4 right-4">
+            <FaTimes size={24} />
+          </button>
+          <ul className="mt-8 space-y-4">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                {item.submenu ? (
+                  <>
+                    <button
+                      onClick={() => handleDropdown(index)}
+                      className={`w-full flex justify-between items-center text-gray-700 font-medium hover:text-blue-600 ${
+                        item.submenu.some((sub) => pathname.startsWith(sub.href)) ? "text-blue-600" : ""
+                      }`}
+                    >
+                      {item.name}
+                      <FaChevronDown
+                        className={`transform transition-transform duration-300 ${
+                          dropdown === index ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
+                    </button>
+                    {dropdown === index && (
+                      <ul className="pl-4 mt-2 space-y-2">
+                        {item.submenu.map((sub, idx) => (
+                          <li key={idx}>
+                            <Link href={sub.href} className="block text-gray-700 hover:text-secondary">
+                              {sub.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`block text-gray-700 font-medium hover:text-blue-600 ${
+                      isActive(item.href) ? "text-blue-600" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </nav>

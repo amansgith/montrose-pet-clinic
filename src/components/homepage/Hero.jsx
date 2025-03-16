@@ -1,33 +1,12 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, EffectFade } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/effect-fade";
-// import "swiper/css/navigation";
-// import Image from "next/image";
-
-// const slides=[
-//     {title:"",
-//     description:"",
-//     image:"",
-//     }
-// ];
-// const Hero = () => {
-//   return (
-//     <div></div>
-//   )
-// }
-
-// export default Hero
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const slides = [
-  { image: "/slider_1.jpg", text: "Welcome to Montrose Pet Clinic", btntext:"Explore Services" },
-  { image: "/slider_3.jpg", text: "Best Care for Your Best Friend", btntext:"Request an Appointment" },
-  { image: "/slider_2.jpg", text: "Caring for Pets is Our Passion", btntext:"Meet our Team" },
+  { image: "/slider_1.jpg", text: "Welcome to Montrose Pet Clinic", btntext: "Explore Services" },
+  { image: "/slider_3.jpg", text: "Best Care for Your Best Friend", btntext: "Request an Appointment" },
+  { image: "/slider_2.jpg", text: "Caring for Pets is Our Passion", btntext: "Meet our Team" },
 ];
 
 const Hero = () => {
@@ -42,8 +21,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      {/* Background Image */}
+    <div className="relative w-full h-[40vh] md:h-screen overflow-hidden">
+      {/* Background Image Slider */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -54,17 +33,16 @@ const Hero = () => {
           <Image
             src={slide.image}
             alt={slide.text}
-            layout="fill"
-            objectFit="cover"
-            className="h-[100px] w-full"
+            fill
+            className=" md:object-cover w h-full"
             priority
           />
         </div>
       ))}
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/40 text-left">
-        <h1 className="text-4xl md:text-6xl font-bold text-primary">
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-center px-4">
+        <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
           {slides[current].text}
         </h1>
         <button className="mt-6 px-6 py-3 bg-secondary text-white font-medium rounded-lg shadow-lg hover:bg-opacity-80 transition">
@@ -73,25 +51,26 @@ const Hero = () => {
       </div>
 
       {/* Navigation Dots */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`h-3 w-3 rounded-full ${
-              index === current ? "bg-primary" : "bg-gray-400"
+            className={`h-3 w-3 rounded-full transition-all ${
+              index === current ? "bg-white scale-110" : "bg-gray-400 opacity-50"
             }`}
             onClick={() => setCurrent(index)}
           ></button>
         ))}
-      </div> */}
+      </div>
 
+      {/* CTA Section */}
       <div className="absolute bottom-0 left-0 w-full">
-        <div className="relative w-full h-[80px] bg-primary text-white flex items-center">
-          <div className="absolute left-0 w-[70%] h-full bg-blue-800 text-center flex items-center justify-center clip-left">
-            <h2 className="text-lg font-bold">WELCOME TO MONTROSE PET CLINIC</h2>
+        <div className="hidden md:flex flex-col md:flex-row w-full bg-primary text-white text-center">
+          <div className="hidden md:block w-full md:w-[70%] py-4 md:py-6 bg-blue-800 clip-left">
+            <h2 className="text-lg md:text-xl font-bold">WELCOME TO MONTROSE PET CLINIC</h2>
           </div>
-          <div className="absolute right-0 w-[30%] h-full bg-green-500 text-center flex items-center justify-center clip-right">
-            <button className="text-lg font-bold flex items-center gap-2 hover:translate-x-2 transition">
+          <div className="w-full md:w-[30%] py-4 md:py-6 bg-green-500 flex items-center justify-center clip-right">
+            <button className="text-lg md:text-xl font-bold flex items-center gap-2 hover:translate-x-2 transition">
               OUR SERVICES <span className="text-xl">➤</span>
             </button>
           </div>

@@ -37,7 +37,7 @@ const Services = () => {
         ))}
       </ul>
       <p className="text-lg text-gray-700">
-        We are committed to providing comprehensive and compassionate care for your pets. Whether it&rsquo;s a routine wellness exam or an emergency situation, you can trust Montrose Pet Clinic to be there for you and your furry family members. <br /> <Link className='text-blue-600' href="/request"> Request an Appointment</Link> Today.
+        We are committed to providing comprehensive and compassionate care for your pets. Whether it&rsquo;s a routine wellness exam or an emergency situation, you can trust Montrose Pet Clinic to be there for you and your furry family members. <br /> <Link className='text-blue-600' href="/newClients/registration"> Request an Appointment</Link> Today.
       </p>
     </div>
   );

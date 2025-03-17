@@ -36,8 +36,8 @@ const newClients = [
 
 const misc = [
   { name: "Medication Refill form", href: "/misc/medication-refill-form" },
-  { name: "Food Order Forms", href: "https://montrosepetclinic.clientvantage.ca/" },
-  { name: "Gallery", href: "/misc/petgallery" },
+  { name: "Food Order Forms", href: "/misc/food-order-form" },
+  { name: "Gallery", href: "/misc/gallery" },
   { name: "Wellness Plans", href: "/misc/wellnessplans" },
   { name: "Monthly Promotions", href: "/misc/monthlypromotions" },
 ];
@@ -48,7 +48,7 @@ const navItems = [
   { name: "Services", href: "/services", submenu: services },
   { name: "New Clients", href: "/newclients", submenu: newClients },
   { name: "Misc.", href: "/misc", submenu: misc },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/newClients/registration" },
 ];
 
 const Navbar = () => {
@@ -170,9 +170,11 @@ const DeskNavbar = () => {
         </div>
 
         <div className="flex items-center">
+          <Link href="/newClients/registration">
           <button className="bg-secondary text-white p-4 rounded-md font-semibold">
             Book an Appointment
           </button>
+          </Link>
         </div>
       </div>
     </nav>

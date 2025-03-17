@@ -1,12 +1,12 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const slides = [
-  { image: "/slider_1.jpg", text: "Welcome to Montrose Pet Clinic", btntext: "Explore Services" },
-  { image: "/slider_3.jpg", text: "Best Care for Your Best Friend", btntext: "Request an Appointment" },
-  { image: "/slider_2.jpg", text: "Caring for Pets is Our Passion", btntext: "Meet our Team" },
+  { image: "/slider_1.jpg", text: "Welcome to Montrose Pet Clinic", btntext: "Explore Services", href: "/services" },
+  { image: "/slider_3.jpg", text: "Best Care for Your Best Friend", btntext: "Request an Appointment", href:"/newClients/registration" },
+  { image: "/slider_2.jpg", text: "Caring for Pets is Our Passion", btntext: "Meet our Team" , href:"/about"},
 ];
 
 const Hero = () => {
@@ -41,13 +41,15 @@ const Hero = () => {
       ))}
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-center px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/40 text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
           {slides[current].text}
         </h1>
+        <Link href={slides[current].href}>
         <button className="mt-6 px-6 py-3 bg-secondary text-white font-medium rounded-lg shadow-lg hover:bg-opacity-80 transition">
           {slides[current].btntext}
         </button>
+        </Link>
       </div>
 
       {/* Navigation Dots */}
@@ -70,9 +72,11 @@ const Hero = () => {
             <h2 className="text-lg md:text-xl font-bold">WELCOME TO MONTROSE PET CLINIC</h2>
           </div>
           <div className="w-full md:w-[30%] py-4 md:py-6 bg-green-500 flex items-center justify-center clip-right">
+            <Link href="/services">
             <button className="text-lg md:text-xl font-bold flex items-center gap-2 hover:translate-x-2 transition">
               OUR SERVICES <span className="text-xl">➤</span>
             </button>
+            </Link>
           </div>
         </div>
       </div>

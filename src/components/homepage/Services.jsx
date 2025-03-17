@@ -1,5 +1,6 @@
 import { FaCat, FaTooth, FaFlask, FaXRay, FaAppleAlt, FaProcedures, FaUserMd, FaSyringe } from "react-icons/fa";
 import { MdPets } from "react-icons/md";
+import Link from "next/link";
 
 const services = [
   { name: "Wellness Programs", icon: <MdPets /> },
@@ -31,9 +32,11 @@ const Services = () => {
       </div>
 
       {/* See All Services Button */}
+      {/* <Link href="/services">
       <button className="mt-8 px-6 py-3 bg-primary text-white font-semibold rounded-full shadow-md hover:bg-secondary transition duration-300">
         See All Services
       </button>
+      </Link> */}
     </section>
   );
 };

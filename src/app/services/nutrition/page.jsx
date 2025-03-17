@@ -71,7 +71,7 @@ const Nutrition = () => {
   return (
     <InfoSection
       title="Nutrition Services at Montrose Pet Clinic"
-      image="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&amp;w=2069&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with an actual image URL
+      image="https://images.unsplash.com/photo-1608408891486-f5cade977d19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       altText="Pet nutrition consultation"
       firstSection={firstSection}
       restContent={restContent}

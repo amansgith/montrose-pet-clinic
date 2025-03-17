@@ -11,7 +11,7 @@ const Surgery = () => {
       <h3 className="text-2xl font-semibold text-secondary mb-2">
         Our Surgical Services Include
       </h3>
-      <ul className="list-disc list-inside text-gray-700 leading-relaxed">
+      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>
           <b>Spay and Neuter:</b> Essential for preventing unwanted litters and
           reducing the risk of certain health issues, our spay and neuter
@@ -52,7 +52,7 @@ const Surgery = () => {
       <h3 className="text-2xl font-semibold text-secondary mb-2">
         Why Choose Montrose Pet Clinic for Surgical Care?
       </h3>
-      <ul className="list-disc list-inside text-gray-700 leading-relaxed">
+      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>
           <b>Safety First:</b> We adhere to the highest safety standards,
           employing advanced monitoring equipment and practices to ensure your
@@ -109,7 +109,6 @@ const Surgery = () => {
   return (
     <InfoSection
       title="Surgical Services at Montrose Pet Clinic"
-      image="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with an actual image URL
       altText="Veterinarian performing surgery"
       firstSection={firstSection}
       restContent={restContent}

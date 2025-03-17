@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 const CTA = () => {
   return (
     <>
@@ -13,9 +14,12 @@ const CTA = () => {
         Schedule your pet’s appointment quickly and easily with our online booking system. Download our app for seamless access to appointments, pet care tips, and more on the go. Enjoy convenient, comprehensive care for your furry friends at your fingertips.
         </p>
         <div className="flex gap-4 justify-center md:justify-start font-semibold">
+          <Link href="/newClients/registration">
           <button className="bg-primary text-white px-6 py-3 rounded-md hover:bg-secondary transition">
             Request an Appointment
           </button>
+          </Link>
+
           <button className="bg-secondary text-white px-6 py-3 rounded-md hover:bg-primary transition">
             Sign Up To Get Our App
           </button>

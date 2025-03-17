@@ -38,16 +38,18 @@ const About = () => {
             6 days a week for your convenience.
           </p>
           <p className="text-primary my-4 font-semibold">
-            We’re excited to welcome new clients!
+            We are excited to welcome new clients!
           </p>
+          <Link href="/about">
           <button className="bg-secondary text-white p-2 text-xl font-semibold rounded-md">
             Learn More
           </button>
+          </Link>
         </div>
       </div>
 
       <div className="w-full flex flex-row justify-center text-center bg-primary hover:bg-secondary text-white py-4 text-2xl font-semibold">
-        <Link href="/contact" className="flex items-center gap-2">
+        <Link href="/newClients/registration" className="flex items-center gap-2">
         <span>Request an Appointment </span>
         <FaCircleArrowRight />
         </Link>

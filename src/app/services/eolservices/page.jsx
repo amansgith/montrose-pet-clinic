@@ -11,7 +11,7 @@ const EOLServices = () => {
       <h3 className="text-2xl font-semibold text-secondary mb-2">
         Our End of Life Care Services
       </h3>
-      <ul className="list-disc list-inside text-gray-700 leading-relaxed">
+      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>
           <b>Euthanasia (In Clinic & House Call):</b> Making the decision to say goodbye to a pet is one of the hardest moments a pet owner can face. Our euthanasia services are performed with the utmost respect and gentleness, whether you choose to be in the familiar surroundings of your home or in the quiet comfort of our clinic. We prioritize making this process as peaceful as possible for your pet and as bearable as it can be for you.
         </li>
@@ -26,7 +26,7 @@ const EOLServices = () => {
       <h3 className="text-2xl font-semibold text-secondary mb-2">
         The Montrose Pet Clinic Approach to End of Life Care
       </h3>
-      <ul className="list-disc list-inside text-gray-700 leading-relaxed">
+      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>
           <b>Compassionate Support:</b> Our staff is here to provide not only medical care but also emotional support. We understand the depth of your loss and offer resources to help you through the grieving process.
         </li>

@@ -6,7 +6,7 @@ import Link from "next/link";
 const slides = [
   { image: "/slider_1.jpg", text: "Welcome to Montrose Pet Clinic", btntext: "Explore Services", href: "/services" },
   { image: "/slider_3.jpg", text: "Best Care for Your Best Friend", btntext: "Request an Appointment", href:"/newClients/registration" },
-  { image: "/slider_2.jpg", text: "Caring for Pets is Our Passion", btntext: "Meet our Team" , href:"/about"},
+  { image: "/slider_2.jpg", text: "Caring for Pets is Our Passion", btntext: "Meet our Team" , href:"/about#team"},
 ];
 
 const Hero = () => {

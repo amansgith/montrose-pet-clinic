@@ -1,6 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { FaCat, FaDog, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaCat,
+  FaDog,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import Link from "next/link";
 
 const ClinicTour = () => {
@@ -35,9 +41,11 @@ const ClinicTour = () => {
         />
       </div> */}
 
-<div className="md:w-1/2 mt-6 md:mt-0">
+      <div className="md:w-1/2 mt-6 md:mt-0">
         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Working Days</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            Working Days
+          </h3>
           <div className="grid grid-cols-2 gap-4 text-lg text-gray-600 mb-6">
             <div>
               <p>Monday</p>
@@ -58,8 +66,12 @@ const ClinicTour = () => {
               <p>Closed</p>
             </div>
           </div>
-          <p className="text-sm text-red-600 mb-6">*We are closed for statutory holidays.</p>
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Contact Information</h3>
+          <p className="text-sm text-red-600 mb-6">
+            *We are closed for statutory holidays.
+          </p>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            Contact Information
+          </h3>
           <ul className="text-lg text-gray-600">
             <li className="flex items-center gap-2 mb-2">
               <FaPhone className="text-primary" /> +1 (780) 929 7363
@@ -68,7 +80,8 @@ const ClinicTour = () => {
               <FaEnvelope className="text-primary" /> info@montrosepetclinic.com
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-primary" /> 6002 29 Ave, Beaumont, AB T4X 0H5, Canada
+              <FaMapMarkerAlt className="text-primary" /> 6002 29 Ave, Beaumont,
+              AB T4X 0H5, Canada
             </li>
           </ul>
         </div>

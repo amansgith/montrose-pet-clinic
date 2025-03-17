@@ -48,7 +48,7 @@ const navItems = [
   { name: "Services", href: "/services", submenu: services },
   { name: "New Clients", href: "/newclients", submenu: newClients },
   { name: "Misc.", href: "/misc", submenu: misc },
-  { name: "Contact", href: "/newClients/registration" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {

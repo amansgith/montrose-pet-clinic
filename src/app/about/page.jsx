@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function AboutUs() {
     const teamMembers = [
       {
@@ -55,20 +57,20 @@ export default function AboutUs() {
             </h1>
             <p className="text-gray-700 leading-relaxed">
               Welcome to <span className="font-semibold">Montrose Pet Clinic</span> in Beaumont, where 
-              we’ve been providing top-notch veterinary care for over a decade. Our team of 
+              we&rsquo;ve been providing top-notch veterinary care for over a decade. Our team of 
               licensed veterinarians, skilled Animal Health Technicians, and support staff are 
               dedicated to ensuring your pet receives the best care possible.
             </p>
             <p className="text-gray-700 mt-4 leading-relaxed">
-              We’re grateful for the support from the Beaumont community and city administration, 
+              We&rsquo;re grateful for the support from the Beaumont community and city administration, 
               as well as various pet and community organizations. Our goal is to exceed your expectations, 
-              and we’re always excited to welcome new clients. Our clinic is open 6 days a week for your convenience.
+              and we&rsquo;re always excited to welcome new clients. Our clinic is open 6 days a week for your convenience.
             </p>
           </div>
   
           {/* Image */}
           <div className="md:w-1/2">
-            <img
+            <Image
               src="/clinicfront.webp"
               alt="Veterinary team at Montrose Pet Clinic"
               className="w-full rounded-lg shadow-lg"

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { FaFacebookF, FaInstagram, FaTimes, FaChevronDown  } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTimes, FaChevronDown } from "react-icons/fa";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
 import Image from "next/image";
 import logo from "../../public/brandlogo.webp";
@@ -27,7 +27,7 @@ const services = [
 ];
 
 const newClients = [
-  { name: "Registration Form", href: "/newclients/registerform" },
+  { name: "Registration Form", href: "/newClients/registration" },
   { name: "Policies", href: "/newclients/policies" },
   { name: "Insurance", href: "/newclients/insurance" },
   { name: "Puppy/Kitten Plans", href: "/newclients/puppykittenplans" },
@@ -35,7 +35,7 @@ const newClients = [
 ];
 
 const misc = [
-  { name: "Medication Refill form", href: "/misc/medicationrefillform" },
+  { name: "Medication Refill form", href: "/misc/medication-refill-form" },
   { name: "Food Order Forms", href: "https://montrosepetclinic.clientvantage.ca/" },
   { name: "Gallery", href: "/misc/petgallery" },
   { name: "Wellness Plans", href: "/misc/wellnessplans" },
@@ -45,9 +45,9 @@ const misc = [
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Services", submenu: services, href:"/services" },
-  { name: "New Clients", submenu: newClients, href: "/newclients" },
-  { name: "Misc.", submenu: misc, href: "/misc" },
+  { name: "Services", href: "/services", submenu: services },
+  { name: "New Clients", href: "/newclients", submenu: newClients },
+  { name: "Misc.", href: "/misc", submenu: misc },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -58,7 +58,7 @@ const Navbar = () => {
         <DeskNavbar />
       </div>
       <div className="md:hidden">
-        <MobileNavbar/>
+        <MobileNavbar />
       </div>
     </>
   );
@@ -125,7 +125,7 @@ const DeskNavbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-8 font-semibold text-gray-700">
-        <ul className="flex space-x-6 z-40">
+          <ul className="flex space-x-6 z-40">
             {navItems.map((item, index) => (
               <li
                 key={index}
@@ -133,55 +133,36 @@ const DeskNavbar = () => {
                 onMouseEnter={() => handleMouseEnter(index)} // Keep dropdown open when hovering over it
                 onMouseLeave={handleMouseLeave}
               >
-                {/* If item has a submenu, show the dropdown */}
-                {item.submenu ? (
-                  <>
-                    <Link
-                      href="#"
-                      className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
-                        item.submenu.some((sub) =>
-                          pathname.startsWith(sub.href)
-                        )
-                          ? "border-b-2 pb-5 border-blue-800 text-blue-600"
-                          : ""
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                    {dropdown === index && (
-                      <div
-                        initial={{ opacity: 0, scaleY: 0 }}
-                        animate={{ opacity: 1, scaleY: 1 }}
-                        exit={{ opacity: 0, scaleY: 0 }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md border border-gray-200 origin-top transform 
-                                   max-h-[300px] overflow-y-auto custom-scrollbar z-50"
-                      >
-                        {item.submenu.map((sub, idx) => (
-                          <li key={idx}>
-                            <Link
-                              href={sub.href}
-                              className="block px-4 py-2 text-gray-700 hover:text-secondary"
-                            >
-                              {sub.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  // If no submenu, it's a simple link
-                  <Link
-                    href={item.href}
-                    className={`text-gray-700 font-medium hover:text-blue-600 ${
-                      isActive(item.href)
-                        ? "border-b-2 pb-5 border-blue-800 text-blue-600"
-                        : ""
-                    }`}
+                <Link
+                  href={item.href}
+                  className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
+                    item.submenu && item.submenu.some((sub) => pathname.startsWith(sub.href))
+                      ? "border-b-2 pb-5 border-blue-800 text-blue-600"
+                      : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+                {item.submenu && dropdown === index && (
+                  <div
+                    initial={{ opacity: 0, scaleY: 0 }}
+                    animate={{ opacity: 1, scaleY: 1 }}
+                    exit={{ opacity: 0, scaleY: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md border border-gray-200 origin-top transform 
+                               max-h-[300px] overflow-y-auto custom-scrollbar z-50"
                   >
-                    {item.name}
-                  </Link>
+                    {item.submenu.map((sub, idx) => (
+                      <li key={idx}>
+                        <Link
+                          href={sub.href}
+                          className="block px-4 py-2 text-gray-700 hover:text-secondary"
+                        >
+                          {sub.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </div>
                 )}
               </li>
             ))}
@@ -197,7 +178,6 @@ const DeskNavbar = () => {
     </nav>
   );
 };
-
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);

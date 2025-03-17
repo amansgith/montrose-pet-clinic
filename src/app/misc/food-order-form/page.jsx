@@ -125,7 +125,7 @@ export default function PrescriptionFoodOrderForm() {
         <div className="mt-4 p-4 bg-gray-100 border-l-4 border-yellow-500 text-sm text-gray-700">
           <p>
             <strong>Note:</strong> Up to 3 pet foods can be ordered at a time.
-            Once received, we will place the order and contact you when it's
+            Once received, we will place the order and contact you when it&rsquo;s
             ready for pickup. Items on backorder will not be ordered, and you
             will be notified. You may also place an order online for home
             delivery or contact us directly for in-clinic pickup.

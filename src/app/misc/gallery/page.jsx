@@ -5,6 +5,7 @@ import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-zoom.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import Image from "next/image";
 
 const galleryData = [
   {
@@ -69,7 +70,7 @@ export default function Gallery() {
           >
             {section.images.map((img, imgIndex) => (
               <a key={imgIndex} href={img} className="block">
-                <img
+                <Image
                   src={img}
                   alt={`${section.title} ${imgIndex}`}
                   className="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-80 transition"

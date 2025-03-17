@@ -45,9 +45,9 @@ const misc = [
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Services", submenu: services },
-  { name: "New Clients", submenu: newClients },
-  { name: "Misc.", submenu: misc },
+  { name: "Services", submenu: services, href:"/services" },
+  { name: "New Clients", submenu: newClients, href: "/newclients" },
+  { name: "Misc.", submenu: misc, href: "/misc" },
   { name: "Contact", href: "/contact" },
 ];
 

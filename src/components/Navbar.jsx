@@ -8,15 +8,15 @@ import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
 
 const services = [
-  { name: "Wellness Exams", href: "/services/wellness-exams" },
-  { name: "Vaccinations", href: "/services/vaccinations" },
+  { name: "Wellness Exams", href: "/services/wellness-exam" },
+  { name: "Vaccinations", href: "/services/vaccination" },
   { name: "Deworming", href: "/services/deworming" },
   { name: "Surgery", href: "/services/surgery" },
   { name: "Treatments", href: "/services/treatments" },
   { name: "Micro-chipping", href: "/services/microchipping" },
   { name: "Laboratory", href: "/services/laboratory" },
-  { name: "Radiology", href: "/services/deworming" },
-  { name: "End of Life Services", href: "/services/eodservices" },
+  { name: "Radiology", href: "/services/radiology" },
+  { name: "End of Life Services", href: "/services/eolservices" },
   { name: "Emergency", href: "/services/emergency" },
   { name: "Dental Care", href: "/services/dentalcare" },
   { name: "Senior Pet Consultant", href: "/services/seniorpetconsultant" },
@@ -36,7 +36,7 @@ const newClients = [
 
 const misc = [
   { name: "Medication Refill form", href: "/misc/medicationrefillform" },
-  { name: "Food Order Forms", href: "/misc/foodorderforms" },
+  { name: "Food Order Forms", href: "https://montrosepetclinic.clientvantage.ca/" },
   { name: "Gallery", href: "/misc/petgallery" },
   { name: "Wellness Plans", href: "/misc/wellnessplans" },
   { name: "Monthly Promotions", href: "/misc/monthlypromotions" },

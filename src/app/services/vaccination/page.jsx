@@ -9,15 +9,15 @@ const Vaccination = () => {
   const restContent = (
     <>
       <p>
-        Many vaccines are available for use in dogs and cats, but not every pet needs every available vaccine. Some vaccines are considered core vaccines and should be administered to all pets, whereas other vaccines are conditional and may be recommended for pets based on a variety of factors, such as their risk for exposure to disease. Vaccine recommendations can also change throughout a pet’s life, as travel habits and other variables change. We will consider all these factors as we determine which vaccines your pet should have.
+        Many vaccines are available for use in dogs and cats, but not every pet needs every available vaccine. Some vaccines are considered core vaccines and should be administered to all pets, whereas other vaccines are conditional and may be recommended for pets based on a variety of factors, such as their risk for exposure to disease. Vaccine recommendations can also change throughout a pet&rsquo;s life, as travel habits and other variables change. We will consider all these factors as we determine which vaccines your pet should have.
       </p>
       <br />
       <p>
-        We understand that your pet is unique and that no single vaccine program will be ideal for every pet in every situation. Our doctors and other staff members are well-educated about veterinary vaccines, and our goal is to give you the best advice for keeping your pet healthy. Let us develop a vaccination schedule and ongoing booster routine that accounts for your pet’s lifestyle, overall health, risk for exposure to infectious disease, and other factors.
+        We understand that your pet is unique and that no single vaccine program will be ideal for every pet in every situation. Our doctors and other staff members are well-educated about veterinary vaccines, and our goal is to give you the best advice for keeping your pet healthy. Let us develop a vaccination schedule and ongoing booster routine that accounts for your pet&rsquo;s lifestyle, overall health, risk for exposure to infectious disease, and other factors.
       </p>
       <br />
       <p>
-        Vaccines help pets live longer, healthier lives. Protecting your pet is our primary goal, so developing an appropriate vaccine schedule for your pet is important to us. Call us today to set up an appointment to discuss your pet’s vaccination needs.
+        Vaccines help pets live longer, healthier lives. Protecting your pet is our primary goal, so developing an appropriate vaccine schedule for your pet is important to us. Call us today to set up an appointment to discuss your pet&rsquo;s vaccination needs.
       </p>
     </>
   );

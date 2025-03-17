@@ -13,7 +13,7 @@ const WellnessExam = () => {
       </h3>
       <p>
         Our wellness checks are central to preventive health care, providing a
-        detailed examination of your pet’s health, establishing health
+        detailed examination of your pet&rsquo;s health, establishing health
         baselines, and identifying early signs of potential issues. These
         essential checks include:
       </p>
@@ -32,7 +32,7 @@ const WellnessExam = () => {
         </li>
         <li>
           <b>Vaccination Updates:</b> Customized vaccinations based on your
-          pet’s age and health status.
+          pet&rsquo;s age and health status.
         </li>
         <li>
           <b>Guidance on Parasite Prevention:</b> Expert advice on preventing
@@ -41,7 +41,7 @@ const WellnessExam = () => {
       </ul>
       <br />
       <h3 className="text-2xl font-semibold text-secondary mb-2">
-        Montrose Pet Clinic’s Wellness Services
+        Montrose Pet Clinic&rsquo;s Wellness Services
       </h3>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>
@@ -50,14 +50,14 @@ const WellnessExam = () => {
         </li>
         <li>
           <b>Annual Exam and Vaccinations:</b> Essential annual check-ups and
-          vaccinations tailored to your pet’s specific needs.
+          vaccinations tailored to your pet&rsquo;s specific needs.
         </li>
         <li>
           <b>Parasite Prevention:</b> Comprehensive programs to shield your pet
           from parasites.
         </li>
         <li>
-          <b>Nutritional Consultation:</b> Custom advice to optimize your pet’s
+          <b>Nutritional Consultation:</b> Custom advice to optimize your pet&rsquo;s
           health through nutrition.
         </li>
         <li>
@@ -104,7 +104,7 @@ const WellnessExam = () => {
         Recognizing that pets age faster than humans, we adapt our wellness and
         preventive care to meet their evolving health needs, from youth through
         to their senior years. Tailored care plans address age-specific
-        concerns, ensuring your pet’s health and happiness at every stage.
+        concerns, ensuring your pet&rsquo;s health and happiness at every stage.
       </p>
       <br />
       <h3 className="text-2xl font-semibold text-secondary mb-2">
@@ -113,7 +113,7 @@ const WellnessExam = () => {
       <p>
         Pet guardians play a vital role in the success of our wellness programs.
         By keeping up with regular vet visits, vaccination schedules, and
-        preventive measures, you contribute greatly to your pet’s well-being.
+        preventive measures, you contribute greatly to your pet&rsquo;s well-being.
         Awareness of illness signs and prompt action further enhances the
         chances of early treatment success.
       </p>
@@ -123,9 +123,9 @@ const WellnessExam = () => {
         At Montrose Pet Clinic, we believe in laying a foundation for a long,
         vibrant life for pets through dedicated wellness and preventive care.
         This strategy, emphasizing regular health checks, preventive measures,
-        and early illness detection, is essential for maintaining your pet’s
+        and early illness detection, is essential for maintaining your pet&rsquo;s
         health and joy. Your commitment as a pet guardian is invaluable to this
-        mission, ensuring a lasting, positive impact on your pet’s life.
+        mission, ensuring a lasting, positive impact on your pet&rsquo;s life.
       </p>
     </>
   );

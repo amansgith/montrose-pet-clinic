@@ -136,7 +136,7 @@ const DeskNavbar = () => {
                 <Link
                   href={item.href}
                   className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
-                    item.submenu && item.submenu.some((sub) => pathname.startsWith(sub.href))
+                   isActive(item.href) || (item.submenu && item.submenu.some((sub) => pathname.startsWith(sub.href)))
                       ? "border-b-2 pb-5 border-blue-800 text-blue-600"
                       : ""
                   }`}
@@ -156,7 +156,7 @@ const DeskNavbar = () => {
                       <li key={idx}>
                         <Link
                           href={sub.href}
-                          className="block px-4 py-2 text-gray-700 hover:text-secondary"
+                          className={`block px-4 py-2 text-gray-700 hover:text-secondary ${ isActive(sub.href) ? "text-secondary" : "" }`}
                         >
                           {sub.name}
                         </Link>

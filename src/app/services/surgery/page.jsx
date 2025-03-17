@@ -15,16 +15,16 @@ const Surgery = () => {
         <li>
           <b>Spay and Neuter:</b> Essential for preventing unwanted litters and
           reducing the risk of certain health issues, our spay and neuter
-          services are performed with your pet’s safety and comfort in mind.
+          services are performed with your pet&rsquo;s safety and comfort in mind.
         </li>
         <li>
           <b>Soft Tissue Surgeries:</b> We offer a variety of soft tissue
           surgeries, including those for the digestive, respiratory, and urinary
-          systems, addressing conditions that affect your pet’s quality of life.
+          systems, addressing conditions that affect your pet&rsquo;s quality of life.
         </li>
         <li>
           <b>Lump Removal:</b> Early removal and biopsy of lumps can
-          significantly impact your pet’s health, potentially preventing the
+          significantly impact your pet&rsquo;s health, potentially preventing the
           spread of cancer.
         </li>
         <li>
@@ -39,7 +39,7 @@ const Surgery = () => {
         </li>
         <li>
           <b>Foreign Body Removal:</b> If your pet has ingested something they
-          shouldn’t have, our surgical team can safely remove the item,
+          shouldn&rsquo;t have, our surgical team can safely remove the item,
           preventing serious gastrointestinal complications.
         </li>
         <li>
@@ -56,7 +56,7 @@ const Surgery = () => {
         <li>
           <b>Safety First:</b> We adhere to the highest safety standards,
           employing advanced monitoring equipment and practices to ensure your
-          pet’s well-being throughout the surgical process.
+          pet&rsquo;s well-being throughout the surgical process.
         </li>
         <li>
           <b>Experienced Veterinarians:</b> Our skilled veterinary surgeons have
@@ -65,7 +65,7 @@ const Surgery = () => {
         </li>
         <li>
           <b>Post-Surgical Care:</b> We provide comprehensive post-operative
-          care instructions and support, ensuring your pet’s recovery is smooth
+          care instructions and support, ensuring your pet&rsquo;s recovery is smooth
           and comfortable.
         </li>
         <li>
@@ -80,7 +80,7 @@ const Surgery = () => {
       </h3>
       <p>
         Prompt surgical intervention can be crucial in preventing more serious
-        health issues for your pet. Whether it’s a routine procedure or an
+        health issues for your pet. Whether it&rsquo;s a routine procedure or an
         emergency surgery, timely care can alleviate pain, improve quality of
         life, and in many cases, be life-saving.
       </p>
@@ -89,7 +89,7 @@ const Surgery = () => {
         Customized Care for Every Pet
       </h3>
       <p>
-        At Montrose Pet Clinic, we understand that every pet is unique. That’s
+        At Montrose Pet Clinic, we understand that every pet is unique. That&rsquo;s
         why we tailor our surgical plans to the individual needs of each animal,
         ensuring the best possible care and outcomes.
       </p>
@@ -99,8 +99,8 @@ const Surgery = () => {
         Our commitment to providing exceptional surgical care is a cornerstone
         of our practice at Montrose Pet Clinic. With a focus on safety,
         expertise, and compassion, we strive to ensure every surgical procedure
-        improves your pet’s health and well-being. If you have concerns about
-        your pet’s health or believe they may need surgical intervention,
+        improves your pet&rsquo;s health and well-being. If you have concerns about
+        your pet&rsquo;s health or believe they may need surgical intervention,
         contact us to discuss how we can help.
       </p>
     </>

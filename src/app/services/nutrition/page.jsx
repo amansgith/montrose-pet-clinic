@@ -30,7 +30,7 @@ const Nutrition = () => {
       </ul>
       <br />
       <h3 className="text-2xl font-semibold text-secondary mb-2">
-        Why Choose Montrose Pet Clinic for Your Pet's Nutritional Needs?
+        Why Choose Montrose Pet Clinic for Your Pet&rsquo;s Nutritional Needs?
       </h3>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>

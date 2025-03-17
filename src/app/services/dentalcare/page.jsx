@@ -3,7 +3,7 @@ import InfoSection from "@/components/InfoSection";
 const DentalCare = () => {
   const firstSection = {
     subheading: "Bright Smiles for Brighter Futures",
-    text: "Good dental health is crucial to your pet’s overall well-being. At Montrose Pet Clinic, located in the heart of Beaumont, Alberta, we’re dedicated to providing comprehensive dental care that ensures your furry family members have healthy teeth and gums. Our state-of-the-art clinic offers a wide range of dental services, from routine cleanings to more complex procedures, all designed to prevent dental disease and its complications.",
+    text: "Good dental health is crucial to your pet&rsquo;s overall well-being. At Montrose Pet Clinic, located in the heart of Beaumont, Alberta, we&rsquo;re dedicated to providing comprehensive dental care that ensures your furry family members have healthy teeth and gums. Our state-of-the-art clinic offers a wide range of dental services, from routine cleanings to more complex procedures, all designed to prevent dental disease and its complications.",
   };
 
   const restContent = (
@@ -30,7 +30,7 @@ const DentalCare = () => {
       </ul>
       <br />
       <h3 className="text-2xl font-semibold text-secondary mb-2">
-        Why Choose Montrose Pet Clinic for Your Pet's Dental Needs?
+        Why Choose Montrose Pet Clinic for Your Pet&rsquo;s Dental Needs?
       </h3>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>

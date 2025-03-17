@@ -127,7 +127,7 @@ export default function AboutUs() {
                 key={index}
                 className="bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center hover:shadow-xl transition-shadow duration-300"
               >
-                <img
+                <Image
                   src={member.img}
                   alt={member.name}
                   className="w-36 h-36 mx-auto rounded-full object-[center_20%] object-cover border-4 border-primary"

@@ -19,7 +19,7 @@ const WellnessExam = () => {
           <b>Diagnostic Screening Tests:</b> Utilizing blood panels, urinalysis, and fecal exams to uncover hidden diseases.
         </li>
         <li>
-          <b>A Review of Results:</b> Discussing the findings and recommendations for your pet's health.
+          <b>A Review of Results:</b> Discussing the findings and recommendations for your pet&rsquo;s health.
         </li>
       </ul>
       <br />

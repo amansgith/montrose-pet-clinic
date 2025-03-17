@@ -73,6 +73,8 @@ export default function Gallery() {
                 <Image
                   src={img}
                   alt={`${section.title} ${imgIndex}`}
+                  width={500}
+                    height={500}
                   className="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-80 transition"
                 />
               </a>

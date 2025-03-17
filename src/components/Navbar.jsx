@@ -8,35 +8,32 @@ import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
 
 const services = [
-  { name: "Wellness Exams", href: "/services/wellness-exam" },
-  { name: "Vaccinations", href: "/services/vaccination" },
+  { name: "Annual wellness exam & Vaccinations", href: "/services/wellness-exam-and-vaccination" },
+  { name: "Puppy/ Kitten Exam", href: "/services/puppy-kitten-exam" },
   { name: "Deworming", href: "/services/deworming" },
+  { name: "Illness Exam", href: "/services/illness-exam" },
   { name: "Surgery", href: "/services/surgery" },
-  { name: "Treatments", href: "/services/treatments" },
-  { name: "Micro-chipping", href: "/services/microchipping" },
-  { name: "Laboratory", href: "/services/laboratory" },
-  { name: "Radiology", href: "/services/radiology" },
-  { name: "End of Life Services", href: "/services/eolservices" },
-  { name: "Emergency", href: "/services/emergency" },
+  { name: "Emergency Care", href: "/services/emergency-care" },
+  { name: "Laboratory Services", href: "/services/laboratory" },
   { name: "Dental Care", href: "/services/dentalcare" },
-  { name: "Senior Pet Consultant", href: "/services/seniorpetconsultant" },
-  { name: "Nail Trim", href: "/services/nailtrim" },
-  { name: "Anal Gland Expersion", href: "/services/analgladexpersion" },
-  { name: "Pain Management", href: "/services/painmanagement" },
-  { name: "Nutrition", href: "/services/nutrition" },
+  { name: "End of Life Services", href: "/services/eolservices" },
+  { name: "Nutrition Consult", href: "/services/nutrition" },
+  { name: "Radiology", href: "/services/radiology" },
+  { name: "Miscellaneous Services", href: "/services/misc-services" },
+  { name: "Geriatric Patient Care", href: "/services/geriatric-patient-care" },
+  { name: "Pet Insurance & Financing", href: "/services/pet-insurance-finance" },
 ];
 
 const newClients = [
   { name: "Registration Form", href: "/newClients/registration" },
+  { name: "Medication Refill form", href: "/newClients/medication-refill-form" },
+  { name: "Food Order Forms", href: "/newClients/food-order-form" },
   { name: "Policies", href: "/newclients/policies" },
-  { name: "Insurance", href: "/newclients/insurance" },
   { name: "Puppy/Kitten Plans", href: "/newclients/puppykittenplans" },
   { name: "FAQ", href: "/newclients/faq" },
 ];
 
 const misc = [
-  { name: "Medication Refill form", href: "/misc/medication-refill-form" },
-  { name: "Food Order Forms", href: "/misc/food-order-form" },
   { name: "Gallery", href: "/misc/gallery" },
   { name: "Wellness Plans", href: "/misc/wellnessplans" },
   { name: "Monthly Promotions", href: "/misc/monthlypromotions" },

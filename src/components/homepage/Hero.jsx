@@ -41,7 +41,7 @@ const Hero = () => {
       ))}
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/40 text-center px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
           {slides[current].text}
         </h1>

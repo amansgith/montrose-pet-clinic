@@ -3,105 +3,28 @@ import InfoSection from "@/components/InfoSection";
 const Surgery = () => {
   const firstSection = {
     subheading: "Expert Surgical Care for Your Pet",
-    text: "Montrose Pet Clinic in Beaumont, Alberta, provides a comprehensive range of surgical services, from routine procedures like spaying and neutering to more advanced soft tissue surgeries. Our dedicated team employs the latest surgical techniques and technology to ensure your pet receives the highest level of care.",
+    text: "We perform routine surgeries every day. Here is a list of surgeries we perform in-house:",
   };
 
   const restContent = (
     <>
       <h3 className="text-2xl font-semibold text-secondary mb-2">
-        Our Surgical Services Include
+        1. Spay & Neuter
       </h3>
-      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
-        <li>
-          <b>Spay and Neuter:</b> Essential for preventing unwanted litters and
-          reducing the risk of certain health issues, our spay and neuter
-          services are performed with your pet&rsquo;s safety and comfort in mind.
-        </li>
-        <li>
-          <b>Soft Tissue Surgeries:</b> We offer a variety of soft tissue
-          surgeries, including those for the digestive, respiratory, and urinary
-          systems, addressing conditions that affect your pet&rsquo;s quality of life.
-        </li>
-        <li>
-          <b>Lump Removal:</b> Early removal and biopsy of lumps can
-          significantly impact your pet&rsquo;s health, potentially preventing the
-          spread of cancer.
-        </li>
-        <li>
-          <b>Laceration and Wound Care:</b> Our clinic is equipped to handle all
-          types of wounds, providing careful treatment to ensure proper healing
-          and prevent infection.
-        </li>
-        <li>
-          <b>Urinary Bladder Surgery (Cystotomy):</b> For pets suffering from
-          bladder stones or other urinary issues, we offer specialized surgical
-          solutions to restore health and comfort.
-        </li>
-        <li>
-          <b>Foreign Body Removal:</b> If your pet has ingested something they
-          shouldn&rsquo;t have, our surgical team can safely remove the item,
-          preventing serious gastrointestinal complications.
-        </li>
-        <li>
-          <b>Rabbit Neuter & Spay:</b> Recognizing the unique needs of rabbit
-          owners, we provide specialized spay and neuter services to improve the
-          health and behavior of these pets.
-        </li>
-      </ul>
-      <br />
-      <h3 className="text-2xl font-semibold text-secondary mb-2">
-        Why Choose Montrose Pet Clinic for Surgical Care?
-      </h3>
-      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
-        <li>
-          <b>Safety First:</b> We adhere to the highest safety standards,
-          employing advanced monitoring equipment and practices to ensure your
-          pet&rsquo;s well-being throughout the surgical process.
-        </li>
-        <li>
-          <b>Experienced Veterinarians:</b> Our skilled veterinary surgeons have
-          extensive experience in performing a wide range of surgical
-          procedures, ensuring the best outcomes for your pet.
-        </li>
-        <li>
-          <b>Post-Surgical Care:</b> We provide comprehensive post-operative
-          care instructions and support, ensuring your pet&rsquo;s recovery is smooth
-          and comfortable.
-        </li>
-        <li>
-          <b>Compassionate Approach:</b> Understanding the anxiety that can
-          accompany pet surgery, our team offers compassionate care and clear
-          communication before, during, and after the procedure.
-        </li>
-      </ul>
-      <br />
-      <h3 className="text-2xl font-semibold text-secondary mb-2">
-        The Importance of Timely Surgical Intervention
-      </h3>
-      <p>
-        Prompt surgical intervention can be crucial in preventing more serious
-        health issues for your pet. Whether it&rsquo;s a routine procedure or an
-        emergency surgery, timely care can alleviate pain, improve quality of
-        life, and in many cases, be life-saving.
+      <p className="text-gray-700 leading-relaxed mb-4">
+        Reproductive surgeries benefit cats and dogs a lot. These surgeries prevent unwanted litters and also help to reduce the occurrence of certain cancers. These surgeries help for behavioral modifications (Make them calm down, avoid dominance). At Montrose Pet Clinic we do spay and neuter for dogs, cats, and rabbits.
       </p>
-      <br />
       <h3 className="text-2xl font-semibold text-secondary mb-2">
-        Customized Care for Every Pet
+        2. Soft Tissue Surgeries
       </h3>
-      <p>
-        At Montrose Pet Clinic, we understand that every pet is unique. That&rsquo;s
-        why we tailor our surgical plans to the individual needs of each animal,
-        ensuring the best possible care and outcomes.
+      <p className="text-gray-700 leading-relaxed mb-4">
+        Laceration repair, wound management, hematoma surgery, cyst or abscess removal/drain, foreign body removal, cystotomy or urinary bladder surgery, cherry eye surgery, etc. come under this category.
       </p>
-      <br />
-      <h3 className="text-2xl font-semibold text-secondary mb-2">Conclusion</h3>
-      <p>
-        Our commitment to providing exceptional surgical care is a cornerstone
-        of our practice at Montrose Pet Clinic. With a focus on safety,
-        expertise, and compassion, we strive to ensure every surgical procedure
-        improves your pet&rsquo;s health and well-being. If you have concerns about
-        your pet&rsquo;s health or believe they may need surgical intervention,
-        contact us to discuss how we can help.
+      <p className="text-gray-700 leading-relaxed mb-4">
+        Montrose Pet Clinic is equipped with a full-service surgery room, monitoring machines like pulse oximetry, ECG, and veterinary Doppler to provide excellent care for your loved ones. We also have a Baer Hugger system to keep your furry friend warm at the time of surgery.
+      </p>
+      <p className="text-gray-700 leading-relaxed mb-4">
+        We refer orthopedic surgeries and other complex surgeries to specialist centers so that our patients get the best care.
       </p>
     </>
   );
@@ -109,6 +32,7 @@ const Surgery = () => {
   return (
     <InfoSection
       title="Surgical Services at Montrose Pet Clinic"
+      image="https://images.unsplash.com/photo-1599442996649-9aaa85137482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       altText="Veterinarian performing surgery"
       firstSection={firstSection}
       restContent={restContent}

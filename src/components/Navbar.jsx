@@ -45,13 +45,13 @@ const newClients = [
 ];
 
 const wellnessplans = [
-  { name: "Kitten Wellness Plans", href: "/misc/wellness-plans/kitten" },
-  { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy" },
-  { name: "Feline Wellness Plans", href: "/misc/wellness-plans/feline" },
-  { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine" },
-  { name: "Dental Plans", href: "/misc/wellness-plans/dental" },
-  { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric" },
-  { name: "Reproductive sx Plans", href: "/misc/wellness-plans/reproductive" },
+  { name: "Kitten Wellness Plans", href: "/misc/wellness-plans/kitten-wellness" },
+  { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy-wellness" },
+  { name: "Feline Wellness Plans", href: "/misc/wellness-plans/feline-wellness" },
+  { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine-wellness" },
+  { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
+  { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric-plans" },
+  { name: "Reproductive sx Plans", href: "/misc/wellness-plans/reproductive-plans" },
 ];
 
 const misc = [
@@ -120,13 +120,14 @@ const DeskNavbar = () => {
             6002 29 Ave, Beaumont, AB T4X 0H5, Canada
           </span>
         </div>
-        <div className="flex gap-3">
-          <Link href="#">
+        <div className="flex items-center justify-center gap-3">
+          <Link href="https://app.petdesk.com/sign-up/montrose-pet-clinic-inc/052e6db6-23be-49e2-be8a-4ae4ecec1554"><div className="p-2 rounded-md text-white bg-secondary">Download Our App</div></Link>
+          <Link href="https://www.facebook.com/MontrosePetClinic/">
             <span className="text-gray-500 hover:text-secondary cursor-pointer">
               <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
             </span>
           </Link>
-          <Link href="#">
+          <Link href="https://www.instagram.com/montrose_pet_clinic/">
             <span className="text-gray-500 hover:text-secondary cursor-pointer">
               <FaInstagram className="cursor-pointer hover:text-red-500 transition duration-300" />
             </span>

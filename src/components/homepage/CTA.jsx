@@ -19,10 +19,11 @@ const CTA = () => {
             Request an Appointment
           </button>
           </Link>
-
+          <Link href="https://app.petdesk.com/sign-up/montrose-pet-clinic-inc/052e6db6-23be-49e2-be8a-4ae4ecec1554">
           <button className="bg-secondary text-white px-6 py-3 rounded-md hover:bg-primary transition">
             Sign Up To Get Our App
           </button>
+          </Link>
         </div>
       </div>
 

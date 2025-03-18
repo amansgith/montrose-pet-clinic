@@ -2,23 +2,24 @@ import React from 'react';
 import Link from 'next/link';
 
 const services = [
-  { name: "Wellness Exams", href: "/services/wellness-exam" },
-  { name: "Vaccinations", href: "/services/vaccination" },
-  { name: "Deworming", href: "/services/deworming" },
-  { name: "Surgery", href: "/services/surgery" },
-  { name: "Treatments", href: "/services/treatments" },
-  { name: "Micro-chipping", href: "/services/microchipping" },
-  { name: "Laboratory", href: "/services/laboratory" },
-  { name: "Radiology", href: "/services/radiology" },
-  { name: "End of Life Services", href: "/services/eolservices" },
-  { name: "Emergency", href: "/services/emergency" },
-  { name: "Dental Care", href: "/services/dentalcare" },
-  { name: "Senior Pet Consultant", href: "/services/seniorpetconsultant" },
-  { name: "Nail Trim", href: "/services/nailtrim" },
-  { name: "Anal Gland Expersion", href: "/services/analgladexpersion" },
-  { name: "Pain Management", href: "/services/painmanagement" },
-  { name: "Nutrition", href: "/services/nutrition" },
-];
+    {
+      name: "Annual wellness exam & Vaccinations",
+      href: "/services/wellness-exam-and-vaccination",
+    },
+    { name: "Puppy/ Kitten Exam", href: "/services/puppy-kitten-exam" },
+    { name: "Deworming", href: "/services/deworming" },
+    { name: "Illness Exam", href: "/services/illness-exam" },
+    { name: "Surgery", href: "/services/surgery" },
+    { name: "Emergency Care", href: "/services/emergency-care" },
+    { name: "Laboratory Services", href: "/services/laboratory" },
+    { name: "Dental Care", href: "/services/dentalcare" },
+    { name: "End of Life Services", href: "/services/eolservices" },
+    { name: "Nutrition Consult", href: "/services/nutrition" },
+    { name: "Radiology", href: "/services/radiology" },
+    { name: "Miscellaneous Services", href: "/services/misc-services" },
+    { name: "Geriatric Patient Care", href: "/services/geriatric-care" },
+    { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
+  ];
 
 const Services = () => {
   return (

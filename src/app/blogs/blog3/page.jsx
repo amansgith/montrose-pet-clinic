@@ -26,15 +26,15 @@ const Blog3 = () => {
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">The Unseen Threat: Parasites Among Us</h2>
       <p className="text-gray-700 leading-relaxed mb-4">
-        Dogs and cats can be hosts to a variety of parasites including roundworms, tapeworms, giardia, and other intestinal protozoa. These parasites may silently affect your pet’s health and could even pose a risk to you and your family. Zoonotic parasites are especially concerning for individuals with weakened immune systems. 
+        Dogs and cats can be hosts to a variety of parasites including roundworms, tapeworms, giardia, and other intestinal protozoa. These parasites may silently affect your pet&rsquo;s health and could even pose a risk to you and your family. Zoonotic parasites are especially concerning for individuals with weakened immune systems. 
       </p>
       <p className="text-gray-700 leading-relaxed mb-4">
-        Indoor pets aren’t exempt. Parasites can thrive in a variety of environments, so even pampered indoor animals can be at risk, especially in areas like Beaumont where certain parasites are more prevalent.
+        Indoor pets aren&rsquo;t exempt. Parasites can thrive in a variety of environments, so even pampered indoor animals can be at risk, especially in areas like Beaumont where certain parasites are more prevalent.
       </p>
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">The Deworming Regimen: A Schedule for Health</h2>
       <p className="text-gray-700 leading-relaxed mb-4">
-        Veterinarians recommend starting a deworming regimen early. Puppies and kittens should be dewormed every two weeks until they are three months old. After that, the frequency depends on your pet’s exposure risk. Pets visiting dog parks, interacting with other animals, or exploring nature may need more frequent deworming. Your veterinarian can create an individualized plan based on your pet's lifestyle.
+        Veterinarians recommend starting a deworming regimen early. Puppies and kittens should be dewormed every two weeks until they are three months old. After that, the frequency depends on your pet&rsquo;s exposure risk. Pets visiting dog parks, interacting with other animals, or exploring nature may need more frequent deworming. Your veterinarian can create an individualized plan based on your pet&rsquo;s lifestyle.
       </p>
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">Fecal Examinations: The Diagnostic Cornerstone</h2>
@@ -44,15 +44,15 @@ const Blog3 = () => {
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">The Risks and How to Mitigate Them</h2>
       <p className="text-gray-700 leading-relaxed mb-4">
-        Beyond deworming, you can protect your pets and family by maintaining cleanliness. Regularly clean your pet’s living spaces, properly dispose of waste, and keep your environment tidy. These simple practices can significantly reduce the risk of parasitic infections.
+        Beyond deworming, you can protect your pets and family by maintaining cleanliness. Regularly clean your pet&rsquo;s living spaces, properly dispose of waste, and keep your environment tidy. These simple practices can significantly reduce the risk of parasitic infections.
       </p>
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">Conclusion: Embracing a Proactive Approach to Pet Care</h2>
       <p className="text-gray-700 leading-relaxed mb-6">
-        For pet owners in Beaumont searching for a “veterinary clinic near me” or “pet clinic near me,” regular deworming is crucial. It’s a simple, effective way to protect your pet and your family. Local clinics like the central Beaumont veterinary referral center offer tailored deworming schedules and expert care.
+        For pet owners in Beaumont searching for a “veterinary clinic near me” or “pet clinic near me,” regular deworming is crucial. It&rsquo;s a simple, effective way to protect your pet and your family. Local clinics like the central Beaumont veterinary referral center offer tailored deworming schedules and expert care.
       </p>
       <p className="text-gray-700 leading-relaxed mb-6">
-        Embrace proactive pet care. Contact your local veterinarian to ensure your pet’s deworming plan is up-to-date and they are protected against hidden health threats.
+        Embrace proactive pet care. Contact your local veterinarian to ensure your pet&rsquo;s deworming plan is up-to-date and they are protected against hidden health threats.
       </p>
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">Related Blogs</h2>

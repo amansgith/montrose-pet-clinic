@@ -10,7 +10,7 @@ const Blog2 = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold text-primary mb-6">Understanding and Managing Your Pet’s Anal Gland Health</h1>
+      <h1 className="text-3xl font-bold text-primary mb-6">Understanding and Managing Your Pet&rsquo;s Anal Gland Health</h1>
       
       <Image 
         src="https://plus.unsplash.com/premium_photo-1661961347317-41f7a010a441?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
@@ -21,12 +21,12 @@ const Blog2 = () => {
       />
 
       <p className="text-gray-700 leading-relaxed mb-6">
-        Anal glands are a lesser-known but vital aspect of your pet’s anatomy, often going unnoticed until a problem arises. These two small oval-shaped sacs located on either side of the anus serve a significant role in your pet’s life, from marking territory to communicating with other animals. However, when these glands become problematic, it can cause discomfort and health issues for your dog or cat.
+        Anal glands are a lesser-known but vital aspect of your pet&rsquo;s anatomy, often going unnoticed until a problem arises. These two small oval-shaped sacs located on either side of the anus serve a significant role in your pet&rsquo;s life, from marking territory to communicating with other animals. However, when these glands become problematic, it can cause discomfort and health issues for your dog or cat.
       </p>
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">The Function of Anal Glands in Pets</h2>
       <p className="text-gray-700 leading-relaxed mb-6">
-        The anal glands produce a fluid with a strong and fishy odor, unique to each dog or cat, which is typically expressed in small amounts during defecation. This scent-marking is part of your pet’s natural behavior for establishing territory. In some instances, pets may involuntarily express these glands when scared or stressed.
+        The anal glands produce a fluid with a strong and fishy odor, unique to each dog or cat, which is typically expressed in small amounts during defecation. This scent-marking is part of your pet&rsquo;s natural behavior for establishing territory. In some instances, pets may involuntarily express these glands when scared or stressed.
       </p>
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">Recognizing Anal Gland Issues</h2>
@@ -41,7 +41,7 @@ const Blog2 = () => {
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">Preventive Measures and Dietary Solutions</h2>
       <p className="text-gray-700 leading-relaxed mb-6">
-        Preventing anal gland issues involves a proactive approach to your pet’s diet and health. Consulting with your veterinarian to devise an appropriate diet plan is essential. They may recommend incorporating fish oil and increased dietary fiber to promote healthy digestion and anal gland expression. Natural remedies like canned pure pumpkin, cooked fresh pumpkin, or unsalted pumpkin seeds are often advised additions to aid in this regard. However, it’s crucial to ensure any pumpkin product is free of xylitol, a sweetener that is toxic to dogs.
+        Preventing anal gland issues involves a proactive approach to your pet&rsquo;s diet and health. Consulting with your veterinarian to devise an appropriate diet plan is essential. They may recommend incorporating fish oil and increased dietary fiber to promote healthy digestion and anal gland expression. Natural remedies like canned pure pumpkin, cooked fresh pumpkin, or unsalted pumpkin seeds are often advised additions to aid in this regard. However, it&rsquo;s crucial to ensure any pumpkin product is free of xylitol, a sweetener that is toxic to dogs.
       </p>
 
       <h2 className="text-2xl font-semibold text-secondary mb-4">Closing Thoughts on Anal Gland Health</h2>

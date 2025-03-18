@@ -4,7 +4,7 @@ import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
-
+import Image from "next/image";
 // Plugins
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -34,7 +34,7 @@ const ClinicTourGallery = () => {
             href={`/clinictour/${img}`}
             className="block overflow-hidden rounded-lg shadow-md"
           >
-            <img
+            <Image
               src={`/clinictour/${img}`}
               alt={`Clinic Picture ${index + 1}`}
               className="object-cover w-full h-60 hover:scale-105 transition-transform duration-300"

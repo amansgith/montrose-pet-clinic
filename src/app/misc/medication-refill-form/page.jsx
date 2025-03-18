@@ -51,21 +51,21 @@ export default function MedicationRefillForm() {
               type="text"
               name="lastName"
               placeholder="Last Name"
-              className="input-field"
+              className="input-field block w-full"
               onChange={handleChange}
             />
             <input
               type="text"
               name="firstName"
               placeholder="First Name"
-              className="input-field"
+              className="input-field block w-full"
               onChange={handleChange}
             />
             <input
               type="tel"
               name="cellPhone"
               placeholder="Cell Phone"
-              className="input-field col-span-2"
+              className="input-field block w-full md:col-span-2"
               onChange={handleChange}
             />
           </div>
@@ -78,12 +78,12 @@ export default function MedicationRefillForm() {
             type="text"
             name="petName"
             placeholder="Name of Pet"
-            className="input-field"
+            className="input-field block w-full"
             onChange={handleChange}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-            <select name="animal" className="input-field" onChange={handleChange}>
+            <select name="animal" className="input-field block w-full" onChange={handleChange}>
               <option value="Dog">Dog</option>
               <option value="Cat">Cat</option>
               <option value="Other">Other</option>
@@ -93,7 +93,7 @@ export default function MedicationRefillForm() {
                 type="text"
                 name="otherAnimal"
                 placeholder="Specify Animal"
-                className="input-field col-span-2"
+                className="input-field block w-full md:col-span-2"
                 onChange={handleChange}
               />
             )}
@@ -101,10 +101,10 @@ export default function MedicationRefillForm() {
               type="number"
               name="age"
               placeholder="Age (Years)"
-              className="input-field"
+              className="input-field block w-full"
               onChange={handleChange}
             />
-            <select name="sex" className="input-field" onChange={handleChange}>
+            <select name="sex" className="input-field block w-full" onChange={handleChange}>
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>
@@ -117,14 +117,14 @@ export default function MedicationRefillForm() {
           <textarea
             name="medicationDetails"
             placeholder="Name of Medication(s), Dose, and Frequency of Administration"
-            className="input-field h-24"
+            className="input-field block w-full h-24"
             onChange={handleChange}
           ></textarea>
           <input
             type="text"
             name="quantityRemaining"
             placeholder="Quantity Remaining"
-            className="input-field mt-2"
+            className="input-field block w-full mt-2"
             onChange={handleChange}
           />
         </fieldset>
@@ -136,7 +136,7 @@ export default function MedicationRefillForm() {
             type="tel"
             name="contactNumber"
             placeholder="Best phone number for pickup"
-            className="input-field"
+            className="input-field block w-full"
             onChange={handleChange}
           />
         </fieldset>

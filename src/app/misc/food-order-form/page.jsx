@@ -44,21 +44,21 @@ export default function PrescriptionFoodOrderForm() {
               type="text"
               name="lastName"
               placeholder="Last Name"
-              className="input-field"
+              className="input-field block w-full"
               onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
             />
             <input
               type="text"
               name="firstName"
               placeholder="First Name"
-              className="input-field"
+              className="input-field block w-full"
               onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
             />
             <input
               type="tel"
               name="phone"
               placeholder="Phone"
-              className="input-field col-span-2"
+              className="input-field block w-full md:col-span-2"
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             />
           </div>
@@ -69,34 +69,34 @@ export default function PrescriptionFoodOrderForm() {
           <legend className="text-lg font-semibold">Pet Details</legend>
           {formData.pets.map((pet, index) => (
             <div key={index} className="mt-4 space-y-2">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <input
                   type="text"
                   placeholder={`Name of Pet ${index + 1}`}
-                  className="input-field"
+                  className="input-field block w-full"
                   value={pet.name}
                   onChange={(e) => handleChange(e, index, "name")}
                 />
                 <input
                   type="text"
                   placeholder={`Name of Pet Food ${index + 1}`}
-                  className="input-field col-span-2"
+                  className="input-field block w-full md:col-span-2"
                   value={pet.food}
                   onChange={(e) => handleChange(e, index, "food")}
                 />
               </div>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <input
                   type="text"
                   placeholder={`Size of Bag ${index + 1}`}
-                  className="input-field"
+                  className="input-field block w-full"
                   value={pet.bagSize}
                   onChange={(e) => handleChange(e, index, "bagSize")}
                 />
                 <input
                   type="text"
                   placeholder={`How many bags or cans requested? ${index + 1}`}
-                  className="input-field col-span-2"
+                  className="input-field block w-full md:col-span-2"
                   value={pet.quantity}
                   onChange={(e) => handleChange(e, index, "quantity")}
                 />
@@ -104,7 +104,7 @@ export default function PrescriptionFoodOrderForm() {
               <input
                 type="text"
                 placeholder={`How many days of food left? ${index + 1}`}
-                className="input-field"
+                className="input-field block w-full"
                 value={pet.daysLeft}
                 onChange={(e) => handleChange(e, index, "daysLeft")}
               />

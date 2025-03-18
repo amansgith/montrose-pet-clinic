@@ -1,5 +1,6 @@
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -24,11 +25,36 @@ const Footer = () => {
         <div className="w-full md:w-1/4 text-center md:text-left">
           <h3 className="text-lg md:text-xl font-semibold text-red-500 mb-4">Quick Links</h3>
           <ul className="text-gray-700 space-y-2">
-            {["Home", "About Us", "Our Team", "Service", "Gallery", "Contact Us"].map((link, index) => (
-              <li key={index}>
-                <a href="#" className="hover:text-red-500 transition">{link}</a>
-              </li>
-            ))}
+            <li>
+              <Link href="/">
+                <span className="hover:text-red-500 transition">Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <span className="hover:text-red-500 transition">About Us</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about/team">
+                <span className="hover:text-red-500 transition">Our Team</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/services">
+                <span className="hover:text-red-500 transition">Service</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/misc/gallery">
+                <span className="hover:text-red-500 transition">Gallery</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <span className="hover:text-red-500 transition">Contact Us</span>
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -39,10 +65,10 @@ const Footer = () => {
             Unit 109, 6002 29 Ave, Beaumont, AB T4X 0H5, Canada
           </p>
           <p className="text-gray-700 font-bold mt-2 text-sm md:text-base">
-            Phone: <span className="font-normal">780-929-7363</span>
+            Phone: <Link href="tel:7809297363"><span className="font-normal text-blue-600 hover:text-red-500 transition">780-929-7363</span></Link>
           </p>
           <p className="text-gray-700 font-bold text-sm md:text-base">
-            Email: <span className="font-normal">infomontrosepet@gmail.com</span>
+            Email: <Link href="mailto:infomontrosepet@gmail.com"><span className="font-normal text-blue-600 hover:text-red-500 transition">infomontrosepet@gmail.com</span></Link>
           </p>
         </div>
 
@@ -50,12 +76,16 @@ const Footer = () => {
         <div className="w-full md:w-1/4 text-center md:text-left">
           <h3 className="text-lg md:text-xl font-semibold text-red-500 mb-4">Join Us on Social Media</h3>
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="#" className="text-blue-600 text-2xl hover:text-blue-800 transition">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="text-pink-500 text-2xl hover:text-pink-700 transition">
-              <FaInstagram />
-            </a>
+            <Link href="https://www.facebook.com/MontrosePetClinic">
+              <span className="text-blue-600 text-2xl hover:text-blue-800 transition">
+                <FaFacebookF />
+              </span>
+            </Link>
+            <Link href="https://www.instagram.com/montrose_pet_clinic">
+              <span className="text-pink-500 text-2xl hover:text-pink-700 transition">
+                <FaInstagram />
+              </span>
+            </Link>
           </div>
         </div>
       </div>

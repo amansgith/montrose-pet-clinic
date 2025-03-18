@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import {
@@ -23,7 +24,7 @@ const ClinicTour = () => {
             <FaCat /> Request an Appointment
           </button>
         </Link>
-        <Link href="/misc/gallery">
+        <Link href="/virtual-tour">
           <button className="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-md hover:bg-secondary transition">
             <FaDog /> Take a Virtual Tour
           </button>

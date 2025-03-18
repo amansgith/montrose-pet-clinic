@@ -13,7 +13,7 @@ const Contact = () => {
         {/* Working Hours */}
         <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold text-gray-800 mb-4">Working Days</h3>
-          <div className="grid grid-cols-2 gap-4 text-lg text-gray-600 mb-6">
+          <div className="grid grid-cols-2 gap-4 md:text-lg text-gray-600 mb-6">
             <div>
               <p>Monday</p>
               <p>Tuesday</p>
@@ -44,7 +44,7 @@ const Contact = () => {
               <FaPhone className="text-primary" /> +1 (780) 929 7363
             </li>
             <li className="flex items-center gap-2 mb-2">
-              <FaEnvelope className="text-primary" /> info@montrosepetclinic.com
+              <FaEnvelope className="text-primary" /> infomontrose@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-primary" /> 6002 29 Ave, Beaumont, AB T4X 0H5, Canada
@@ -85,6 +85,7 @@ const Contact = () => {
 
       {/* Google Map */}
       <div className="mt-12 w-full h-[400px] rounded-lg overflow-hidden shadow-md">
+        <h1 className="text-center text-3xl my-2 text-primary font-bold">Find us on the Map</h1>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d327332.3641928253!2d-113.42380164905036!3d53.32930458543105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a01cc6146d30b7%3A0x66ba5d38e58fdc80!2sMontrose%20Pet%20Clinic%20Inc!5e1!3m2!1sen!2sus!4v1742122764950!5m2!1sen!2sus"
           className="w-full h-full"

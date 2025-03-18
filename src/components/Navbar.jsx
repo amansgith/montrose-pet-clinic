@@ -1,14 +1,28 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { FaFacebookF, FaInstagram, FaTimes, FaChevronDown } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTimes,
+  FaChevronDown,
+} from "react-icons/fa";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
 import Image from "next/image";
 import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
 
+const about = [
+  { name: "About Montrose Pet Clinic", href: "/about" },
+  { name: "Our Mission and Values", href: "/about/mission-values" },
+  { name: "Our Team", href: "/about/team" },
+];
+
 const services = [
-  { name: "Annual wellness exam & Vaccinations", href: "/services/wellness-exam-and-vaccination" },
+  {
+    name: "Annual wellness exam & Vaccinations",
+    href: "/services/wellness-exam-and-vaccination",
+  },
   { name: "Puppy/ Kitten Exam", href: "/services/puppy-kitten-exam" },
   { name: "Deworming", href: "/services/deworming" },
   { name: "Illness Exam", href: "/services/illness-exam" },
@@ -20,28 +34,41 @@ const services = [
   { name: "Nutrition Consult", href: "/services/nutrition" },
   { name: "Radiology", href: "/services/radiology" },
   { name: "Miscellaneous Services", href: "/services/misc-services" },
-  { name: "Geriatric Patient Care", href: "/services/geriatric-patient-care" },
-  { name: "Pet Insurance & Financing", href: "/services/pet-insurance-finance" },
+  { name: "Geriatric Patient Care", href: "/services/geriatric-care" },
+  { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
 ];
 
 const newClients = [
   { name: "Registration Form", href: "/newClients/registration" },
-  { name: "Medication Refill form", href: "/newClients/medication-refill-form" },
-  { name: "Food Order Forms", href: "/newClients/food-order-form" },
-  { name: "Policies", href: "/newclients/policies" },
-  { name: "Puppy/Kitten Plans", href: "/newclients/puppykittenplans" },
+  { name: "Policies", href: "/newClients/policies" },
   { name: "FAQ", href: "/newclients/faq" },
 ];
 
+const wellnessplans = [
+  { name: "Kitten Wellness Plans", href: "/misc/wellness-plans/kitten" },
+  { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy" },
+  { name: "Feline Wellness Plans", href: "/misc/wellness-plans/feline" },
+  { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine" },
+  { name: "Dental Plans", href: "/misc/wellness-plans/dental" },
+  { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric" },
+  { name: "Reproductive sx Plans", href: "/misc/wellness-plans/reproductive" },
+];
+
 const misc = [
+  {
+    name: "Wellness Plans",
+    href: "/misc/wellness-plans",
+    submenu: wellnessplans,
+  },
   { name: "Gallery", href: "/misc/gallery" },
-  { name: "Wellness Plans", href: "/misc/wellnessplans" },
-  { name: "Monthly Promotions", href: "/misc/monthlypromotions" },
+  { name: "Monthly Promotions", href: "/misc/monthly-promotions" },
+  { name: "Medication Refill form", href: "/misc/medication-refill-form" },
+  { name: "Food Order Forms", href: "/misc/food-order-form" },
 ];
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+  { name: "About Us", href: "/about", submenu: about },
   { name: "Services", href: "/services", submenu: services },
   { name: "New Clients", href: "/newclients", submenu: newClients },
   { name: "Misc.", href: "/misc", submenu: misc },
@@ -127,37 +154,55 @@ const DeskNavbar = () => {
               <li
                 key={index}
                 className="relative group"
-                onMouseEnter={() => handleMouseEnter(index)} // Keep dropdown open when hovering over it
+                onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
                   href={item.href}
                   className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
-                   isActive(item.href) || (item.submenu && item.submenu.some((sub) => pathname.startsWith(sub.href)))
+                    isActive(item.href) ||
+                    (item.submenu &&
+                      item.submenu.some((sub) => pathname.startsWith(sub.href)))
                       ? "border-b-2 pb-5 border-blue-800 text-blue-600"
                       : ""
                   }`}
                 >
                   {item.name}
                 </Link>
+
+                {/* First Level Dropdown */}
                 {item.submenu && dropdown === index && (
-                  <div
-                    initial={{ opacity: 0, scaleY: 0 }}
-                    animate={{ opacity: 1, scaleY: 1 }}
-                    exit={{ opacity: 0, scaleY: 0 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md border border-gray-200 origin-top transform 
-                               max-h-[300px] overflow-y-auto custom-scrollbar z-50"
-                  >
+                  <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md border border-gray-200 origin-top transform z-50">
                     {item.submenu.map((sub, idx) => (
-                      <li key={idx}>
+                      <div key={idx} className="relative group">
                         <Link
                           href={sub.href}
-                          className={`block px-4 py-2 text-gray-700 hover:text-secondary ${ isActive(sub.href) ? "text-secondary" : "" }`}
+                          className={`block px-4 py-2 text-gray-700 hover:text-secondary ${
+                            isActive(sub.href) ? "text-secondary" : ""
+                          }`}
                         >
                           {sub.name}
                         </Link>
-                      </li>
+
+                        {/* Nested Wellness Dropdown */}
+                        {sub.submenu && (
+                          <div className="absolute left-full top-0 mt-0 ml-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 z-50 hidden group-hover:block">
+                            {sub.submenu.map((wellness, wIdx) => (
+                              <Link
+                                key={wIdx}
+                                href={wellness.href}
+                                className={`block px-4 py-2 text-gray-700 hover:text-secondary ${
+                                  isActive(wellness.href)
+                                    ? "text-secondary"
+                                    : ""
+                                }`}
+                              >
+                                {wellness.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -166,12 +211,22 @@ const DeskNavbar = () => {
           </ul>
         </div>
 
-        <div className="flex items-center">
-          <Link href="/newClients/registration">
-          <button className="bg-secondary text-white p-4 rounded-md font-semibold">
-            Book an Appointment
-          </button>
-          </Link>
+        {/* Appointment Button */}
+        <div className="flex gap-2">
+          <div className="flex items-center">
+            <Link href="/newClients/registration">
+              <button className="bg-secondary text-white p-4 rounded-md font-semibold">
+                Book an Appointment
+              </button>
+            </Link>
+          </div>
+          <div className="flex items-center">
+            <Link href="https://montrosepetclinic.clientvantage.ca/">
+              <button className="bg-secondary text-white p-4 rounded-md font-semibold">
+                Shop
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
@@ -181,15 +236,16 @@ const DeskNavbar = () => {
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdown, setDropdown] = useState(null);
+  const [wellnessDropdown, setWellnessDropdown] = useState(null);
   const pathname = usePathname();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  const handleDropdown = (index) => {
+  const handleDropdown = (index) =>
     setDropdown(dropdown === index ? null : index);
-  };
+
+  const handleWellnessDropdown = (index) =>
+    setWellnessDropdown(wellnessDropdown === index ? null : index);
 
   const isActive = (path) => pathname === path;
 
@@ -197,27 +253,50 @@ const MobileNavbar = () => {
     <nav className="bg-white shadow-md md:hidden relative">
       <div className="flex justify-between items-center px-4 py-2">
         <Link href="/">
-          <Image src={logo} alt="Montrose Pet Clinic Logo" width={100} height={30} />
+          <Image
+            src={logo}
+            alt="Montrose Pet Clinic Logo"
+            width={100}
+            height={30}
+          />
         </Link>
+        <Link href="/newClients/registration">
         <button className="bg-secondary text-white px-2 py-2 text-sm rounded-md font-semibold">
           Request an Appointment
         </button>
-        <button onClick={toggleMenu} className="text-gray-700 hover:bg-gray-800 hover:text-white p-2 rounded-md">
+        </Link>
+        <button
+          onClick={toggleMenu}
+          className="text-gray-700 hover:bg-gray-800 hover:text-white p-2 rounded-md"
+        >
           <RiBarChartHorizontalLine size={24} />
         </button>
       </div>
 
-      {/* Overlay */}
-      {isOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={toggleMenu}></div>}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={toggleMenu}
+        ></div>
+      )}
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-screen w-64 bg-white shadow-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50 overflow-y-auto`}
       >
+        <div className="  w-1/2 p-4 bg-white">
+          <Link href="https://montrosepetclinic.clientvantage.ca/">
+            <button className="bg-secondary text-white w-full p-4 rounded-md font-semibold">
+              Shop
+            </button>
+          </Link>
+        </div>
         <div className="p-4 h-full">
-          <button onClick={toggleMenu} className="text-gray-700 absolute top-4 right-4">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-700 absolute top-4 right-4"
+          >
             <FaTimes size={24} />
           </button>
           <ul className="mt-8 space-y-4">
@@ -228,7 +307,11 @@ const MobileNavbar = () => {
                     <button
                       onClick={() => handleDropdown(index)}
                       className={`w-full flex justify-between items-center text-gray-700 font-medium hover:text-blue-600 ${
-                        item.submenu.some((sub) => pathname.startsWith(sub.href)) ? "text-blue-600" : ""
+                        item.submenu.some((sub) =>
+                          pathname.startsWith(sub.href)
+                        )
+                          ? "text-blue-600"
+                          : ""
                       }`}
                     >
                       {item.name}
@@ -242,9 +325,45 @@ const MobileNavbar = () => {
                       <ul className="pl-4 mt-2 space-y-2">
                         {item.submenu.map((sub, idx) => (
                           <li key={idx}>
-                            <Link href={sub.href} className="block text-gray-700 hover:text-secondary">
-                              {sub.name}
-                            </Link>
+                            {sub.submenu ? (
+                              <>
+                                {/* Handle Wellness nested dropdown */}
+                                <button
+                                  onClick={() => handleWellnessDropdown(idx)}
+                                  className="w-full flex justify-between items-center text-gray-700 font-medium hover:text-blue-600"
+                                >
+                                  {sub.name}
+                                  <FaChevronDown
+                                    className={`transform transition-transform duration-300 ${
+                                      wellnessDropdown === idx
+                                        ? "rotate-180"
+                                        : "rotate-0"
+                                    }`}
+                                  />
+                                </button>
+                                {wellnessDropdown === idx && (
+                                  <ul className="pl-4 mt-2 space-y-2">
+                                    {sub.submenu.map((wellness, wIdx) => (
+                                      <li key={wIdx}>
+                                        <Link
+                                          href={wellness.href}
+                                          className="block text-gray-700 hover:text-secondary"
+                                        >
+                                          {wellness.name}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </>
+                            ) : (
+                              <Link
+                                href={sub.href}
+                                className="block text-gray-700 hover:text-secondary"
+                              >
+                                {sub.name}
+                              </Link>
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -264,6 +383,7 @@ const MobileNavbar = () => {
             ))}
           </ul>
         </div>
+        
       </div>
     </nav>
   );

@@ -28,7 +28,7 @@ export default function MissionValues() {
                 To be the leading veterinary care provider in Beaumont and the surrounding areas, 
                 leveraging the expertise of our professional team year-round. We envision a future 
                 where every pet receives the highest standard of care, and every pet owner feels 
-                confident and supported in their pet's health journey. Our vision includes:
+                confident and supported in their pet&rsquo;s health journey. Our vision includes:
               </p>
               <ul className="list-disc pl-6 mt-2 text-gray-700 leading-relaxed">
                 <li>Expanding our services to include the latest advancements in veterinary medicine.</li>

@@ -5,26 +5,21 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
-    name: "Jazmin Hiller",
-    text: "This is a great vet! They are open and willing to go over things with you so you understand. My 14-year-old dog just got dental, she’s healing very nicely!",
-  },
-  {
-    id: 2,
     name: "Maggie Stanton",
     text: "This amazing clinic is a very friendly, kind, loving, and caring vet. I bring my boy there and he loves them. They explain things very well and in detail. Keep up the amazing work, you guys!",
   },
   {
-    id: 3,
+    id: 2,
     name: "Diann R",
     text: "Dr. Koshy is always so compassionate and takes the time to explain everything. The team is all very friendly and helpful also.",
   },
   {
-    id: 4,
+    id: 3,
     name: "Sudip Punoria",
     text: "The staff is very accommodating and welcoming. The doctor was very helpful and happy to answer all my questions. Reasonable pricing as well for all the vaccines and exams.",
   },
   {
-    id: 5,
+    id: 4,
     name: "Rose Adams",
     text: "Wonderful friendly staff and doctors! My Mini Schnauzer had surgery today. When I took him in this morning, he wasn’t even shaking as the staff were so kind and gentle with him. The atmosphere at this clinic is calming. Highly recommend. Very reasonable prices too compared to other local vets!",
   },

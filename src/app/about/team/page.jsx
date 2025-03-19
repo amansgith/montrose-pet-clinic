@@ -19,7 +19,7 @@ export default function OurTeam() {
     {
       name: "Dr. Aparna Mariyam Thomas",
       role: "MSc, MVSc (Veterinarian)",
-      img: "/member3.webp",
+      img: "/aparna.webp",
       description:
         "Dr. Aparna is a veterinarian from Kerala, India, with a Master's in Veterinary Parasitology. She has worked in veterinary surgery and animal birth control programs. She now practices in Alberta, specializing in small animal internal medicine and surgery.",
     },
@@ -44,6 +44,12 @@ export default function OurTeam() {
       description:
         "Rebecca is a certified VOA from NorQuest College and joined MPC in 2023. She specializes in animal handling and enjoys hiking with her senior dog or playing video games with her cat in her spare time.",
     },
+    {
+        name: "Dr. Rajpreet Kour",
+        img: "https://images.unsplash.com/photo-1491485880348-85d48a9e5312?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description:
+          "Coming Soon",
+      },
   ];
 
   return (

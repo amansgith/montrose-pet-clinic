@@ -26,6 +26,13 @@ const EmergencyCare = () => {
       <p>
         These are some of the common emergency conditions but not limited to. Pets need immediate attention in all the above situations.
       </p>
+      <br />
+      <h3 className="text-xl font-semibold text-secondary mb-4">Emergency Contacts</h3>
+      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
+        <li>Pulse Veterinary: <a href="tel:7805709999" className="text-blue-600 hover:underline">780-570-9999</a></li>
+        <li>Guardian Veterinary Centre: <a href="tel:7804365880" className="text-blue-600 hover:underline">780-436-5880</a></li>
+        <li>Boreal Veterinary Centre Vet ER: <a href="tel:8254804881" className="text-blue-600 hover:underline">825-480-4881</a></li>
+      </ul>
     </>
   );
 

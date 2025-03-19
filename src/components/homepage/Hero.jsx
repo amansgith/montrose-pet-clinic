@@ -7,6 +7,7 @@ const slides = [
   { image: "/slider_1.jpg", text: "Welcome to Montrose Pet Clinic", btntext: "Explore Services", href: "/services" },
   { image: "/slider_3.jpg", text: "Best Care for Your Best Friend", btntext: "Request an Appointment", href:"/newClients/registration" },
   { image: "/slider_2.jpg", text: "Caring for Pets is Our Passion", btntext: "Meet our Team" , href:"/about/team"},
+  { image: "/slider_4.jpg", text: "Wellness plans for every pet.", btntext: "Explore more" , href:"/misc/wellness-plans"},
 ];
 
 const Hero = () => {

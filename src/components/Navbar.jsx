@@ -112,7 +112,7 @@ const DeskNavbar = () => {
       {/* Top Bar */}
       <div className="flex justify-between items-center px-6 py-2 text-sm bg-gray-100">
         <div className="text-primary font-semibold">
-          Call Us: <span className="text-secondary">+1 (780) 929 7363</span>
+          Call Us: <span className="text-secondary font-extrabold">+1 (780) 929 7363</span>
         </div>
         <div className="text-gray-500">
           Visit Us:{" "}

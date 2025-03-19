@@ -174,7 +174,7 @@ export default function AboutMontrose() {
         {/* Image */}
         <div className="md:w-1/2">
           <Image
-            src="/clinicfront.webp"
+            src="/counter.jpg"
             alt="Veterinary team at Montrose Pet Clinic"
             width={500}
             height={300}

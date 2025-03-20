@@ -48,11 +48,21 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-row justify-center text-center bg-primary hover:bg-secondary text-white py-4 text-2xl font-semibold">
-        <Link href="/newClients/registration" className="flex items-center gap-2">
-        <span>Request an Appointment </span>
-        <FaCircleArrowRight />
-        </Link>
+      <div className=" w-full">
+        <div className="hidden md:flex flex-col md:flex-row w-full bg-secondary text-white text-center">
+          <div className="hidden md:block w-full md:w-[70%] py-4 md:py-6 bg-blue-600 clip-left">
+            <Link className="flex items-center justify-center gap-2 px-2 hover:translate-x-2 transition" href="/misc/registration">
+            <h2 className="text-lg md:text-xl font-bold ">Request an Appointment</h2><FaCircleArrowRight size={20}/>
+            </Link>
+          </div>
+          <div className="w-full md:w-[70%] py-4 md:py-6 bg-primary flex items-center justify-center clip-right">
+            <Link href="/services">
+            <button className="text-lg md:text-xl font-bold flex items-center gap-2 hover:translate-x-2 transition">
+              Send Us a Review <span className="text-xl">➤</span>
+            </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

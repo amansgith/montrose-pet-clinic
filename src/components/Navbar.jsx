@@ -41,7 +41,7 @@ const services = [
 const newClients = [
   { name: "Registration Form", href: "/newClients/registration" },
   { name: "Policies", href: "/newClients/policies" },
-  { name: "FAQ", href: "/newclients/faq" },
+  { name: "FAQ", href: "/newClients/faq" },
 ];
 
 const wellnessplans = [
@@ -60,10 +60,10 @@ const misc = [
     href: "/misc/wellness-plans",
     submenu: wellnessplans,
   },
-  { name: "Gallery", href: "/misc/gallery" },
-  { name: "Monthly Promotions", href: "/misc/monthly-promotions" },
   { name: "Medication Refill form", href: "/misc/medication-refill-form" },
   { name: "Food Order Forms", href: "/misc/food-order-form" },
+  { name: "Monthly Promotions", href: "/misc/monthly-promotions" },
+  { name: "Gallery", href: "/misc/gallery" },
 ];
 
 const navItems = [
@@ -110,7 +110,7 @@ const DeskNavbar = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="flex justify-between items-center px-6 py-2 text-sm bg-gray-100">
+      <div className="flex justify-between items-center px-6 py-2 text-lg bg-gray-100">
         <div className="text-primary font-semibold">
           Call Us: <span className="text-secondary font-extrabold">+1 (780) 929 7363</span>
         </div>
@@ -121,7 +121,9 @@ const DeskNavbar = () => {
           </span>
         </div>
         <div className="flex items-center justify-center gap-3">
-          <Link href="https://app.petdesk.com/sign-up/montrose-pet-clinic-inc/052e6db6-23be-49e2-be8a-4ae4ecec1554"><div className="p-2 rounded-md text-white bg-secondary">Download Our App</div></Link>
+          <Link href="https://app.petdesk.com/sign-up/montrose-pet-clinic-inc/052e6db6-23be-49e2-be8a-4ae4ecec1554">
+            <div className="p-2 rounded-md text-white bg-secondary">Download Our App</div>
+          </Link>
           <Link href="https://www.facebook.com/MontrosePetClinic/">
             <span className="text-gray-500 hover:text-secondary cursor-pointer">
               <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
@@ -140,12 +142,7 @@ const DeskNavbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <Image
-              src={logo}
-              alt="Montrose Pet Clinic Logo"
-              width={150}
-              height={50}
-            />
+            <Image src={logo} alt="Montrose Pet Clinic Logo" width={150} height={50} />
           </Link>
         </div>
 
@@ -162,8 +159,7 @@ const DeskNavbar = () => {
                   href={item.href}
                   className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
                     isActive(item.href) ||
-                    (item.submenu &&
-                      item.submenu.some((sub) => pathname.startsWith(sub.href)))
+                    (item.submenu && item.submenu.some((sub) => pathname.startsWith(sub.href)))
                       ? "border-b-2 pb-5 border-blue-800 text-blue-600"
                       : ""
                   }`}
@@ -173,38 +169,46 @@ const DeskNavbar = () => {
 
                 {/* First Level Dropdown */}
                 {item.submenu && dropdown === index && (
-                  <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md border border-gray-200 origin-top transform z-50">
-                    {item.submenu.map((sub, idx) => (
-                      <div key={idx} className="relative group">
-                        <Link
-                          href={sub.href}
-                          className={`block px-4 py-2 text-gray-700 hover:text-secondary ${
-                            isActive(sub.href) ? "text-secondary" : ""
-                          }`}
-                        >
-                          {sub.name}
-                        </Link>
+                  <div
+                    className={`absolute left-0 mt-2 bg-white text-md shadow-lg rounded-md border border-gray-200 origin-top transform z-50 ${
+                      item.submenu.length > 6 ? "w-96" : "w-56" // Wider for multi-column
+                    }`}
+                  >
+                    <div
+                      className={`grid ${
+                        item.submenu.length > 6 ? "grid-cols-2 gap-4 p-2" : "grid-cols-1 p-2"
+                      }`}
+                    >
+                      {item.submenu.map((sub, idx) => (
+                        <div key={idx} className="relative group">
+                          <Link
+                            href={sub.href}
+                            className={`block px-2 py-1 text-gray-700 hover:text-secondary ${
+                              isActive(sub.href) ? "text-secondary" : ""
+                            }`}
+                          >
+                            {sub.name}
+                          </Link>
 
-                        {/* Nested Wellness Dropdown */}
-                        {sub.submenu && (
-                          <div className="absolute left-full top-0 mt-0 ml-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 z-50 hidden group-hover:block">
-                            {sub.submenu.map((wellness, wIdx) => (
-                              <Link
-                                key={wIdx}
-                                href={wellness.href}
-                                className={`block px-4 py-2 text-gray-700 hover:text-secondary ${
-                                  isActive(wellness.href)
-                                    ? "text-secondary"
-                                    : ""
-                                }`}
-                              >
-                                {wellness.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                          {/* Nested Dropdown (unchanged) */}
+                          {sub.submenu && (
+                            <div className="absolute left-full top-0 mt-0 ml-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 z-50 hidden group-hover:block">
+                              {sub.submenu.map((wellness, wIdx) => (
+                                <Link
+                                  key={wIdx}
+                                  href={wellness.href}
+                                  className={`block px-4 py-2 text-gray-700 hover:text-secondary ${
+                                    isActive(wellness.href) ? "text-secondary" : ""
+                                  }`}
+                                >
+                                  {wellness.name}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </li>
@@ -212,7 +216,7 @@ const DeskNavbar = () => {
           </ul>
         </div>
 
-        {/* Appointment Button */}
+        {/* Appointment Buttons */}
         <div className="flex gap-2">
           <div className="flex items-center">
             <Link href="/newClients/registration">

@@ -17,11 +17,11 @@ export default function OurTeam() {
         "Dr. Koshy earned his DVM in 2007 and has since worked in small animal clinics across Alberta. He has a Master's in Business Administration and completed the VSTEP program at the University of Guelph. His areas of interest include small animal internal medicine and surgery.",
     },
     {
-      name: "Dr. Aparna Mariyam Thomas",
-      role: "MSc, MVSc (Veterinarian)",
-      img: "/aparna.webp",
+      name: "Dr. Rajpreet Kaur",
+      role: "(Veterinarian)",
+      img: "/member3.jpg",
       description:
-        "Dr. Aparna is a veterinarian from Kerala, India, with a Master's in Veterinary Parasitology. She has worked in veterinary surgery and animal birth control programs. She now practices in Alberta, specializing in small animal internal medicine and surgery.",
+        "Completed her DVM from India in 2018 and has a Master’s in veterinary microbiology & immunology. Moved to Canada in 2022 and focusing in the process of finishing up her licensing to practice veterinary medicine in Canada. She works in Montrose Pet Clinic as a temporary licensed vet. Her goal is to provide compassionate and dedicated quality care to pets. Her area of interest are veterinary medicine and surgery. Outside work she likes painting, hiking and reading.",
     },
     {
       name: "Amanda O",

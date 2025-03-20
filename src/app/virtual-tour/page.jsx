@@ -11,11 +11,10 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 // Array of image filenames
 const images = [
-  "clinicfront.webp","IMG_6643.jpg", "IMG_6644.jpg", "IMG_6645.jpg", "IMG_6647.jpg", "IMG_6648.jpg",
-  "IMG_6649.jpg", "IMG_6650.jpg", "IMG_6653.jpg", "IMG_6654.jpg",
-  "IMG_6656.jpg", "IMG_6657.jpg", "IMG_6659.jpg", "IMG_6660.jpg", "IMG_6661.jpg",
-  "IMG_6665.jpg",  "IMG_6667.jpg", "IMG_6668.jpg",
-  "IMG_6669.jpg", "IMG_6671.jpg", "IMG_6672.jpg", "IMG_6673.jpg"
+  "clinicfront.webp",, "IMG_6660.jpg", "IMG_6657.jpg", "IMG_6644.jpg", "IMG_6645.jpg", "IMG_6647.jpg", "IMG_6648.jpg",
+  "IMG_6649.jpg", "IMG_6643.jpg","IMG_6650.jpg", "IMG_6653.jpg", "IMG_6654.jpg",
+  "IMG_6656.jpg", "IMG_6659.jpg", "IMG_6668.jpg",
+  "IMG_6669.jpg", "IMG_6671.jpg"
 ];
 
 const ClinicTourGallery = () => {
@@ -37,6 +36,8 @@ const ClinicTourGallery = () => {
             <Image
               src={`/clinictour/${img}`}
               alt={`Clinic Picture ${index + 1}`}
+              width={500}
+              height={300}
               className="object-cover w-full h-60 hover:scale-105 transition-transform duration-300"
               loading="lazy"
             />

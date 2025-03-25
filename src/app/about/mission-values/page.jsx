@@ -16,7 +16,7 @@ export default function MissionValues() {
                 At Montrose Pet Clinic, we see pets as family. They offer us unconditional love and 
                 deserve the highest level of care. Our mission is to foster the best 
                 veterinarian-client-patient relationship, ensuring 
-                <span className="font-semibold"> The best care for your best friend</span> 
+                <span className="font-semibold"> The best care for your best friend </span> 
                 with the support of modern technology and a professional environment.
               </p>
             </div>

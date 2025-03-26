@@ -45,13 +45,25 @@ const newClients = [
 ];
 
 const wellnessplans = [
-  { name: "Kitten Wellness Plans", href: "/misc/wellness-plans/kitten-wellness" },
+  {
+    name: "Kitten Wellness Plans",
+    href: "/misc/wellness-plans/kitten-wellness",
+  },
   { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy-wellness" },
-  { name: "Feline Wellness Plans", href: "/misc/wellness-plans/feline-wellness" },
-  { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine-wellness" },
+  {
+    name: "Feline Wellness Plans",
+    href: "/misc/wellness-plans/feline-wellness",
+  },
+  {
+    name: "Canine Wellness Plans",
+    href: "/misc/wellness-plans/canine-wellness",
+  },
   { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
   { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric-plans" },
-  { name: "Reproductive sx Plans", href: "/misc/wellness-plans/reproductive-plans" },
+  {
+    name: "Reproductive sx Plans",
+    href: "/misc/wellness-plans/reproductive-plans",
+  },
 ];
 
 const misc = [
@@ -112,7 +124,10 @@ const DeskNavbar = () => {
       {/* Top Bar */}
       <div className="flex justify-between items-center px-6 py-2 text-lg bg-gray-100">
         <div className="text-primary font-semibold">
-          Call Us: <span className="text-secondary font-extrabold">+1 (780) 929 7363</span>
+          Call Us:{" "}
+          <span className="text-secondary font-extrabold">
+            +1 (780) 929 7363
+          </span>
         </div>
         <div className="text-gray-500">
           Visit Us:{" "}
@@ -122,7 +137,9 @@ const DeskNavbar = () => {
         </div>
         <div className="flex items-center justify-center gap-3">
           <Link href="https://app.petdesk.com/sign-up/montrose-pet-clinic-inc/052e6db6-23be-49e2-be8a-4ae4ecec1554">
-            <div className="p-2 rounded-md text-white bg-secondary">Download Our App</div>
+            <div className="p-2 rounded-md text-white bg-secondary">
+              Download Our App
+            </div>
           </Link>
           <Link href="https://www.facebook.com/MontrosePetClinic/">
             <span className="text-gray-500 hover:text-secondary cursor-pointer">
@@ -142,7 +159,12 @@ const DeskNavbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <Image src={logo} alt="Montrose Pet Clinic Logo" width={150} height={50} />
+            <Image
+              src={logo}
+              alt="Montrose Pet Clinic Logo"
+              width={150}
+              height={50}
+            />
           </Link>
         </div>
 
@@ -159,7 +181,8 @@ const DeskNavbar = () => {
                   href={item.href}
                   className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
                     isActive(item.href) ||
-                    (item.submenu && item.submenu.some((sub) => pathname.startsWith(sub.href)))
+                    (item.submenu &&
+                      item.submenu.some((sub) => pathname.startsWith(sub.href)))
                       ? "border-b-2 pb-5 border-blue-800 text-blue-600"
                       : ""
                   }`}
@@ -176,7 +199,9 @@ const DeskNavbar = () => {
                   >
                     <div
                       className={`grid ${
-                        item.submenu.length > 6 ? "grid-cols-2 gap-4 p-2" : "grid-cols-1 p-2"
+                        item.submenu.length > 6
+                          ? "grid-cols-2 gap-4 p-2"
+                          : "grid-cols-1 p-2"
                       }`}
                     >
                       {item.submenu.map((sub, idx) => (
@@ -198,7 +223,9 @@ const DeskNavbar = () => {
                                   key={wIdx}
                                   href={wellness.href}
                                   className={`block px-4 py-2 text-gray-700 hover:text-secondary ${
-                                    isActive(wellness.href) ? "text-secondary" : ""
+                                    isActive(wellness.href)
+                                      ? "text-secondary"
+                                      : ""
                                   }`}
                                 >
                                   {wellness.name}
@@ -254,6 +281,12 @@ const MobileNavbar = () => {
 
   const isActive = (path) => pathname === path;
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+    setDropdown(null);
+    setWellnessDropdown(null);
+  };
+
   return (
     <nav className="bg-white shadow-md md:hidden relative">
       <div className="flex justify-between items-center px-4 py-2">
@@ -266,9 +299,9 @@ const MobileNavbar = () => {
           />
         </Link>
         <Link href="/newClients/registration">
-        <button className="bg-secondary text-white px-2 py-2 text-sm rounded-md font-semibold">
-          Request an Appointment
-        </button>
+          <button className="bg-secondary text-white px-2 py-2 text-sm rounded-md font-semibold">
+            Request an Appointment
+          </button>
         </Link>
         <button
           onClick={toggleMenu}
@@ -353,6 +386,7 @@ const MobileNavbar = () => {
                                         <Link
                                           href={wellness.href}
                                           className="block text-gray-700 hover:text-secondary"
+                                          onClick={handleLinkClick} // Close sidebar on link click
                                         >
                                           {wellness.name}
                                         </Link>
@@ -365,6 +399,7 @@ const MobileNavbar = () => {
                               <Link
                                 href={sub.href}
                                 className="block text-gray-700 hover:text-secondary"
+                                onClick={handleLinkClick} // Close sidebar on link click
                               >
                                 {sub.name}
                               </Link>
@@ -380,6 +415,7 @@ const MobileNavbar = () => {
                     className={`block text-gray-700 font-medium hover:text-blue-600 ${
                       isActive(item.href) ? "text-blue-600" : ""
                     }`}
+                    onClick={handleLinkClick} // Close sidebar on link click
                   >
                     {item.name}
                   </Link>
@@ -388,7 +424,6 @@ const MobileNavbar = () => {
             ))}
           </ul>
         </div>
-        
       </div>
     </nav>
   );

@@ -78,7 +78,7 @@ const Location = () => {
                 name="message"
                 placeholder="Message"
                 rows="4"
-                className="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-300"
+                className="w-full p-3 resize-none border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-300"
                 value={formData.message}
                 onChange={handleChange}
                 required

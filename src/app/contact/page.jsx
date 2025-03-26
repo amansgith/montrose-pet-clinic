@@ -13,6 +13,8 @@ const Contact = () => {
 
   const [formData, setFormData] = useState(initialFormData);
   const [messagePlaceholder, setMessagePlaceholder] = useState("Message");
+  const [formStatus, setFormStatus] = useState(null); // New state for form status
+  const [isLoading, setIsLoading] = useState(false); // New state for loading
 
   // Handle input changes
   const handleChange = (e) => {
@@ -31,6 +33,7 @@ const Contact = () => {
   // Form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Set loading to true
 
     // Sanitize form data
     const sanitizedFormData = {
@@ -50,14 +53,16 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        alert("Message Sent Successfully!");
+        setFormStatus("success");
         setFormData(initialFormData); // Reset form data
       } else {
-        alert("Error sending message. Please try again.");
+        setFormStatus("error");
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Error sending message. Please try again.");
+      setFormStatus("error");
+    } finally {
+      setIsLoading(false); // Set loading to false
     }
   };
 
@@ -214,10 +219,40 @@ const Contact = () => {
             <button
               type="submit"
               className="w-full bg-primary text-white font-bold py-3 rounded-md flex justify-center items-center gap-2 hover:bg-secondary transition"
+              disabled={isLoading} // Disable button while loading
             >
-              🐶 Send Message
+              {isLoading ? (
+                <svg
+                  className="animate-spin h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                  ></path>
+                </svg>
+              ) : (
+                "🐶 Send Message"
+              )}
             </button>
           </form>
+          {formStatus === "success" && (
+            <p className="mt-4 text-green-600">Message Sent Successfully!</p>
+          )}
+          {formStatus === "error" && (
+            <p className="mt-4 text-red-600">Error sending message. Please try again.</p>
+          )}
         </div>
       </div>
 

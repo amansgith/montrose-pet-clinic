@@ -15,6 +15,8 @@ export default function PrescriptionFoodOrderForm() {
   };
 
   const [formData, setFormData] = useState(initialFormData);
+  const [formStatus, setFormStatus] = useState(null); // New state for form status
+  const [isLoading, setIsLoading] = useState(false); // New state for loading
 
   const handleChange = (e, index, field) => {
     const updatedPets = [...formData.pets];
@@ -24,6 +26,7 @@ export default function PrescriptionFoodOrderForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Set loading to true
 
     // Sanitize form data
     const sanitizedFormData = {
@@ -49,14 +52,16 @@ export default function PrescriptionFoodOrderForm() {
       });
 
       if (response.ok) {
-        alert("Prescription Food Order Submitted!");
+        setFormStatus("success");
         setFormData(initialFormData); // Reset form data
       } else {
-        alert("Error submitting form. Please try again.");
+        setFormStatus("error");
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert("Error submitting form. Please try again.");
+      setFormStatus("error");
+    } finally {
+      setIsLoading(false); // Set loading to false
     }
   };
 
@@ -162,22 +167,52 @@ export default function PrescriptionFoodOrderForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition"
+          className="w-full bg-primary text-white py-3 rounded-lg font-semibold flex justify-center items-center gap-2 hover:bg-secondary transition"
+          disabled={isLoading} // Disable button while loading
         >
-          Send
+          {isLoading ? (
+            <svg
+              className="animate-spin h-5 w-5 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+              ></path>
+            </svg>
+          ) : (
+            "Send"
+          )}
         </button>
-
-        {/* Notes Section */}
-        <div className="mt-4 p-4 bg-gray-100 border-l-4 border-yellow-500 text-sm text-gray-700">
-          <p>
-            <strong>Note:</strong> Up to 3 pet foods can be ordered at a time.
-            Once received, we will place the order and contact you when it’s
-            ready for pickup. Items on backorder will not be ordered, and you
-            will be notified. You may also place an order online for home
-            delivery or contact us directly for in-clinic pickup.
-          </p>
-        </div>
       </form>
+      {formStatus === "success" && (
+        <p className="mt-4 text-green-600">Prescription Food Order Submitted!</p>
+      )}
+      {formStatus === "error" && (
+        <p className="mt-4 text-red-600">Error submitting form. Please try again.</p>
+      )}
+
+      {/* Notes Section */}
+      <div className="mt-4 p-4 bg-gray-100 border-l-4 border-yellow-500 text-sm text-gray-700">
+        <p>
+          <strong>Note:</strong> Up to 3 pet foods can be ordered at a time.
+          Once received, we will place the order and contact you when it’s
+          ready for pickup. Items on backorder will not be ordered, and you
+          will be notified. You may also place an order online for home
+          delivery or contact us directly for in-clinic pickup.
+        </p>
+      </div>
     </div>
   );
 }

@@ -18,6 +18,8 @@ export default function MedicationRefillForm() {
   };
 
   const [formData, setFormData] = useState(initialFormData);
+  const [formStatus, setFormStatus] = useState(null); // New state for form status
+  const [isLoading, setIsLoading] = useState(false); // New state for loading
 
   // Handle input changes
   const handleChange = (e) => {
@@ -27,6 +29,7 @@ export default function MedicationRefillForm() {
   // Form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Set loading to true
 
     // Sanitize form data
     const sanitizedFormData = {
@@ -53,14 +56,16 @@ export default function MedicationRefillForm() {
       });
 
       if (response.ok) {
-        alert("Medication Refill Request Submitted!");
+        setFormStatus("success");
         setFormData(initialFormData); // Reset form data
       } else {
-        alert("Error submitting form. Please try again.");
+        setFormStatus("error");
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert("Error submitting form. Please try again.");
+      setFormStatus("error");
+    } finally {
+      setIsLoading(false); // Set loading to false
     }
   };
 
@@ -161,11 +166,11 @@ export default function MedicationRefillForm() {
 
         {/* Medication Details */}
         <fieldset className="border border-gray-300 p-4 rounded-lg">
-          <legend className="text-lg font-semibold">Medication Details (Add at max 3)</legend>
+          <legend className="text-lg font-semibold">Medication Details</legend>
           <textarea
             name="medicationDetails"
-            placeholder="Name of upto 3 Medication(s), Dose, and Frequency of Administration"
-            className="input-field resize-none block w-full h-24"
+            placeholder="Name of Medication(s), Dose, and Frequency of Administration"
+            className="input-field block w-full h-24"
             value={formData.medicationDetails}
             onChange={handleChange}
             required
@@ -198,21 +203,51 @@ export default function MedicationRefillForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition"
+          className="w-full bg-primary text-white py-3 rounded-lg font-semibold flex justify-center items-center gap-2 hover:bg-secondary transition"
+          disabled={isLoading} // Disable button while loading
         >
-          Send
+          {isLoading ? (
+            <svg
+              className="animate-spin h-5 w-5 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+              ></path>
+            </svg>
+          ) : (
+            "Send"
+          )}
         </button>
-
-        {/* Notes Section */}
-        <div className="mt-4 p-4 bg-gray-100 border-l-4 border-yellow-500 text-sm text-gray-700">
-          <p>
-            <strong>Note:</strong> This form can be used for 1 pet with up to 3
-            medications. Medications on backorder will not be filled. Refills
-            are for chronic illnesses only, and annual exams are required. A
-            complete physical exam may be necessary for other medications.
-          </p>
-        </div>
       </form>
+      {formStatus === "success" && (
+        <p className="mt-4 text-green-600">Medication Refill Request Submitted!</p>
+      )}
+      {formStatus === "error" && (
+        <p className="mt-4 text-red-600">Error submitting form. Please try again.</p>
+      )}
+
+      {/* Notes Section */}
+      <div className="mt-4 p-4 bg-gray-100 border-l-4 border-yellow-500 text-sm text-gray-700">
+        <p>
+          <strong>Note:</strong> This form can be used for 1 pet with up to 3
+          medications. Medications on backorder will not be filled. Refills
+          are for chronic illnesses only, and annual exams are required. A
+          complete physical exam may be necessary for other medications.
+        </p>
+      </div>
     </div>
   );
 }

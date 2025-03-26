@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-1 py-12">
       <h1 className="text-4xl font-bold text-primary text-center mb-8">
         Contact Us
       </h1>
@@ -16,7 +16,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Opening Hours
             </h3>
-            <div className="grid grid-cols-2 gap-4 md:text-lg text-gray-600 mb-6">
+            <div className="grid grid-cols-2 md:text-lg text-gray-600 mb-6">
               <div>
                 <p>Monday</p>
                 <p>Tuesday</p>
@@ -39,30 +39,69 @@ const Contact = () => {
             <p className="text-sm text-red-600 mb-6">
               *We are closed for statutory holidays.
             </p>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Contact Information
-            </h3>
-            <ul className="text-lg text-gray-600 mb-4">
-              <li className="flex items-center gap-2 mb-2">
-                <FaPhone className="text-primary" /> +1 (780) 929 7363
-              </li>
-              <li className="flex items-center gap-2 mb-2">
-                <FaEnvelope className="text-primary" /> infomontrosepet@gmail.com
-              </li>
-              <li className="flex items-center gap-2 mb-4">
-                <FaMapMarkerAlt className="text-primary" /> 6002 29 Ave, Beaumont,
-                AB T4X 0H5, Canada
-              </li>
-            </ul>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              In Case of Emergency (24/7 Available)
-            </h3>
-            <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
-              <li>Pulse Veterinary: <a href="tel:7805709999" className="text-blue-600 hover:underline">780-570-9999</a></li>
-              <li>Guardian Veterinary Centre: <a href="tel:7804365880" className="text-blue-600 hover:underline">780-436-5880</a></li>
-              <li>Boreal Veterinary Centre <a href="tel:7803064400" className="text-blue-600 hover:underline">780-306-4400</a></li>
-            <li>Vet ER: <a href="tel:8254804881" className="text-blue-600 hover:underline">825-480-4881</a></li>
-            </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  Contact Information
+                </h3>
+                <ul className=" text-gray-600 mb-4">
+                  <li className="flex items-center gap-2 mb-2">
+                    <FaPhone className="text-primary" /> +1 (780) 929 7363
+                  </li>
+                  <li className="flex items-center gap-2 mb-2">
+                    <FaEnvelope className="text-primary" />{" "}
+                    infomontrosepet@gmail.com
+                  </li>
+                  <li className="flex items-center gap-2 mb-4">
+                    <FaMapMarkerAlt className="text-primary" /> 6002 29 Ave,
+                    Beaumont, AB T4X 0H5, Canada
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  In Case of Emergency
+                </h3>
+                <ul className="list-outside text-gray-700 leading-relaxed">
+                  <li>
+                    Pulse Veterinary:{" "}
+                    <a
+                      href="tel:7805709999"
+                      className="text-blue-600 hover:underline"
+                    >
+                      780-570-9999
+                    </a>
+                  </li>
+                  <li>
+                    Guardian Veterinary Centre:{" "}
+                    <a
+                      href="tel:7804365880"
+                      className="text-blue-600 hover:underline"
+                    >
+                      780-436-5880
+                    </a>
+                  </li>
+                  <li>
+                    Boreal Veterinary Centre:{" "}
+                    <a
+                      href="tel:7803064400"
+                      className="text-blue-600 hover:underline"
+                    >
+                      780-306-4400
+                    </a>
+                  </li>
+                  <li>
+                    Vet ER:{" "}
+                    <a
+                      href="tel:8254804881"
+                      className="text-blue-600 hover:underline"
+                    >
+                      825-480-4881
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -99,7 +138,9 @@ const Contact = () => {
 
       {/* Google Map */}
       <div className="mt-12 w-full h-[400px] rounded-lg overflow-hidden shadow-md">
-        <h1 className="text-center text-3xl my-2 text-primary font-bold">Find us on the Map</h1>
+        <h1 className="text-center text-3xl my-2 text-primary font-bold">
+          Find us on the Map
+        </h1>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d327332.3641928253!2d-113.42380164905036!3d53.32930458543105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a01cc6146d30b7%3A0x66ba5d38e58fdc80!2sMontrose%20Pet%20Clinic%20Inc!5e1!3m2!1sen!2sus!4v1742122764950!5m2!1sen!2sus"
           className="w-full h-full"

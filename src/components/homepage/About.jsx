@@ -56,7 +56,7 @@ const About = () => {
             </Link>
           </div>
           <div className="w-full md:w-[70%] py-4 md:py-6 bg-primary flex items-center justify-center clip-right">
-            <Link href="/services">
+            <Link href="/contact">
             <button className="text-lg md:text-xl font-bold flex items-center gap-2 hover:translate-x-2 transition">
               Send Us a Review <span className="text-xl">➤</span>
             </button>

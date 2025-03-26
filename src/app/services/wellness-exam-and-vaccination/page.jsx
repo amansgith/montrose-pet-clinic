@@ -3,7 +3,7 @@ import InfoSection from "@/components/InfoSection";
 const WellnessExam = () => {
   const firstSection = {
     subheading: "Annual Wellness Exam & Vaccinations",
-    text: "At Montrose Pet Clinic, our dedication to wellness and preventive care is at the heart of our practice, offering early intervention and consistent oversight to safeguard your pet’s health. Embracing a comprehensive care approach, we ensure your pet enjoys a fuller, healthier life through regular health assessments, timely vaccinations, and the early identification of health issues. Annual Wellness Exam include a head to tail physical exam of your furry friend, checking the vitals such as body temp, Heart rate and respiratory rate. This will help the veterinarian to discuss recommendations for wellbeing of your furry friend aiming early detection of disease conditions and to take appropriate actions.",
+    text: "At Montrose Pet Clinic, our dedication to wellness and preventive care is at the heart of our practice, offering early intervention and consistent oversight to safeguard your pet’s health. Embracing a comprehensive care approach, we ensure your pet enjoys a fuller, healthier life through regular health assessments, timely vaccinations, and the early identification of health issues. The annual wellness exam include a head to tail physical exam of your furry friend, checking vitals such as body temperature, heart rate, and respiratory rate. This helps the veterinarian provide personalized recommendations for your pet’s well-being, focusing on early detection of potential health issues and timely intervention.",
   };
 
   const restContent = (
@@ -27,23 +27,23 @@ const WellnessExam = () => {
         Vaccinations
       </h3>
       <p>
-        Just like in humans, vaccinations provide preventive care for pets and so they are protected from sufferings from some contagious diseases and also prevent spreading of the diseases. It saves money because you can avoid expenses from treatments of the pet. Here is the common Pet vaccines used in Alberta:
+      Just like in humans, vaccinations provide essential preventive care for pets, protecting them from contagious diseases and helping prevent the spread of infections. Vaccinating your pet can also save you money by reducing the risk of costly treatments. Here are the common pet vaccines used in Alberta:
       </p>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
         <li>
           <b>Dogs:</b>
           <ul className="list-disc list-inside pl-4">
-            <li>DAPP (Distemper, Adeno, Parvo & Parainfluenza) Vaccine</li>
-            <li>Rabies</li>
-            <li>Bordetella Vaccine</li>
+            <li>DAPP (Distemper, Adeno, Parvo & Parainfluenza) vaccine</li>
+            <li>Rabies vaccine</li>
+            <li>Bordetella vaccine</li>
           </ul>
         </li>
         <li>
           <b>Cats:</b>
           <ul className="list-disc list-inside pl-4">
-            <li>FRCP (Feline Rhinotracheitis, Calici, Parvo) Vaccine</li>
-            <li>Rabies</li>
-            <li>Feline Leukemia</li>
+            <li>FRCP (Feline Rhinotracheitis, Calici, Parvo) vaccine</li>
+            <li>Rabies vaccine</li>
+            <li>Feline Leukemia vaccine</li>
           </ul>
         </li>
       </ul>
@@ -52,7 +52,7 @@ const WellnessExam = () => {
         Vaccine Reactions
       </h3>
       <p>
-        Vaccine reactions are very uncommon. Pets exhibit swelling around their face, eyes, vomiting, diarrhea, and full body hives are the symptoms and it usually happens within few hours of vaccinations. Please contact your pet care facility or an emergency clinic to deal with the reaction.
+      Vaccine reactions are rare, but if they occur, symptoms like facial swelling, eye swelling, vomiting, diarrhea, or full-body hives typically appear within a few hours of vaccination. Please contact your pet care facility or an emergency clinic to deal with the reaction.
       </p>
     </>
   );

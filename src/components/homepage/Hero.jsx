@@ -68,14 +68,14 @@ const Hero = () => {
 
       {/* CTA Section */}
       <div className="absolute bottom-0 left-0 w-full">
-        <div className="hidden md:flex flex-col md:flex-row w-full bg-primary text-white text-center">
-          <div className="hidden md:block w-full md:w-[70%] py-4 md:py-6 bg-blue-800 clip-left">
-            <h2 className="text-lg md:text-xl font-bold">WELCOME TO MONTROSE PET CLINIC</h2>
+      <div className="hidden md:flex flex-col md:flex-row w-full bg-secondary text-white text-center">
+          <div className="hidden md:block w-full md:w-[70%] py-4 md:py-6 bg-blue-600 clip-left">
+            <h2 className="text-xl md:text-xl font-bold uppercase">Welcome to Montrose Pet Clinic</h2>
           </div>
-          <div className="w-full md:w-[30%] py-4 md:py-6 bg-green-500 flex items-center justify-center clip-right">
+          <div className="w-full md:w-[70%] py-4 md:py-6 bg-green-500 flex items-center justify-center clip-right">
             <Link href="/services">
-            <button className="text-lg md:text-xl font-bold flex items-center gap-2 hover:translate-x-2 transition">
-              OUR SERVICES <span className="text-xl">➤</span>
+            <button className="text-lg md:text-2xl font-bold flex items-center gap-2 hover:translate-x-2 transition">
+              Our Services <span className="text-xl">➤</span>
             </button>
             </Link>
           </div>

@@ -60,7 +60,7 @@ const misc = [
     href: "/misc/wellness-plans",
     submenu: wellnessplans,
   },
-  { name: "Medication Refill form", href: "/misc/medication-refill-form" },
+  { name: "Medication Refill Form", href: "/misc/medication-refill-form" },
   { name: "Food Order Forms", href: "/misc/food-order-form" },
   { name: "Monthly Promotions", href: "/misc/monthly-promotions" },
   { name: "Gallery", href: "/misc/gallery" },

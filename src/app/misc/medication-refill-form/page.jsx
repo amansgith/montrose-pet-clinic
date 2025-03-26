@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
+import DOMPurify from "dompurify";
 
 export default function MedicationRefillForm() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     lastName: "",
     firstName: "",
     cellPhone: "",
@@ -14,7 +15,9 @@ export default function MedicationRefillForm() {
     medicationDetails: "",
     quantityRemaining: "",
     contactNumber: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -22,10 +25,43 @@ export default function MedicationRefillForm() {
   };
 
   // Form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Medication Refill Request Submitted!");
+
+    // Sanitize form data
+    const sanitizedFormData = {
+      lastName: DOMPurify.sanitize(formData.lastName),
+      firstName: DOMPurify.sanitize(formData.firstName),
+      cellPhone: DOMPurify.sanitize(formData.cellPhone),
+      petName: DOMPurify.sanitize(formData.petName),
+      animal: DOMPurify.sanitize(formData.animal),
+      otherAnimal: DOMPurify.sanitize(formData.otherAnimal),
+      age: DOMPurify.sanitize(formData.age),
+      sex: DOMPurify.sanitize(formData.sex),
+      medicationDetails: DOMPurify.sanitize(formData.medicationDetails),
+      quantityRemaining: DOMPurify.sanitize(formData.quantityRemaining),
+      contactNumber: DOMPurify.sanitize(formData.contactNumber),
+    };
+
+    try {
+      const response = await fetch('/api/send-refill', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ formData: sanitizedFormData }),
+      });
+
+      if (response.ok) {
+        alert("Medication Refill Request Submitted!");
+        setFormData(initialFormData); // Reset form data
+      } else {
+        alert("Error submitting form. Please try again.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("Error submitting form. Please try again.");
+    }
   };
 
   return (
@@ -52,21 +88,27 @@ export default function MedicationRefillForm() {
               name="lastName"
               placeholder="Last Name"
               className="input-field block w-full"
+              value={formData.lastName}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
               name="firstName"
               placeholder="First Name"
               className="input-field block w-full"
+              value={formData.firstName}
               onChange={handleChange}
+              required
             />
             <input
               type="tel"
               name="cellPhone"
               placeholder="Cell Phone"
               className="input-field block w-full md:col-span-2"
+              value={formData.cellPhone}
               onChange={handleChange}
+              required
             />
           </div>
         </fieldset>
@@ -79,11 +121,13 @@ export default function MedicationRefillForm() {
             name="petName"
             placeholder="Name of Pet"
             className="input-field block w-full"
+            value={formData.petName}
             onChange={handleChange}
+            required
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-            <select name="animal" className="input-field block w-full" onChange={handleChange}>
+            <select name="animal" className="input-field block w-full" value={formData.animal} onChange={handleChange} required>
               <option value="Dog">Dog</option>
               <option value="Cat">Cat</option>
               <option value="Other">Other</option>
@@ -94,7 +138,9 @@ export default function MedicationRefillForm() {
                 name="otherAnimal"
                 placeholder="Specify Animal"
                 className="input-field block w-full md:col-span-2"
+                value={formData.otherAnimal}
                 onChange={handleChange}
+                required
               />
             )}
             <input
@@ -102,9 +148,11 @@ export default function MedicationRefillForm() {
               name="age"
               placeholder="Age (Years)"
               className="input-field block w-full"
+              value={formData.age}
               onChange={handleChange}
+              required
             />
-            <select name="sex" className="input-field block w-full" onChange={handleChange}>
+            <select name="sex" className="input-field block w-full" value={formData.sex} onChange={handleChange} required>
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>
@@ -113,19 +161,23 @@ export default function MedicationRefillForm() {
 
         {/* Medication Details */}
         <fieldset className="border border-gray-300 p-4 rounded-lg">
-          <legend className="text-lg font-semibold">Medication Details</legend>
+          <legend className="text-lg font-semibold">Medication Details (Add at max 3)</legend>
           <textarea
             name="medicationDetails"
-            placeholder="Name of Medication(s), Dose, and Frequency of Administration"
-            className="input-field block w-full h-24"
+            placeholder="Name of upto 3 Medication(s), Dose, and Frequency of Administration"
+            className="input-field resize-none block w-full h-24"
+            value={formData.medicationDetails}
             onChange={handleChange}
+            required
           ></textarea>
           <input
             type="text"
             name="quantityRemaining"
             placeholder="Quantity Remaining"
             className="input-field block w-full mt-2"
+            value={formData.quantityRemaining}
             onChange={handleChange}
+            required
           />
         </fieldset>
 
@@ -137,7 +189,9 @@ export default function MedicationRefillForm() {
             name="contactNumber"
             placeholder="Best phone number for pickup"
             className="input-field block w-full"
+            value={formData.contactNumber}
             onChange={handleChange}
+            required
           />
         </fieldset>
 

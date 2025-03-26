@@ -19,25 +19,36 @@ const Surgery = () => {
         </div>
         <div className="md:w-1/2 md:pl-8">
           <p className="text-gray-700 leading-relaxed mb-4 font-bold">
-            We perform routine surgeries every day. Here is a list of surgeries we perform in-house:
+            We perform routine surgeries every day. Here is a list of surgeries
+            we perform in-house:
           </p>
           <h3 className="text-2xl font-semibold text-secondary mb-2">
             1. Spay & Neuter
           </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Reproductive surgeries benefit cats and dogs a lot. These surgeries prevent unwanted litters and also help to reduce the occurrence of certain cancers. These surgeries help for behavioral modifications (Make them calm down, avoid dominance). At Montrose Pet Clinic we do spay and neuter for dogs, cats, and rabbits.
+            Reproductive surgeries offer several benefits for cats and dogs.
+            They prevent unwanted litters and help reduce the risk of certain
+            cancers. These procedures can also improve behavior by reducing
+            aggression and dominance. At Montrose Pet Clinic, we offer spay and
+            neuter surgeries for dogs, cats, and rabbits.
           </p>
           <h3 className="text-2xl font-semibold text-secondary mb-2">
             2. Soft Tissue Surgeries
           </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Laceration repair, wound management, hematoma surgery, cyst or abscess removal/drain, foreign body removal, cystotomy or urinary bladder surgery, cherry eye surgery, etc. come under this category.
+            This includes procedures like treating cuts and wounds, draining
+            abscesses or cysts, removing foreign objects, surgery on the
+            bladder, fixing ear hematomas, and cherry eye surgery.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Montrose Pet Clinic is equipped with a full-service surgery room, monitoring machines like pulse oximetry, ECG, and veterinary Doppler to provide excellent care for your loved ones. We also have a Baer Hugger system to keep your furry friend warm at the time of surgery.
+            Montrose Pet Clinic is equipped with a full-service surgery room,
+            monitoring machines such as pulse oximetry, ECG, and veterinary doppler
+            to provide excellent care for your loved ones. We also have a Baer
+            Hugger system to keep your furry friend warm at the time of surgery.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We refer orthopedic surgeries and other complex surgeries to specialist centers so that our patients get the best care.
+            We refer orthopedic surgeries and other complex surgeries to
+            specialist centers so that our patients get the best care.
           </p>
         </div>
       </div>

@@ -55,7 +55,7 @@ const About = () => {
             <h2 className="text-lg md:text-xl font-bold ">Request an Appointment</h2><FaCircleArrowRight size={20}/>
             </Link>
           </div>
-          <div className="w-full md:w-[70%] py-4 md:py-6 bg-primary flex items-center justify-center clip-right">
+          <div className="w-full md:w-[70%] py-4 md:py-6 bg-green-500 flex items-center justify-center clip-right">
             <Link href="/contact">
             <button className="text-lg md:text-xl font-bold flex items-center gap-2 hover:translate-x-2 transition">
               Send Us a Review <span className="text-xl">➤</span>

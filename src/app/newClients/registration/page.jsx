@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
+import DOMPurify from "dompurify";
 
 export default function AppointmentForm() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     lastName: "",
     firstName: "",
     address: "",
@@ -10,21 +11,24 @@ export default function AppointmentForm() {
     homePhone: "",
     cellPhone: "",
     email: "",
-    petNames: "",
+    pet1Name: "",
+    pet2Name: "",
     animal1: "Dog",
     animal1Breed: "",
     animal1Sex: "M",
-    animal1Age: "",
+    animal1dob: "",
     animal2: "Dog",
     animal2Breed: "",
     animal2Sex: "M",
-    animal2Age: "",
+    animal2dob: "",
     heardAboutUs: "Google",
     appointmentDate: "",
     appointmentTime: "",
     purpose: "",
     declaration: false,
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   // Handle form field changes
   const handleChange = (e) => {
@@ -32,14 +36,58 @@ export default function AppointmentForm() {
     setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.declaration) {
       alert("You must agree to the declaration before submitting.");
       return;
     }
-    console.log("Form submitted:", formData);
-    alert("Appointment Request Submitted!");
+
+    // Sanitize form data
+    const sanitizedFormData = {
+      lastName: DOMPurify.sanitize(formData.lastName),
+      firstName: DOMPurify.sanitize(formData.firstName),
+      address: DOMPurify.sanitize(formData.address),
+      postalCode: DOMPurify.sanitize(formData.postalCode),
+      homePhone: DOMPurify.sanitize(formData.homePhone),
+      cellPhone: DOMPurify.sanitize(formData.cellPhone),
+      email: DOMPurify.sanitize(formData.email),
+      pet1Name: DOMPurify.sanitize(formData.pet1Name),
+      pet2Name: DOMPurify.sanitize(formData.pet2Name),
+      animal1: DOMPurify.sanitize(formData.animal1),
+      animal1Breed: DOMPurify.sanitize(formData.animal1Breed),
+      animal1Sex: DOMPurify.sanitize(formData.animal1Sex),
+      animal1dob: DOMPurify.sanitize(formData.animal1dob),
+      animal2: DOMPurify.sanitize(formData.animal2),
+      animal2Breed: DOMPurify.sanitize(formData.animal2Breed),
+      animal2Sex: DOMPurify.sanitize(formData.animal2Sex),
+      animal2dob: DOMPurify.sanitize(formData.animal2dob),
+      heardAboutUs: DOMPurify.sanitize(formData.heardAboutUs),
+      appointmentDate: DOMPurify.sanitize(formData.appointmentDate),
+      appointmentTime: DOMPurify.sanitize(formData.appointmentTime),
+      purpose: DOMPurify.sanitize(formData.purpose),
+      declaration: formData.declaration,
+    };
+
+    try {
+      const response = await fetch('/api/send-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ formData: sanitizedFormData }),
+      });
+
+      if (response.ok) {
+        alert("Appointment Request Submitted!");
+        setFormData(initialFormData); // Reset form data
+      } else {
+        alert("Error submitting form. Please try again.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("Error submitting form. Please try again.");
+    }
   };
 
   // Get today's date in YYYY-MM-DD format
@@ -75,6 +123,7 @@ export default function AppointmentForm() {
               name="lastName"
               placeholder="Last Name"
               className="input-field block w-full"
+              value={formData.lastName}
               onChange={handleChange}
               required
             />
@@ -83,6 +132,7 @@ export default function AppointmentForm() {
               name="firstName"
               placeholder="First Name"
               className="input-field block w-full"
+              value={formData.firstName}
               onChange={handleChange}
               required
             />
@@ -91,6 +141,7 @@ export default function AppointmentForm() {
               name="address"
               placeholder="Address"
               className="input-field block w-full md:col-span-2"
+              value={formData.address}
               onChange={handleChange}
               required
             />
@@ -99,6 +150,7 @@ export default function AppointmentForm() {
               name="postalCode"
               placeholder="Postal Code"
               className="input-field block w-full"
+              value={formData.postalCode}
               onChange={handleChange}
               required
             />
@@ -107,6 +159,7 @@ export default function AppointmentForm() {
               name="homePhone"
               placeholder="Home Phone No."
               className="input-field block w-full"
+              value={formData.homePhone}
               onChange={handleChange}
             />
             <input
@@ -114,6 +167,7 @@ export default function AppointmentForm() {
               name="cellPhone"
               placeholder="Cell Phone"
               className="input-field block w-full"
+              value={formData.cellPhone}
               onChange={handleChange}
               required
             />
@@ -123,6 +177,7 @@ export default function AppointmentForm() {
               placeholder="Email *"
               required
               className="input-field block w-full md:col-span-2"
+              value={formData.email}
               onChange={handleChange}
             />
           </div>
@@ -131,51 +186,62 @@ export default function AppointmentForm() {
         {/* Pet Details */}
         <fieldset className="border border-gray-300 p-4 rounded-lg">
           <legend className="text-lg font-semibold">Pet Details (Add at max 2 animal details)*</legend>
-          <input
-            type="text"
-            name="petNames"
-            placeholder="Pet Name(s)"
-            className="input-field block w-full"
-            onChange={handleChange}
-            required
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              name="pet1Name"
+              placeholder="Pet 1 Name"
+              className="input-field block w-full"
+              value={formData.pet1Name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="pet2Name"
+              placeholder="Pet 2 Name"
+              className="input-field block w-full"
+              value={formData.pet2Name}
+              onChange={handleChange}
+            />
+          </div>
 
           {/* Animal 1 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-            <select name="animal1" className="input-field block w-full" onChange={handleChange} required>
+            <select name="animal1" className="input-field block w-full" value={formData.animal1} onChange={handleChange} required>
               <option value="animal1">Animal 1</option>
               <option value="Dog">Dog</option>
               <option value="Cat">Cat</option>
               <option value="Other">Other</option>
             </select>
-            <input type="text" name="animal1Breed" placeholder="Breed of animal 1" className="input-field block w-full" onChange={handleChange} required />
-            <select name="animal1Sex" className="input-field block w-full" onChange={handleChange} required>
+            <input type="text" name="animal1Breed" placeholder="Breed of animal 1" className="input-field block w-full" value={formData.animal1Breed} onChange={handleChange} required />
+            <select name="animal1Sex" className="input-field block w-full" value={formData.animal1Sex} onChange={handleChange} required>
               <option value="GenderofAnimal1">Gender of Animal 1</option>
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>
             <div>
               <label htmlFor="animal1DOB" className="block text-gray-500 pl-2">Animal 1 D.O.B</label>
-              <input type="date" name="animal1dob" className="input-field block w-full" onChange={handleChange} required max={today} min={twentyYearsAgo} />
+              <input type="date" name="animal1dob" className="input-field block w-full" value={formData.animal1dob} onChange={handleChange} required max={today} min={twentyYearsAgo} />
             </div>
           </div>
 
           {/* Animal 2 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-            <select name="animal2" className="input-field block w-full" onChange={handleChange}>
+            <select name="animal2" className="input-field block w-full" value={formData.animal2} onChange={handleChange}>
               <option value="GenderofAnimal1">Gender of Animal 2</option>
               <option value="Dog">Dog</option>
               <option value="Cat">Cat</option>
               <option value="Other">Other</option>
             </select>
-            <input type="text" name="animal2Breed" placeholder="Breed of Animal 2" className="input-field block w-full" onChange={handleChange} />
-            <select name="animal2Sex" className="input-field block w-full" onChange={handleChange}>
+            <input type="text" name="animal2Breed" placeholder="Breed of Animal 2" className="input-field block w-full" value={formData.animal2Breed} onChange={handleChange} />
+            <select name="animal2Sex" className="input-field block w-full" value={formData.animal2Sex} onChange={handleChange}>
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>
             <div>
-              <label htmlFor="animal2Age" className="block text-gray-500 pl-2">Animal 2 D.O.B</label>
-              <input type="date" name="animal2Age" className="input-field block w-full" onChange={handleChange} max={today} min={twentyYearsAgo} />
+              <label htmlFor="animal2dob" className="block text-gray-500 pl-2">Animal 2 D.O.B</label>
+              <input type="date" name="animal2dob" className="input-field block w-full" value={formData.animal2dob} onChange={handleChange} max={today} min={twentyYearsAgo} />
             </div>
           </div>
         </fieldset>
@@ -183,7 +249,7 @@ export default function AppointmentForm() {
         {/* Appointment Details */}
         <fieldset className="border border-gray-300 p-4 rounded-lg">
           <legend className="text-lg font-semibold">Appointment Details</legend>
-          <select name="heardAboutUs" className="input-field block w-full" onChange={handleChange} required>
+          <select name="heardAboutUs" className="input-field block w-full" value={formData.heardAboutUs} onChange={handleChange} required>
             <option value="howyouknow">How did you hear about us? </option>
             <option value="Google">Google</option>
             <option value="Friend">Friend</option>
@@ -194,11 +260,36 @@ export default function AppointmentForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
             <div>
               <label htmlFor="appointmentDate" className="block text-gray-700">Date of Appointment</label>
-              <input type="date" name="appointmentDate" className="input-field block w-full" onChange={handleChange} required min={today} />
+              <input type="date" name="appointmentDate" className="input-field block w-full" value={formData.appointmentDate} onChange={handleChange} required min={today} onKeyDown={(e) => e.preventDefault()} onInput={(e) => {
+                const date = new Date(e.target.value);
+                if (date.getUTCDay() === 0) {
+                  e.target.setCustomValidity("Appointments cannot be scheduled on Sundays.");
+                } else {
+                  e.target.setCustomValidity("");
+                }
+              }} />
             </div>
             <div>
               <label htmlFor="appointmentTime" className="block text-gray-700">Time of Appointment</label>
-              <input type="time" name="appointmentTime" className="input-field block w-full" onChange={handleChange} required />
+              <select name="appointmentTime" className="input-field block w-full" value={formData.appointmentTime} onChange={handleChange} required>
+                <option value="">Select Time</option>
+                <option value="08:30">08:30 AM</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="09:30">09:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="13:30">01:30 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="14:30">02:30 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="15:30">03:30 PM</option>
+                <option value="16:00">04:00 PM</option>
+              </select>
             </div>
           </div>
 
@@ -207,6 +298,7 @@ export default function AppointmentForm() {
             placeholder="Purpose of Appointment *"
             required
             className="input-field block w-full h-24"
+            value={formData.purpose}
             onChange={handleChange}
           ></textarea>
         </fieldset>
@@ -217,6 +309,7 @@ export default function AppointmentForm() {
             type="checkbox"
             name="declaration"
             className="mt-1 mr-2"
+            checked={formData.declaration}
             onChange={handleChange}
             required
           />

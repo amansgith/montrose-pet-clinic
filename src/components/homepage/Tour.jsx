@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import {
@@ -61,6 +61,9 @@ const ClinicTour = () => {
               <p>Closed</p>
             </div>
           </div>
+          <p className="text-sm text-red-600 mb-6">
+            *We are closed for statutory holidays.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
@@ -71,11 +74,12 @@ const ClinicTour = () => {
                   <FaPhone className="text-primary" /> +1 (780) 929 7363
                 </li>
                 <li className="flex items-center gap-2 mb-2">
-                  <FaEnvelope className="text-primary" /> infomontrosepet@gmail.com
+                  <FaEnvelope className="text-primary" />{" "}
+                  infomontrosepet@gmail.com
                 </li>
                 <li className="flex items-center gap-2 mb-4">
-                  <FaMapMarkerAlt className="text-primary" /> 6002 29 Ave, Beaumont,
-                  AB T4X 0H5, Canada
+                  <FaMapMarkerAlt className="text-primary" /> 6002 29 Ave,
+                  Beaumont, AB T4X 0H5, Canada
                 </li>
               </ul>
             </div>
@@ -84,10 +88,42 @@ const ClinicTour = () => {
                 In Case of Emergency
               </h3>
               <ul className=" list-outside text-gray-700 leading-relaxed">
-                <li>Pulse Veterinary: <a href="tel:7805709999" className="text-blue-600 hover:underline">780-570-9999</a></li>
-                <li>Guardian Veterinary Centre: <a href="tel:7804365880" className="text-blue-600 hover:underline">780-436-5880</a></li>
-                <li>Boreal Veterinary Centre: <a href="tel:7803064400" className="text-blue-600 hover:underline">780-306-4400</a></li>
-                <li>Vet ER: <a href="tel:8254804881" className="text-blue-600 hover:underline">825-480-4881</a></li>
+                <li>
+                  Pulse Veterinary:{" "}
+                  <a
+                    href="tel:7805709999"
+                    className="text-blue-600 hover:underline"
+                  >
+                    780-570-9999
+                  </a>
+                </li>
+                <li>
+                  Guardian Veterinary Centre:{" "}
+                  <a
+                    href="tel:7804365880"
+                    className="text-blue-600 hover:underline"
+                  >
+                    780-436-5880
+                  </a>
+                </li>
+                <li>
+                  Boreal Veterinary Centre:{" "}
+                  <a
+                    href="tel:7803064400"
+                    className="text-blue-600 hover:underline"
+                  >
+                    780-306-4400
+                  </a>
+                </li>
+                <li>
+                  Vet ER:{" "}
+                  <a
+                    href="tel:8254804881"
+                    className="text-blue-600 hover:underline"
+                  >
+                    825-480-4881
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

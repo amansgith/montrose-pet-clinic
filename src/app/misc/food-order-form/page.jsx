@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
+import DOMPurify from "dompurify";
 
 export default function PrescriptionFoodOrderForm() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     lastName: "",
     firstName: "",
     phone: "",
@@ -11,7 +12,9 @@ export default function PrescriptionFoodOrderForm() {
       { name: "", food: "", bagSize: "", quantity: "", daysLeft: "" },
       { name: "", food: "", bagSize: "", quantity: "", daysLeft: "" },
     ],
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e, index, field) => {
     const updatedPets = [...formData.pets];
@@ -19,10 +22,42 @@ export default function PrescriptionFoodOrderForm() {
     setFormData({ ...formData, pets: updatedPets });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Prescription Food Order Submitted!");
+
+    // Sanitize form data
+    const sanitizedFormData = {
+      lastName: DOMPurify.sanitize(formData.lastName),
+      firstName: DOMPurify.sanitize(formData.firstName),
+      phone: DOMPurify.sanitize(formData.phone),
+      pets: formData.pets.map((pet) => ({
+        name: DOMPurify.sanitize(pet.name),
+        food: DOMPurify.sanitize(pet.food),
+        bagSize: DOMPurify.sanitize(pet.bagSize),
+        quantity: DOMPurify.sanitize(pet.quantity),
+        daysLeft: DOMPurify.sanitize(pet.daysLeft),
+      })),
+    };
+
+    try {
+      const response = await fetch('/api/send-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ formData: sanitizedFormData }),
+      });
+
+      if (response.ok) {
+        alert("Prescription Food Order Submitted!");
+        setFormData(initialFormData); // Reset form data
+      } else {
+        alert("Error submitting form. Please try again.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("Error submitting form. Please try again.");
+    }
   };
 
   return (
@@ -45,21 +80,27 @@ export default function PrescriptionFoodOrderForm() {
               name="lastName"
               placeholder="Last Name"
               className="input-field block w-full"
+              value={formData.lastName}
               onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+              required
             />
             <input
               type="text"
               name="firstName"
               placeholder="First Name"
               className="input-field block w-full"
+              value={formData.firstName}
               onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+              required
             />
             <input
               type="tel"
               name="phone"
               placeholder="Phone"
               className="input-field block w-full md:col-span-2"
+              value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              required
             />
           </div>
         </fieldset>
@@ -76,6 +117,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full"
                   value={pet.name}
                   onChange={(e) => handleChange(e, index, "name")}
+                  required
                 />
                 <input
                   type="text"
@@ -83,6 +125,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full md:col-span-2"
                   value={pet.food}
                   onChange={(e) => handleChange(e, index, "food")}
+                  required
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -92,6 +135,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full"
                   value={pet.bagSize}
                   onChange={(e) => handleChange(e, index, "bagSize")}
+                  required
                 />
                 <input
                   type="text"
@@ -99,6 +143,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full md:col-span-2"
                   value={pet.quantity}
                   onChange={(e) => handleChange(e, index, "quantity")}
+                  required
                 />
               </div>
               <input
@@ -107,6 +152,7 @@ export default function PrescriptionFoodOrderForm() {
                 className="input-field block w-full"
                 value={pet.daysLeft}
                 onChange={(e) => handleChange(e, index, "daysLeft")}
+                required
               />
               <hr className="border-gray-300 my-4" />
             </div>
@@ -125,7 +171,7 @@ export default function PrescriptionFoodOrderForm() {
         <div className="mt-4 p-4 bg-gray-100 border-l-4 border-yellow-500 text-sm text-gray-700">
           <p>
             <strong>Note:</strong> Up to 3 pet foods can be ordered at a time.
-            Once received, we will place the order and contact you when it&rsquo;s
+            Once received, we will place the order and contact you when it’s
             ready for pickup. Items on backorder will not be ordered, and you
             will be notified. You may also place an order online for home
             delivery or contact us directly for in-clinic pickup.

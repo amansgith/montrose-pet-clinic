@@ -1,7 +1,66 @@
 "use client";
+import { useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import DOMPurify from "dompurify";
 
 const Contact = () => {
+  const initialFormData = {
+    name: "",
+    email: "",
+    message: "",
+    rating: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+  const [messagePlaceholder, setMessagePlaceholder] = useState("Message");
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+    if (name === "rating") {
+      if (value === "1" || value === "2") {
+        setMessagePlaceholder("What should we improve?");
+      } else {
+        setMessagePlaceholder("Add a review message");
+      }
+    }
+  };
+
+  // Form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Sanitize form data
+    const sanitizedFormData = {
+      name: DOMPurify.sanitize(formData.name),
+      email: DOMPurify.sanitize(formData.email),
+      message: DOMPurify.sanitize(formData.message),
+      rating: DOMPurify.sanitize(formData.rating),
+    };
+
+    try {
+      const response = await fetch("/api/send-review", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ formData: sanitizedFormData }),
+      });
+
+      if (response.ok) {
+        alert("Message Sent Successfully!");
+        setFormData(initialFormData); // Reset form data
+      } else {
+        alert("Error sending message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Error sending message. Please try again.");
+    }
+  };
+
   return (
     <div className="container mx-auto px-1 py-12">
       <h1 className="text-4xl font-bold text-primary text-center mb-8">
@@ -110,22 +169,48 @@ const Contact = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase">
             Please Send Us a Review
           </h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
+              name="name"
               placeholder="Name"
               className="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-300"
+              value={formData.name}
+              onChange={handleChange}
+              required
             />
             <input
               type="email"
+              name="email"
               placeholder="Your Email Address"
               className="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-300"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
             <textarea
-              placeholder="Message"
+              name="message"
+              placeholder={messagePlaceholder}
               rows="4"
-              className="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-300"
+              className="w-full p-3 border resize-none rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-300"
+              value={formData.message}
+              onChange={handleChange}
+              required
             ></textarea>
+            <select
+              name="rating"
+              className="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-300"
+              value={formData.rating}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Rate our service</option>
+              <option value="1">1 - Very Poor 😞</option>
+              <option value="2">2 - Poor 😕</option>
+              <option value="3">3 - Average 😐</option>
+              <option value="4">4 - Great 🙂</option>
+              <option value="5">5 - Excellent 😃</option>
+            </select>
             <button
               type="submit"
               className="w-full bg-primary text-white font-bold py-3 rounded-md flex justify-center items-center gap-2 hover:bg-secondary transition"

@@ -122,7 +122,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full"
                   value={pet.name}
                   onChange={(e) => handleChange(e, index, "name")}
-                  required
+                  required={index === 0} // Only required for the first pet
                 />
                 <input
                   type="text"
@@ -130,7 +130,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full md:col-span-2"
                   value={pet.food}
                   onChange={(e) => handleChange(e, index, "food")}
-                  required
+                  required={index === 0} // Only required for the first pet
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -140,7 +140,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full"
                   value={pet.bagSize}
                   onChange={(e) => handleChange(e, index, "bagSize")}
-                  required
+                  required={index === 0} // Only required for the first pet
                 />
                 <input
                   type="text"
@@ -148,7 +148,7 @@ export default function PrescriptionFoodOrderForm() {
                   className="input-field block w-full md:col-span-2"
                   value={pet.quantity}
                   onChange={(e) => handleChange(e, index, "quantity")}
-                  required
+                  required={index === 0} // Only required for the first pet
                 />
               </div>
               <input
@@ -157,7 +157,7 @@ export default function PrescriptionFoodOrderForm() {
                 className="input-field block w-full"
                 value={pet.daysLeft}
                 onChange={(e) => handleChange(e, index, "daysLeft")}
-                required
+                required={index === 0} // Only required for the first pet
               />
               <hr className="border-gray-300 my-4" />
             </div>

@@ -41,7 +41,7 @@ const ClinicTour = () => {
           <h3 className="text-2xl font-bold text-gray-800 mb-4">
             Opening Hours
           </h3>
-          <div className="grid grid-cols-2 pl-6 md:text-lg text-gray-600 mb-6">
+          <div className="grid grid-cols-2 md:pl-6 md:text-lg text-gray-600 mb-6">
             <div>
               <p>Monday</p>
               <p>Tuesday</p>

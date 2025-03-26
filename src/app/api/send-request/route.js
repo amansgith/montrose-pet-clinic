@@ -15,7 +15,7 @@ export async function POST(req) {
     // Email options
     const mailOptions = {
         from: process.env.GMAIL_USER,
-        to: 'amankhancompq2002@gmail.com',
+        to: process.env.GMAIL_USER,
         subject: 'New Appointment Request',
         html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">

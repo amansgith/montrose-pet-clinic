@@ -3,24 +3,26 @@ import InfoSection from "@/components/InfoSection";
 const Deworming = () => {
   const firstSection = {
     subheading: "Deworming",
-    text: "Deworming is an integral part of preventive care which will protect pets from various kinds of parasites. Ecto and endo parasites are prevalent and some of them are zoonotic (Transfer from pets to humans). They can cause blindness to cysts in brain or abdomen. The common Endo and Ecto parasites are listed below for your information:",
+    text: "Deworming is an important part of preventive care that helps protect pets from different types of parasites. Some live inside the body, while others live on the skin or fur. Certain parasites can also spread from pets to humans and cause serious health problems, including blindness or cysts in the brain or abdomen. Some common parasites are listed below:",
   };
 
   const restContent = (
     <>
-      <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed">
+      <ul className="list-disc list z-outside pl-4 text-gray-700 leading-relaxed">
         <li>Round worms</li>
         <li>Hook worms</li>
         <li>Tapeworms</li>
         <li>Pin worms</li>
-        <li>Ticks and Fleas</li>
+        <li>Ticks and fleas</li>
         <li>Lice</li>
         <li>Ear mites and other mites</li>
         <li>Heart worms</li>
       </ul>
       <br />
       <p>
-        At Montrose Pet Clinic, we offer deworming protocol for pets of all ages, Fecal PCR tests to detect any Protozoal parasites like Giardia and fecal Ova tests.
+        At Montrose Pet Clinic, we offer deworming programs for pets of all
+        ages, along with Fecal PCR tests to detect parasites like Giardia and
+        fecal ova tests to check for other internal parasites.
       </p>
     </>
   );

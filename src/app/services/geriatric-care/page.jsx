@@ -3,35 +3,59 @@ import InfoSection from "@/components/InfoSection";
 const GeriatricCare = () => {
   const firstSection = {
     subheading: "Caring for Your Aging Pet",
-    text: "Pets age faster than people. Age affects health, and pets progress through life stages more rapidly than people.",
+    text: "Pets age faster than humans, progressing through life stages more quickly, which impacts their health.",
   };
 
   const restContent = (
     <>
-      <h3 className="text-2xl font-semibold text-secondary mb-2">Feline Life Stages</h3>
+      <h3 className="text-2xl font-semibold text-secondary mb-2">
+        Feline Life Stages
+      </h3>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed mb-4">
         <li>Kitten: From birth up to 1 year old</li>
         <li>Young Adult: From 1 to 6 years old</li>
         <li>Mature Adult: From 7 to 10 Years Old</li>
         <li>Senior: Over 10 Years Old</li>
       </ul>
-      <h3 className="text-2xl font-semibold text-secondary mb-2">Canine Life Stages</h3>
+      <h3 className="text-2xl font-semibold text-secondary mb-2">
+        Canine Life Stages
+      </h3>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed mb-4">
-        <li>Puppy: From birth to cessation of rapid growth (Approximately 6-9 months but vary with breed and size)</li>
-        <li>Young Adult: From cessation of rapid growth to 3-4 years of age (Physical and Social maturation)</li>
-        <li>Mature Adult: From completion of physical and social maturation until the 25% of estimated life span</li>
-        <li>Senior: From that last 25% of estimated lifespan through end of life</li>
+        <li>
+          Puppy: From birth to the end of rapid growth (approximately 6–9
+          months, varying by breed and size)
+        </li>
+        <li>
+          Young adult: From the end of rapid growth to 3–4 years of age
+          (physical and social maturation)
+        </li>
+        <li>
+          Mature adult: From the completion of physical and social maturation
+          until 25% of the estimated lifespan
+        </li>
+        <li>
+          Senior: From the last 25% of the estimated lifespan through the end of
+          life
+        </li>
       </ul>
-      <h3 className="text-2xl font-semibold text-secondary mb-2">A Typical Geriatric Pet Consult Includes:</h3>
+
+      <h3 className="text-2xl font-semibold text-secondary mb-2">
+        A Typical Geriatric Pet Consult Includes:
+      </h3>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed mb-4">
         <li>A physical exam</li>
-        <li>Diagnostic Screening Tests</li>
+        <li>Diagnostic screening tests</li>
         <li>A review of results</li>
       </ul>
-      <h3 className="text-2xl font-semibold text-secondary mb-2">What We Look at in a Geriatric Pet Visit?</h3>
+      <h3 className="text-2xl font-semibold text-secondary mb-2">
+        What We Look at in a Geriatric Pet Visit?
+      </h3>
       <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed mb-4">
-        <li>Physical changes in your pet’s ears, eyes, teeth, joints, skin, body weight, etc.</li>
-        <li>Heart and Lungs</li>
+        <li>
+          Physical changes in your pet’s ears, eyes, teeth, joints, skin, body
+          weight, etc.
+        </li>
+        <li>Heart and lungs</li>
         <li>Liver</li>
         <li>Pancreas and intestine</li>
         <li>Kidneys</li>

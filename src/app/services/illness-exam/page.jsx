@@ -2,7 +2,7 @@ import InfoSection from "@/components/InfoSection";
 
 const IllnessExam = () => {
   const firstSection = {
-    subheading: "Illness Exam",
+    subheading: "",
     text: "Dogs and cats develop various diseases due to different reasons. In most cases, illnesses occur when their immune system becomes compromised. The most common conditions or diseases we see on a routine basis are the following:",
   };
 

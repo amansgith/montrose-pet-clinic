@@ -2,7 +2,7 @@ import InfoSection from "@/components/InfoSection";
 
 const PuppyKittenExam = () => {
   const firstSection = {
-    subheading: "Puppy and Kitten Exams",
+    subheading: "",
     text: "Puppy and kitten exams focus on checking all vital signs and performing a head-to-tail examination, just like in an annual wellness exam. They also help detect any congenital defects in puppies or kittens, such as umbilical hernias, retained testicles, poor weight gain, or physical abnormalities in organs or body parts. The vaccine protocol for puppies and kittens is as follows:",
   };
 

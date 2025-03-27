@@ -12,31 +12,46 @@ const MiscellaneousServices = () => {
       <h3 className="text-2xl font-semibold text-secondary mb-6">
         Our Miscellaneous Services
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-1">
+      <div className="flex flex-row gap-20 ">
+        {/* Service List */}
         <ul className="list-disc list-outside pl-4 text-gray-700 leading-relaxed mb-4">
           <li>Nail trim</li>
           <li>Microchip</li>
-          <li>Anal sac Expression</li>
+          <li>Anal sac expression</li>
           <li>Pain management</li>
-          <li>Grooming with sedation (We are not groomers)</li>
+          <li>Grooming with sedation</li>
         </ul>
-        <div className="relative w-36 h-36">
-          <Image
-            src="/nailcutter.jpg"
-            alt="Nail trim"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg shadow-lg object-[center_20%]"
-          />
+
+        {/* Nail Trim Image and Description */}
+        <div className="flex flex-col items-center">
+          <div className="relative w-28 h-36">
+            <Image
+              src="/nailcutter.jpg"
+              alt="Nail trim"
+              width={112} // Set width in pixels
+              height={144} // Set height in pixels
+              className="rounded-lg shadow-lg object-contain"
+            />
+          </div>
+          <p className="text-sm text-gray-600 mt-2 text-center">
+            Nail Trimmer.
+          </p>
         </div>
-        <div className="relative w-36 h-36">
-          <Image
-            src="/microchip.jpg"
-            alt="Microchip"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg shadow-lg"
-          />
+
+        {/* Microchip Image and Description */}
+        <div className="flex flex-col items-center">
+          <div className="relative w-56 h-36">
+            <Image
+              src="/microchip.jpg"
+              alt="Microchip"
+              width={454} // Set width in pixels
+              height={144} // Set height in pixels
+              className="rounded-lg shadow-lg object-contain"
+            />
+          </div>
+          <p className="text-sm text-gray-600 mt-2 text-center">
+            Microchipping equipment.
+          </p>
         </div>
       </div>
     </>

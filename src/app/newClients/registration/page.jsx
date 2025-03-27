@@ -106,7 +106,7 @@ export default function AppointmentForm() {
     <div className="max-w-3xl mx-auto bg-white shadow-lg p-8 rounded-lg my-10">
       <h2 className="text-3xl font-bold text-primary text-center mb-6">Best Care for your Best Friend</h2>
       <p className="text-lg text-gray-700 mb-6">
-        We are happy to book an appointment for you. This is not an automatic process. Once we receive your request, we will contact you to confirm a date and time that is as close to your request as possible.
+      We are happy to book an appointment for you, however, this is not an automatic process. Once we receive your request, we will contact you to confirm a date and time that is as close to your request as possible.
       </p>
       <p className="text-lg text-gray-700 mb-6">
         This form should only be used for requesting appointments that will take place at least 1 full business day after the time of the submission of this form.

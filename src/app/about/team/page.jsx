@@ -49,7 +49,7 @@ export default function OurTeam() {
         role: "(Clinic Cat)",
         img: "/daisy.jpg",
         description:
-          "Bio Coming Soon",
+          "Daisy is one of our founding members and takes her job as front window security very seriously. She can often be found having a nap in her hammock, having a nap on the front desk, or having a nap on one of the exam room tables. While she often stares at the birds outside and plots the best way to escape and capture them, she knows that her life inside the clinic where she is exceptionally loved and well taken care of, is the best place of all. ",
       },
   ];
 

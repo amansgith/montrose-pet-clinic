@@ -5,7 +5,7 @@ export default function MissionValues() {
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Mission Section */}
       <div className="mt-16">
-        <h2 className="text-3xl font-semibold text-secondary mb-4">Our Promise to Your Pets</h2>
+        <h2 className="text-3xl font-semibold text-secondary mb-4">Our Promise to You & Your Pets</h2>
 
         <div className="flex flex-col md:flex-row">
           <div className="md:w-3/4">

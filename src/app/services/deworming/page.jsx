@@ -2,7 +2,7 @@ import InfoSection from "@/components/InfoSection";
 
 const Deworming = () => {
   const firstSection = {
-    subheading: "Deworming",
+    subheading: "",
     text: "Deworming is an important part of preventive care that helps protect pets from different types of parasites. Some live inside the body, while others live on the skin or fur. Certain parasites can also spread from pets to humans and cause serious health problems, including blindness or cysts in the brain or abdomen. Some common parasites are listed below:",
   };
 

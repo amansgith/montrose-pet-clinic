@@ -4,7 +4,7 @@ import { FaInfoCircle } from "react-icons/fa";
 const DentalCare = () => {
   const firstSection = {
     subheading: "Bright Smiles for Brighter Futures",
-    text: "Dental care is a key part of your pet’s everyday health and vitality. Early dental care such as regular teeth brushing, use of dental food, water additives, gels, and dental scrubs prevent early appearance of dental problems. Some breeds are more prone to dental diseases and may need dental cleaning at an early age. Dental diseases bring constant pain for our loved ones and may also cause other serious complications such as heart disease.",
+    text: "o	Dental care is a key part of your pet’s every day health. Early dental care such as brush, using a dental food, water additives or gels, and dental scrubs, can help prevent the early appearance of many dental issues. Some breeds, however, are very prone to dental disease, and they may need cleanings at an early age. Dental disease can cause constant pain for your pets, and may lead to other serious problems, like heart disease, later in life. Regular dental exams and preventative care can help keep your pets healthy and happy.",
   };
 
   const restContent = (
@@ -49,7 +49,7 @@ const DentalCare = () => {
       <br />
       <p className="text-gray-700 leading-relaxed mb-4">
         Montrose Pet Clinic is well equipped to provide superior dental care for
-        your beloved furry friends. Please call us for a dental exam so we can accurately asses your pet&#39;s oral health.
+        your beloved furry friends. Please call us to book an oral health exam for your pet.
       </p>
     </>
   );

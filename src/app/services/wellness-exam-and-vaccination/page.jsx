@@ -2,7 +2,7 @@ import InfoSection from "@/components/InfoSection";
 
 const WellnessExam = () => {
   const firstSection = {
-    subheading: "Annual Wellness Exam & Vaccinations",
+    subheading: "",
     text: "At Montrose Pet Clinic, our dedication to wellness and preventive care is at the heart of our practice, offering early intervention and consistent oversight to safeguard your pet’s health. Embracing a comprehensive care approach, we ensure your pet enjoys a fuller, healthier life through regular health assessments, timely vaccinations, and the early identification of health issues. The annual wellness exam include a head to tail physical exam of your furry friend, checking vitals such as body temperature, heart rate, and respiratory rate. This helps the veterinarian provide personalized recommendations for your pet’s well-being, focusing on early detection of potential health issues and timely intervention.",
   };
 

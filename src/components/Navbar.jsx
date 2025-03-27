@@ -19,11 +19,8 @@ const about = [
 ];
 
 const services = [
-  {
-    name: "Annual wellness exam & Vaccinations",
-    href: "/services/wellness-exam-and-vaccination",
-  },
-  { name: "Puppy/ Kitten Exam", href: "/services/puppy-kitten-exam" },
+  { name: "Radiology", href: "/services/radiology" },
+  { name: "Puppy/Kitten Exam", href: "/services/puppy-kitten-exam" },
   { name: "Deworming", href: "/services/deworming" },
   { name: "Illness Exam", href: "/services/illness-exam" },
   { name: "Surgery", href: "/services/surgery" },
@@ -32,10 +29,14 @@ const services = [
   { name: "Dental Care", href: "/services/dentalcare" },
   { name: "End of Life Services", href: "/services/eolservices" },
   { name: "Nutrition Consult", href: "/services/nutrition" },
-  { name: "Radiology", href: "/services/radiology" },
+  { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
   { name: "Miscellaneous Services", href: "/services/misc-services" },
   { name: "Geriatric Patient Care", href: "/services/geriatric-care" },
-  { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
+  
+  {
+    name: "Annual wellness exam & Vaccinations",
+    href: "/services/wellness-exam-and-vaccination",
+  },
 ];
 
 const newClients = [

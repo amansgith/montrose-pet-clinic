@@ -5,7 +5,7 @@ const Policies = () => {
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-3xl font-bold text-primary mb-6">Clinic Policies</h1>
       <p className="text-gray-700 leading-relaxed mb-4">
-        At Montrose Pet Clinic, we aim for a smooth and satisfactory experience with these guidelines:
+      We strive to ensure that our clients and patients are well taken care of. In order to provide the best care, the following policies are in effect:
       </p>
       <ul className="list-decimal list-inside pl-4 text-gray-700 leading-relaxed">
         <li>Please arrive 5 minutes early to update your information at reception.</li>

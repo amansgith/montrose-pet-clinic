@@ -8,18 +8,25 @@ export default function AboutMontrose() {
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-bold text-primary mb-4">
-            Our veterinary team in Beaumont welcomes you & your pet!
+            Why Choose Us?
           </h1>
           <p className="text-gray-700 leading-relaxed">
-            Welcome to <span className="font-semibold">Montrose Pet Clinic</span> in Beaumont, where 
-            we’ve been providing top-notch veterinary care for over a decade. Our team of 
-            licensed veterinarians, skilled Animal Health Technicians, and support staff are 
-            dedicated to ensuring your pet receives the best care possible.
+            We have served more than <span className="font-semibold">4,250 clients</span> in Beaumont and the surrounding areas. We provide:
           </p>
+          <ul className="list-decimal list-inside text-gray-700 mt-4 leading-relaxed">
+            <li>Experienced veterinarians.</li>
+            <li>Award-winning customer service.</li>
+            <li>Transparency in our services.</li>
+            <li>Easy appointment booking via our website and PetDesk app.</li>
+            <li>
+              Convenient access to your pet&apos;s medical history by downloading the app.
+            </li>
+            <li>Monthly promotions to help you save money.</li>
+            <li>Wellness plans for all pets (call us for more details).</li>
+            <li>In-clinic lab services for faster diagnosis and treatment.</li>
+          </ul>
           <p className="text-gray-700 mt-4 leading-relaxed">
-            We’re grateful for the support from the Beaumont community and city administration, 
-            as well as various pet and community organizations. Our goal is to exceed your expectations, 
-            and we’re always excited to welcome new clients. Our clinic is open 6 days a week for your convenience.
+            Montrose Pet Clinic always welcomes new clients and patients!
           </p>
         </div>
 

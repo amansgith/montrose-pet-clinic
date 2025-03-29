@@ -13,7 +13,7 @@ import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
 
 const about = [
-  { name: "About Montrose Pet Clinic", href: "/about" },
+  { name: "Why choose us?", href: "/about" },
   { name: "Our Mission and Values", href: "/about/mission-values" },
   { name: "Our Team", href: "/about/team" },
 ];

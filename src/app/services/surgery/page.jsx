@@ -19,36 +19,32 @@ const Surgery = () => {
         </div>
         <div className="md:w-1/2 md:pl-8">
           <p className="text-gray-700 leading-relaxed mb-4 font-bold">
-            We perform routine surgeries every day. Here is a list of surgeries
-            we perform in-house:
+            At Montrose Pet Clinnic, we offer a wide reange of surgical services, including routine procedures like spays and neuters, dental work and emergency surgeries.
+            Common surgical procudures:
           </p>
           <h3 className="text-2xl font-semibold text-secondary mb-2">
-            1. Spay & Neuter
+            1. Spaying & Neutering
           </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Reproductive surgeries offer several benefits for cats and dogs.
-            They prevent unwanted litters and help reduce the risk of certain
-            cancers. These procedures can also improve behavior by reducing
-            aggression and dominance. At Montrose Pet Clinic, we offer spay and
-            neuter surgeries for dogs, cats, and rabbits.
+            to prevent unwanted pregnancies and reduce certain health and behavioural issues.
           </p>
           <h3 className="text-2xl font-semibold text-secondary mb-2">
-            2. Soft Tissue Surgeries
+            2. Dental Surgery
           </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            This includes procedures like treating cuts and wounds, draining
-            abscesses or cysts, removing foreign objects, surgery on the
-            bladder, fixing ear hematomas, and cherry eye surgery.
+            This includes tooth extractions, scaling and polishing.
           </p>
+          <h3 className="text-2xl font-semibold text-secondary mb-2">
+            3. Soft Tissue surgery
+          </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Montrose Pet Clinic is equipped with a full-service surgery room,
-            monitoring machines such as pulse oximetry, ECG, and veterinary doppler
-            to provide excellent care for your loved ones. We also have a Baer
-            Hugger system to keep your furry friend warm at the time of surgery.
+            This includes lump removal, cyst removal, foreign body removal, bladder stone removal, laceration repair, porcupine quill removal and so on.
           </p>
+          <h3 className="text-2xl font-semibold text-secondary mb-2">
+            4. Eye surgery
+          </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We refer orthopedic surgeries and other complex surgeries to
-            specialist centers so that our patients get the best care.
+            We do cherry eye surgery and eyelid tumor removal.
           </p>
         </div>
       </div>

@@ -12,31 +12,60 @@ import Image from "next/image";
 import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
 
+
+// const services = [
+//   // { name: "Radiology", href: "/services/radiology" },
+//   // { name: "Puppy/Kitten Exam", href: "/services/puppy-kitten-exam" },
+//   // { name: "Deworming", href: "/services/deworming" },
+//   { name: "Illness Exam", href: "/services/illness-exam" },
+//   { name: "Surgery", href: "/services/surgery" },
+//   // { name: "Emergency Care", href: "/services/emergency-care" },
+//   { name: "Laboratory Services", href: "/services/laboratory" },
+//   // { name: "Dental Care", href: "/services/dentalcare" },
+//   { name: "End of Life Services", href: "/services/eolservices" },
+//   // { name: "Nutrition Consult", href: "/services/nutrition" },
+//   { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
+//   { name: "Miscellaneous Services", href: "/services/misc-services" },
+//   // { name: "Geriatric Patient Care", href: "/services/geriatric-care" },
+  
+//   {
+//     name: "Annual wellness exam & Preventative care",
+//     href: "/services/wellness-exam-and-vaccination",
+//   },
+// ];
+
 const about = [
   { name: "Why choose us?", href: "/about" },
   { name: "Our Mission and Values", href: "/about/mission-values" },
   { name: "Our Team", href: "/about/team" },
 ];
 
+const wellnessplans = [
+  { name: "Kitten Wellness Plans", href: "/misc/wellness-plans/kitten-wellness" },
+  { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy-wellness" },
+  { name: "Feline Wellness Plans", href: "/misc/wellness-plans/feline-wellness" },
+  { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine-wellness" },
+  { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
+  { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric-plans" },
+  { name: "Reproductive sx Plans", href: "/misc/wellness-plans/reproductive-plans" },
+];
+
 const services = [
-  { name: "Radiology", href: "/services/radiology" },
-  { name: "Puppy/Kitten Exam", href: "/services/puppy-kitten-exam" },
-  { name: "Deworming", href: "/services/deworming" },
-  { name: "Illness Exam", href: "/services/illness-exam" },
-  { name: "Surgery", href: "/services/surgery" },
-  { name: "Emergency Care", href: "/services/emergency-care" },
-  { name: "Laboratory Services", href: "/services/laboratory" },
-  { name: "Dental Care", href: "/services/dentalcare" },
-  { name: "End of Life Services", href: "/services/eolservices" },
-  { name: "Nutrition Consult", href: "/services/nutrition" },
-  { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
-  { name: "Miscellaneous Services", href: "/services/misc-services" },
-  { name: "Geriatric Patient Care", href: "/services/geriatric-care" },
-  
   {
-    name: "Annual wellness exam & Vaccinations",
+    name: "Annual wellness exam & Preventative care",
     href: "/services/wellness-exam-and-vaccination",
   },
+  { name: "Illness Exam", href: "/services/illness-exam" },
+  { name: "Surgery", href: "/services/surgery" },
+  { name: "Laboratory Services", href: "/services/laboratory" },
+  {
+    name: "Wellness Plans",
+    href: "/misc/wellness-plans",
+    submenu: wellnessplans,
+  },
+  { name: "End of Life Services", href: "/services/eolservices" },
+  { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
+  { name: "Miscellaneous Services", href: "/services/misc-services" },
 ];
 
 const newClients = [
@@ -45,34 +74,7 @@ const newClients = [
   { name: "FAQ", href: "/newClients/faq" },
 ];
 
-const wellnessplans = [
-  {
-    name: "Kitten Wellness Plans",
-    href: "/misc/wellness-plans/kitten-wellness",
-  },
-  { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy-wellness" },
-  {
-    name: "Feline Wellness Plans",
-    href: "/misc/wellness-plans/feline-wellness",
-  },
-  {
-    name: "Canine Wellness Plans",
-    href: "/misc/wellness-plans/canine-wellness",
-  },
-  { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
-  { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric-plans" },
-  {
-    name: "Reproductive sx Plans",
-    href: "/misc/wellness-plans/reproductive-plans",
-  },
-];
-
 const misc = [
-  {
-    name: "Wellness Plans",
-    href: "/misc/wellness-plans",
-    submenu: wellnessplans,
-  },
   { name: "Medication Refill Form", href: "/misc/medication-refill-form" },
   { name: "Food Order Forms", href: "/misc/food-order-form" },
   { name: "Monthly Promotions", href: "/misc/monthly-promotions" },
@@ -103,6 +105,7 @@ const Navbar = () => {
 
 const DeskNavbar = () => {
   const [dropdown, setDropdown] = useState(null);
+  const [wellnessDropdown, setWellnessDropdown] = useState(null);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
   const pathname = usePathname();
 
@@ -114,8 +117,17 @@ const DeskNavbar = () => {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setDropdown(null);
+      setWellnessDropdown(null);
     }, 300); // Delay of 300ms before closing
     setDropdownTimeout(timeout);
+  };
+
+  const handleWellnessMouseEnter = () => {
+    setWellnessDropdown(true);
+  };
+
+  const handleWellnessMouseLeave = () => {
+    setWellnessDropdown(false);
   };
 
   const isActive = (path) => pathname === path;
@@ -194,19 +206,26 @@ const DeskNavbar = () => {
                 {/* First Level Dropdown */}
                 {item.submenu && dropdown === index && (
                   <div
-                    className={`absolute left-0 mt-2 bg-white text-md shadow-lg rounded-md border border-gray-200 origin-top transform z-50 ${
-                      item.submenu.length > 6 ? "w-96" : "w-56" // Wider for multi-column
-                    }`}
+                    className={`absolute left-0 mt-2 bg-white text-md shadow-lg rounded-md border border-gray-200 origin-top transform z-50 w-64`}
                   >
                     <div
-                      className={`grid ${
-                        item.submenu.length > 6
-                          ? "grid-cols-2 gap-4 p-2"
-                          : "grid-cols-1 p-2"
-                      }`}
+                      className={`grid grid-cols-1 p-2`}
                     >
                       {item.submenu.map((sub, idx) => (
-                        <div key={idx} className="relative group">
+                        <div
+                          key={idx}
+                          className="relative group"
+                          onMouseEnter={
+                            sub.name === "Wellness Plans"
+                              ? handleWellnessMouseEnter
+                              : null
+                          }
+                          onMouseLeave={
+                            sub.name === "Wellness Plans"
+                              ? handleWellnessMouseLeave
+                              : null
+                          }
+                        >
                           <Link
                             href={sub.href}
                             className={`block px-2 py-1 text-gray-700 hover:text-secondary ${
@@ -216,9 +235,9 @@ const DeskNavbar = () => {
                             {sub.name}
                           </Link>
 
-                          {/* Nested Dropdown (unchanged) */}
-                          {sub.submenu && (
-                            <div className="absolute left-full top-0 mt-0 ml-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 z-50 hidden group-hover:block">
+                          {/* Nested Dropdown for Wellness Plans */}
+                          {sub.submenu && wellnessDropdown && (
+                            <div className="absolute left-full top-0 mt-0 ml-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 z-50">
                               {sub.submenu.map((wellness, wIdx) => (
                                 <Link
                                   key={wIdx}

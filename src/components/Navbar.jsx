@@ -12,7 +12,6 @@ import Image from "next/image";
 import logo from "../../public/brandlogo.webp";
 import Link from "next/link";
 
-
 // const services = [
 //   // { name: "Radiology", href: "/services/radiology" },
 //   // { name: "Puppy/Kitten Exam", href: "/services/puppy-kitten-exam" },
@@ -27,7 +26,7 @@ import Link from "next/link";
 //   { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
 //   { name: "Miscellaneous Services", href: "/services/misc-services" },
 //   // { name: "Geriatric Patient Care", href: "/services/geriatric-care" },
-  
+
 //   {
 //     name: "Annual wellness exam & Preventative care",
 //     href: "/services/wellness-exam-and-vaccination",
@@ -41,13 +40,25 @@ const about = [
 ];
 
 const wellnessplans = [
-  { name: "Kitten Wellness Plans", href: "/misc/wellness-plans/kitten-wellness" },
+  {
+    name: "Kitten Wellness Plans",
+    href: "/misc/wellness-plans/kitten-wellness",
+  },
   { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy-wellness" },
-  { name: "Feline Wellness Plans", href: "/misc/wellness-plans/feline-wellness" },
-  { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine-wellness" },
+  {
+    name: "Feline Wellness Plans",
+    href: "/misc/wellness-plans/feline-wellness",
+  },
+  {
+    name: "Canine Wellness Plans",
+    href: "/misc/wellness-plans/canine-wellness",
+  },
   { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
   { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric-plans" },
-  { name: "Reproductive Surgery Plans", href: "/misc/wellness-plans/reproductive-plans" },
+  {
+    name: "Reproductive Surgery Plans",
+    href: "/misc/wellness-plans/reproductive-plans",
+  },
 ];
 
 const services = [
@@ -83,10 +94,10 @@ const misc = [
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about", submenu: about },
+  { name: "About Us", submenu: about },
   { name: "Services", href: "/services", submenu: services },
-  { name: "New Clients", href: "/newclients", submenu: newClients },
-  { name: "Misc.", href: "/misc", submenu: misc },
+  { name: "New Clients", submenu: newClients },
+  { name: "Misc.", submenu: misc },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -190,27 +201,31 @@ const DeskNavbar = () => {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                <Link
-                  href={item.href}
-                  className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
-                    isActive(item.href) ||
-                    (item.submenu &&
-                      item.submenu.some((sub) => pathname.startsWith(sub.href)))
-                      ? "border-b-2 pb-5 border-blue-800 text-blue-600"
-                      : ""
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                {item.href ? (
+                  // Render Link if href exists
+                  <Link
+                    href={item.href}
+                    className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
+                      isActive(item.href)
+                        ? "border-b-2 pb-5 border-blue-800 text-blue-600"
+                        : ""
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  // Render span if no href
+                  <span className="text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 cursor-pointer">
+                    {item.name}
+                  </span>
+                )}
 
                 {/* First Level Dropdown */}
                 {item.submenu && dropdown === index && (
                   <div
                     className={`absolute left-0 mt-2 bg-white text-md shadow-lg rounded-md border border-gray-200 origin-top transform z-50 w-64`}
                   >
-                    <div
-                      className={`grid grid-cols-1 p-2`}
-                    >
+                    <div className={`grid grid-cols-1 p-2`}>
                       {item.submenu.map((sub, idx) => (
                         <div
                           key={idx}

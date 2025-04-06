@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const services = [
     {
-      name: "Annual wellness exam & Vaccinations",
+      name: "Annual wellness exam & Preventive care",
       href: "/services/wellness-exam-and-vaccination",
     },
     // { name: "Puppy/ Kitten Exam", href: "/services/puppy-kitten-exam" },
@@ -13,13 +13,13 @@ const services = [
     // { name: "Emergency Care", href: "/services/emergency-care" },
     { name: "Laboratory Services", href: "/services/laboratory" },
     // { name: "Dental Care", href: "/services/dentalcare" },
+    { name: "Wellness Plans", href: "/misc/wellness-plans" },
     { name: "End of Life Services", href: "/services/eolservices" },
     // { name: "Nutrition Consult", href: "/services/nutrition" },
     // { name: "Radiology", href: "/services/radiology" },
+    { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
     { name: "Miscellaneous Services", href: "/services/misc-services" },
     // { name: "Geriatric Patient Care", href: "/services/geriatric-care" },
-    { name: "Pet Insurance & Financing", href: "/services/insurance-finance" },
-    { name: "Wellness Plans", href: "/misc/wellness-plans" },
   ];
 
 const Services = () => {

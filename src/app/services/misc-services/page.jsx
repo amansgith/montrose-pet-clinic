@@ -75,7 +75,7 @@ const MiscellaneousServices = () => {
           <div className="relative w-full h-40">
             <Image
               src="/brush.jpg"
-              alt="Nail trim"
+              alt="animal brush image"
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-lg"
@@ -84,7 +84,7 @@ const MiscellaneousServices = () => {
           <div className="relative w-full h-60">
             <Image
               src="/nail.jpg"
-              alt="Microchip"
+              alt="nail cutter image"
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-lg"
@@ -93,7 +93,7 @@ const MiscellaneousServices = () => {
           <div className="relative w-full h-60">
             <Image
               src="/microchip.jpg"
-              alt="Anal sac expression"
+              alt="Microchip image"
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-lg"

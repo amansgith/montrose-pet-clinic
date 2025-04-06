@@ -22,7 +22,6 @@ const galleryData = [
   {
     title: "Best Friends",
     images: [
-      "/gallery/friend1.webp",
       "/gallery/friend2.webp",
       "/gallery/friend3.jpg",
       "/gallery/friend4.webp",

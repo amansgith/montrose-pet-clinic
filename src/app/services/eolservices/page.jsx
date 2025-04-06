@@ -15,7 +15,7 @@ const EOLServices = () => {
         <div className="md:w-1/2">
           <Image
             src="/dogflower.jpg"
-            alt="Veterinarian providing end-of-life care"
+            alt="image of dog with a white flower in mouth"
             width={300}
             height={150}
             className="w-full rounded-lg shadow-lg"

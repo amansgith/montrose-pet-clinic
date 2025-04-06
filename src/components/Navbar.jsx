@@ -116,7 +116,7 @@ const Navbar = () => {
 
 const DeskNavbar = () => {
   const [dropdown, setDropdown] = useState(null);
-  const [wellnessDropdown, setWellnessDropdown] = useState(null);
+  const [wellnessDropdown, setWellnessDropdown] = useState(false);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
   const pathname = usePathname();
 
@@ -128,17 +128,21 @@ const DeskNavbar = () => {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setDropdown(null);
-      setWellnessDropdown(null);
+      setWellnessDropdown(false);
     }, 300); // Delay of 300ms before closing
     setDropdownTimeout(timeout);
   };
 
   const handleWellnessMouseEnter = () => {
+    if (dropdownTimeout) clearTimeout(dropdownTimeout);
     setWellnessDropdown(true);
   };
 
   const handleWellnessMouseLeave = () => {
-    setWellnessDropdown(false);
+    const timeout = setTimeout(() => {
+      setWellnessDropdown(false);
+    }, 300); // Delay of 300ms before closing
+    setDropdownTimeout(timeout);
   };
 
   const isActive = (path) => pathname === path;

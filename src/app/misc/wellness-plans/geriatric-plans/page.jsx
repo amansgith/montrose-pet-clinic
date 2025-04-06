@@ -28,7 +28,7 @@ const SeniorWellness = () => {
 
   return (
     <InfoSection
-      title="Senior Wellness Plan at Montrose Pet Clinic"
+      title="Senior Wellness Plan"
       altText="Senior Wellness Plan"
       firstSection={firstSection}
       restContent={restContent}

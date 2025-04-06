@@ -39,7 +39,7 @@ const PrePaymentPlan = () => {
 
   return (
     <InfoSection
-      title="Reproductive sx Plan at Montrose Pet Clinic"
+      title="Reproductive Surgery Plan"
       altText="Pre-Payment Plan"
       firstSection={firstSection}
       restContent={restContent}

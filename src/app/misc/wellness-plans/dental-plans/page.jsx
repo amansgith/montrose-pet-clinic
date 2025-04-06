@@ -26,7 +26,7 @@ const DentalPlan = () => {
 
   return (
     <InfoSection
-      title="Dental Plan at Montrose Pet Clinic"
+      title="Dental Plan"
       altText="Dental Plan"
       firstSection={firstSection}
       restContent={restContent}

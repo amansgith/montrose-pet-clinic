@@ -41,7 +41,7 @@ const FelineWellness = () => {
 
   return (
     <InfoSection
-      title="Feline Wellness Plan at Montrose Pet Clinic"
+      title="Feline Wellness Plan"
       altText="Feline Wellness Plan"
       firstSection={firstSection}
       restContent={restContent}

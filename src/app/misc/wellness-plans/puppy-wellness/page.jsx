@@ -29,7 +29,7 @@ const PuppyWellness = () => {
 
   return (
     <InfoSection
-      title="Puppy Wellness Plan at Montrose Pet Clinic"
+      title="Puppy Wellness Plan"
       altText="Puppy Wellness Plan"
       firstSection={firstSection}
       restContent={restContent}

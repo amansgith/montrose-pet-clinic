@@ -52,7 +52,7 @@ const WellnessExam = () => {
       {/* Section 2 */}
       <div className="text-gray-700 leading-relaxed">
         <h3 className="text-2xl font-semibold text-secondary mb-4">
-          Puppy and Kitten Exams
+          Puppy and Kitten exams
         </h3>
         <p>
           Puppy and kitten exams are similar to annual wellness exams with an
@@ -89,7 +89,7 @@ const WellnessExam = () => {
         <ul className="list-disc list-outside pl-4 mt-4">
           <li>Regular deworming</li>
           <li>Monthly preventatives</li>
-          <li>Good Hygeine</li>
+          <li>Good hygeine</li>
           <li>Regular veterinary check-ups</li>
         </ul>
       </div>

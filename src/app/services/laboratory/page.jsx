@@ -58,7 +58,7 @@ const Laboratory = () => {
             <li className="mb-2">Culture and sensitivity</li>
             <li className="mb-2">
               Specialized tests for thyroid problems, cushing&apos;s or
-              addison&apos;s
+              Addison&apos;s
             </li>
             <li className="mb-2">Drug tests</li>
           </ul>

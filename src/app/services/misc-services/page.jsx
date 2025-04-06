@@ -83,7 +83,7 @@ const MiscellaneousServices = () => {
           </div>
           <div className="relative w-full h-60">
             <Image
-              src="/nail.jpg"
+              src="/Nailcut.jpg"
               alt="nail cutter image"
               layout="fill"
               objectFit="cover"

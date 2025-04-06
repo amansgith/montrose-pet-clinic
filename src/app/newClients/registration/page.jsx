@@ -13,15 +13,15 @@ export default function AppointmentForm() {
     email: "",
     pet1Name: "",
     pet2Name: "",
-    animal1: "Dog",
+    animal1: "",
     animal1Breed: "",
-    animal1Sex: "M",
+    animal1Sex: "",
     animal1dob: "",
-    animal2: "Dog",
+    animal2: "",
     animal2Breed: "",
-    animal2Sex: "M",
+    animal2Sex: "",
     animal2dob: "",
-    heardAboutUs: "Google",
+    heardAboutUs: "",
     appointmentDate: "",
     appointmentTime: "",
     purpose: "",
@@ -303,7 +303,7 @@ export default function AppointmentForm() {
             name="purpose"
             placeholder="Purpose of Appointment *"
             required
-            className="input-field block w-full h-24"
+            className="input-field resize-none block w-full h-24"
             value={formData.purpose}
             onChange={handleChange}
           ></textarea>

@@ -8,7 +8,7 @@ const WellnessPlans = () => {
     { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine-wellness" },
     { name: "Senior Wellness Plans", href: "/misc/wellness-plans/geriatric-plans" },
     { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
-    { name: "Reproductive sx Plans", href: "/misc/wellness-plans/reproductive-plans" },
+    { name: "Reproductive Surgery Plans", href: "/misc/wellness-plans/reproductive-plans" },
   ];
 
   return (
@@ -26,7 +26,7 @@ const WellnessPlans = () => {
           </li>
         ))}
       </ul>
-      <p>Get any of these wellness plans at a minimum cost. <Link className="text-blue-600" href="/newClients/registration">Contact Us</Link> Today.</p>
+      <p>Get any of these wellness plans at a minimum cost. Contact the clinic for more details.</p>
     </div>
   );
 };

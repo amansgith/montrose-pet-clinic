@@ -1,40 +1,92 @@
-import InfoSection from "@/components/InfoSection";
+import Image from "next/image";
 
 const Laboratory = () => {
-  const firstSection = {
-    subheading: "Precision Diagnostics for Pet Health",
-    text: "Montrose Pet Clinic stands at the forefront of veterinary diagnostics with our comprehensive laboratory services. Our state-of-the-art lab allows us to perform a wide array of tests quickly and accurately, ensuring your pet receives the timely and effective care they need. Understanding the crucial role of diagnostics in animal health, we offer advanced testing capabilities to detect, diagnose, and monitor a variety of conditions.",
-  };
-
-  const restContent = (
-    <>
-      <p className="text-gray-700 leading-relaxed mb-4">
-        We are equipped with in-house Idexx full-service lab. Our laboratory
-        machines include Lasercyte, Catalyst, Snap Reader, Sedi view, Urine
-        strip reader & Microscope.
-      </p>
-      <p className="text-gray-700 leading-relaxed mb-4">
-        The in-clinic lab helps us diagnose diseases quickly and start treatment
-        without delay. We perform complete blood count, biochemistry, complete
-        urinalysis, ear cytology, and snap tests such as canine pancreatic
-        lipase, feline pancreatic lipase, feline infectious peritonitis, FeLV,
-        fecal smear, and more.
-      </p>
-      <p className="text-gray-700 leading-relaxed mb-4">
-        Tests we are not able to perform in the clinic are sent out to Idexx Lab
-        or Antech Lab for processing.
-      </p>
-    </>
-  );
-
   return (
-    <InfoSection
-      title="Laboratory Services at Montrose Pet Clinic"
-      image="https://images.unsplash.com/photo-1602052577122-f73b9710adba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      altText="Veterinarian performing laboratory tests"
-      firstSection={firstSection}
-      restContent={restContent}
-    />
+    <div className="max-w-7xl mx-auto px-6 py-12 space-y-12">
+      {/* Title Section */}
+      <h1 className="text-center text-4xl font-bold text-primary">
+        Laboratory services
+      </h1>
+
+      {/* First Section */}
+      <div className="flex flex-col md:flex-row items-center gap-10 text-justify">
+        {/* Image */}
+        <div className="md:w-1/3">
+          <Image
+            src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="veterinarian performing laboratory tests"
+            width={500}
+            height={300}
+            className="w-full rounded-lg shadow-lg"
+          />
+        </div>
+        {/* Content */}
+        <div className="md:w-1/2 text-gray-700 leading-relaxed">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            Precision diagnostics for pet health
+          </h2>
+          <p>
+            Montrose pet clinic offers a wide range of laboratory services,
+            including in-house testing for quick results and outside lab
+            services for more comprehensive analysis, to help diagnose and
+            monitor pet health.
+          </p>
+        </div>
+      </div>
+
+      {/* Rest Content Section */}
+      <div className="flex flex-col md:flex-row items-center gap-2">
+        {/* Content */}
+        <div className="md:w-1/2 text-gray-700 leading-relaxed">
+          <h3 className="text-2xl font-semibold text-secondary mb-4">
+            In-house laboratory services
+          </h3>
+          <ul className="list-disc pl-6 mb-4">
+            <li className="mb-2">Complete blood count (CBC)</li>
+            <li className="mb-2">Biochemistry panel</li>
+            <li className="mb-2">Urinalysis</li>
+            <li className="mb-2">Fecal analysis</li>
+            <li className="mb-2">Cytology</li>
+            <li className="mb-2">Snap tests</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-secondary mb-4">
+            Outside laboratory services
+          </h3>
+          <ul className="list-disc pl-6 mb-4">
+            <li className="mb-2">Biopsy and histopathology</li>
+            <li className="mb-2">Culture and sensitivity</li>
+            <li className="mb-2">
+              Specialized tests for thyroid problems, cushing&apos;s or
+              addison&apos;s
+            </li>
+            <li className="mb-2">Drug tests</li>
+          </ul>
+        </div>
+        {/* Image */}
+        <div className="md:w-1/2">
+          <Image
+            src="/radiology.jpg"
+            alt="laboratory equipment"
+            width={500}
+            height={300}
+            className="w-full rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+
+      {/* Radiology Section */}
+      <div>
+        <h3 className="text-2xl font-semibold text-secondary mb-2">
+          Radiology services
+        </h3>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          We are equipped with a whole-body digital X-RAY machine which allows
+          us to diagnose various conditions such as fractures, tumors, and heart
+          diseases.
+        </p>
+      </div>
+    </div>
   );
 };
 

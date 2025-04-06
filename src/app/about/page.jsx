@@ -11,7 +11,7 @@ export default function AboutMontrose() {
             Why Choose Us?
           </h1>
           <p className="text-gray-700 leading-relaxed">
-            We have served more than <span className="font-semibold">4,250 clients</span> in Beaumont and the surrounding areas. We provide:
+            We have served more than <span className="font-semibold">4,250 clients</span> in Beaumont and the surrounding areas. We have:
           </p>
           <ul className="list-decimal list-inside text-gray-700 mt-4 leading-relaxed">
             <li>Experienced veterinarians.</li>
@@ -19,11 +19,11 @@ export default function AboutMontrose() {
             <li>Transparency in our services.</li>
             <li>Easy appointment booking via our website and PetDesk app.</li>
             <li>
-              Convenient access to your pet&apos;s medical history by downloading the app.
+              Convenient access to your pet&apos;s medical history by downloading our customised Petdesk app.
             </li>
             <li>Monthly promotions to help you save money.</li>
             <li>Wellness plans for all pets (call us for more details).</li>
-            <li>In-clinic lab services for faster diagnosis and treatment.</li>
+            <li>In-clinic lab and pharmacy srvices for faster diagnosis and treatment.</li>
           </ul>
           <p className="text-gray-700 mt-4 leading-relaxed">
             Montrose Pet Clinic always welcomes new clients and patients!

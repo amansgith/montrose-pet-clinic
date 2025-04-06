@@ -34,8 +34,7 @@ const About = () => {
             care possible. We’re grateful for the support from the Beaumont
             community and city administration, as well as various pet and
             community organizations. Our goal is to exceed your expectations,
-            and we’re always excited to welcome new clients. Our clinic is open
-            6 days a week for your convenience.
+            by providing &quot;best care for your best friends&quot;. Our Clinic is open 6 days a week.
           </p>
           <p className="text-primary my-4 font-semibold">
             We are excited to welcome new clients!

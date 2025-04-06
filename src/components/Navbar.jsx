@@ -47,7 +47,7 @@ const wellnessplans = [
   { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine-wellness" },
   { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
   { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric-plans" },
-  { name: "Reproductive sx Plans", href: "/misc/wellness-plans/reproductive-plans" },
+  { name: "Reproductive Surgery Plans", href: "/misc/wellness-plans/reproductive-plans" },
 ];
 
 const services = [
@@ -138,9 +138,9 @@ const DeskNavbar = () => {
       <div className="flex justify-between items-center px-6 py-2 text-lg bg-gray-100">
         <div className="text-primary font-semibold">
           Call Us:{" "}
-          <span className="text-secondary font-extrabold">
+          <a href="tel:17809297363" className="text-secondary font-extrabold">
             +1 (780) 929 7363
-          </span>
+          </a>
         </div>
         <div className="text-gray-500">
           Visit Us:{" "}

@@ -30,7 +30,7 @@ const InsuranceFinance = () => {
 
   return (
     <InfoSection
-      title="Pet Insurance and Finance Options at Montrose Pet Clinic"
+      title="Pet Insurance and Finance Options"
       altText="Pet insurance and finance options"
       firstSection={firstSection}
       restContent={restContent}

@@ -95,7 +95,7 @@ const MiscellaneousServices = () => {
               src="/microchip.jpg"
               alt="Microchip image"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               className="rounded-lg shadow-lg"
             />
           </div>

@@ -50,7 +50,7 @@ const About = () => {
       <div className=" w-full">
         <div className="hidden md:flex flex-col md:flex-row w-full bg-secondary text-white text-center">
           <div className="hidden md:block w-full md:w-[70%] py-4 md:py-6 bg-blue-600 clip-left">
-            <Link className="flex items-center justify-center gap-2 px-2 hover:translate-x-2 transition" href="/misc/registration">
+            <Link className="flex items-center justify-center gap-2 px-2 hover:translate-x-2 transition" href="/newClients/registration">
             <h2 className="text-lg md:text-xl font-bold ">Request an Appointment</h2><FaCircleArrowRight size={20}/>
             </Link>
           </div>

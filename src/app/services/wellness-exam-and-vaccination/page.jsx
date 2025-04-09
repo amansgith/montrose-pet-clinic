@@ -21,22 +21,24 @@ const WellnessExam = () => {
           <h3 className="text-2xl font-semibold text-secondary mb-4">
            A typical wellness visit includes:
           </h3>
-          <p>
-            Annual wellness exams for pets are essential for preventive care,
-            allowing veterinarians to monitor overall health, detect potential
-            problems early, and administer necessary preventive care such as
-            vaccinations and parasite prevention measures like deworming.
-          </p>
+          <ul className="list-disc list-outside pl-4 mt-4">
+          <li>Comprehensive physical examination</li>
+          <li>Questionning the owner</li>
+          <li>Diagnosetive testing</li>
+          <li>Vaccinations</li>
+          <li>Preventive care</li>
+          <li>Weight check and dental health</li>
+        </ul>
           <h3 className="text-2xl font-semibold text-secondary mt-6 mb-4">
             Why Are Annual Wellness Visits Important?
           </h3>
-          <p>
-            Regular wellness visits help ensure your pet stays healthy and happy
-            throughout their life. These visits allow veterinarians to identify
-            potential health issues before they become serious, provide
-            personalized care recommendations, and keep your pet up-to-date on
-            vaccinations and preventive treatments.
-          </p>
+          <ul className="list-disc list-outside pl-4 mt-4">
+          <li>Early disease detection</li>
+          <li>Preventive care</li>
+          <li>Monitoring overall health</li>
+          <li>Peace of mind</li>
+          <li>Cost-effective</li>
+        </ul>
         </div>
         <div className="md:w-1/3">
           <Image

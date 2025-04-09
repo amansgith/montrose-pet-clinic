@@ -26,7 +26,7 @@ const Surgery = () => {
             1. Spaying & Neutering
           </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            to prevent unwanted pregnancies and reduce certain health and behavioural issues.
+            To prevent unwanted pregnancies and reduce certain health and behavioural issues.
           </p>
           <h3 className="text-2xl font-semibold text-secondary mb-2">
             2. Dental Surgery

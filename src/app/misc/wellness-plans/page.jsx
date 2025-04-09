@@ -26,7 +26,7 @@ const WellnessPlans = () => {
           </li>
         ))}
       </ul>
-      <p>Get any of these wellness plans at a minimum cost. Contact the clinic for more details.</p>
+      <p>Please contact us for more details.</p>
     </div>
   );
 };

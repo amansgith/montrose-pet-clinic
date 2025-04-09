@@ -57,7 +57,7 @@ const MiscellaneousServices = () => {
 
           {/* These Visits Include */}
           <h3 className="text-xl font-semibold text-secondary mb-4">
-            These visits include:
+          Geriatric care visits include:
           </h3>
           <ul className="list-disc list-outside pl-4">
             <li className="mb-2">Thorough physical exams</li>

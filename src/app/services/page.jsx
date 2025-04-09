@@ -27,7 +27,7 @@ const Services = () => {
     <div className="container mx-auto px-4 md:px-36 py-8">
       <h1 className="text-3xl font-bold text-center mb-6">Our Services</h1>
       <p className="text-lg text-gray-700 mb-6">
-        At Montrose Pet Clinic, we offer a variety of services to care for your pet. If you have any questions or would like more information on how we can care for your pet, please <Link href="/contact" className='text-blue-600'>contact us</Link> today.
+        At Montrose Pet Clinic, we offer a variety of services to care for your pet. If you have any questions, or would like more information, please <Link href="/contact" className='text-blue-600'>contact us</Link> today.
       </p>
       <ul className="list-disc list-inside pl-8 text-gray-700 leading-relaxed mb-6">
         {services.map((service, index) => (

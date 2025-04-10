@@ -48,7 +48,7 @@ const Surgery = () => {
           </p>
         </div>
       </div>
-      <div className="text-md mt-8 text-gray-800">
+      <div className="text-md mt-4 text-gray-800">
         <p>We know surgery & anesthesia are very stressful for you and your furry friend and the risks associated with any surgical procedure can cause a lot of stress and anxiety. The risks involved with anesthesia and surgery have decreased to great extend because of scientific advancement in recent years. Here are the precautions followed by us to reduce the risk of anesthesia and surgery. </p>
         <ul className="list-decimal list-inside mt-4 space-y-2 pl-12">
           <li>Thorough pre surgical exam </li>

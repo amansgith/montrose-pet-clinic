@@ -189,7 +189,8 @@ const FileTransfer = () => {
 
         <fieldset className="border border-gray-300 p-4 rounded-lg mt-4">
           <legend className="text-lg font-bold">
-            Date of Request (mm/dd/yyyy)
+            Date of Request (mm/dd/yyyy){" "}
+            <span className="text-red-600">*</span>
           </legend>
           <input
             name="date"

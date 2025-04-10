@@ -81,6 +81,7 @@ const services = [
 
 const newClients = [
   { name: "Registration Form", href: "/newClients/registration" },
+  { name: "Medical Record Transfer Form", href: "/newClients/filetransfer" },
   { name: "Policies", href: "/newClients/policies" },
   { name: "FAQ", href: "/newClients/faq" },
 ];

@@ -46,6 +46,7 @@ export default function MedicationRefillForm() {
       contactNumber: DOMPurify.sanitize(formData.contactNumber),
     };
 
+    // send the form data to the email API
     try {
       const response = await fetch('/api/send-refill', {
         method: 'POST',

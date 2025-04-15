@@ -46,8 +46,8 @@ const Testimonials = () => {
   return (
     <div className="flex flex-col items-center px-6 md:px-12 py-16 bg-gray-100">
       <h2 className="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
-      <div className="relative w-full bg-white p-6 rounded-lg text-center transition-all duration-500 ease-in-out" style={{ minHeight: '200px' }}>
-        <p className="text-lg text-gray-700 italic px-4">
+      <div className="relative w-full bg-blue-100 p-6 rounded-lg text-center transition-all duration-500 ease-in-out" style={{ minHeight: '200px' }}>
+        <p className="text-lg text-gray-700 italic px-4 md:mt-5">
           `{testimonials[currentIndex].text}`
         </p>
         <h3 className="mt-4 text-xl font-semibold text-gray-800">

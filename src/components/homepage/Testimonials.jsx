@@ -57,13 +57,13 @@ const Testimonials = () => {
         {/* Navigation Arrows */}
         <button
           onClick={prevTestimonial}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full hover:bg-gray-300 transition"
         >
           <FaChevronLeft />
         </button>
         <button
           onClick={nextTestimonial}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full hover:bg-gray-300 transition"
         >
           <FaChevronRight />
         </button>

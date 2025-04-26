@@ -73,7 +73,7 @@ const services = [
   { name: "Laboratory Services", href: "/services/laboratory" },
   {
     name: "Wellness Plans",
-    href: "/misc/wellness-plans",
+    href: "/requests/wellness-plans",
     submenu: wellnessplans,
   },
   { name: "End of Life Services", href: "/services/eolservices" },
@@ -147,7 +147,19 @@ const DeskNavbar = () => {
     setDropdownTimeout(timeout);
   };
 
-  const isActive = (path) => pathname === path;
+  const isActive = (path, submenu = []) => {
+    const normalizePath = (p) => p.replace(/\/$/, ""); // Remove trailing slash
+
+    // Check if the current path matches the top-level path
+    if (path && normalizePath(pathname) === normalizePath(path)) {
+      return true;
+    }
+
+    // Check if any submenu item's href matches the current path
+    return submenu.some(
+      (sub) => normalizePath(pathname) === normalizePath(sub.href)
+    );
+  };
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -212,16 +224,23 @@ const DeskNavbar = () => {
                   <Link
                     href={item.href}
                     className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
-                      isActive(item.href)
+                      isActive(item.href, item.submenu)
                         ? "border-b-2 pb-5 border-blue-800 text-blue-600"
                         : ""
                     }`}
                   >
+                    {console.log(item.href)}
                     {item.name}
                   </Link>
                 ) : (
                   // Render span if no href
-                  <span className="text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 cursor-pointer">
+                  <span
+                    className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 cursor-pointer ${
+                      isActive(null, item.submenu)
+                        ? "border-b-2 pb-5 border-blue-800 text-blue-600"
+                        : ""
+                    }`}
+                  >
                     {item.name}
                   </span>
                 )}

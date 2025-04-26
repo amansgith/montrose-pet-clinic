@@ -81,7 +81,7 @@ const WellnessExam = () => {
         <ul className="list-disc list-outside pl-4 mt-4">
           <li>Health risks for pets</li>
           <li>Zoonotic infections</li>
-          <li>Prevention is easire and cheaper than treatment</li>
+          <li>Prevention is easier and cheaper than treatment</li>
           <li>Year round protection</li>
           <li>Protects your home from parasite infestation</li>
         </ul>

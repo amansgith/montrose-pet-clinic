@@ -37,6 +37,8 @@ const about = [
   { name: "Why choose us?", href: "/about" },
   { name: "Our Mission and Values", href: "/about/mission-values" },
   { name: "Our Team", href: "/about/team" },
+  { name: "Monthly Promotions", href: "/about/monthly-promotions" },
+  { name: "Gallery", href: "/about/gallery" },
 ];
 
 const wellnessplans = [
@@ -86,11 +88,10 @@ const newClients = [
   { name: "FAQ", href: "/newClients/faq" },
 ];
 
-const misc = [
-  { name: "Medication Refill Form", href: "/misc/medication-refill-form" },
-  { name: "Food Order Forms", href: "/misc/food-order-form" },
-  { name: "Monthly Promotions", href: "/misc/monthly-promotions" },
-  { name: "Gallery", href: "/misc/gallery" },
+const requests = [
+  { name: "Medication Refill Form", href: "/requests/medication-refill-form" },
+  { name: "Food Order Forms", href: "/requests/food-order-form" },
+  { name: "Medical Record Transfer Form", href: "/newClients/filetransfer" },
 ];
 
 const navItems = [
@@ -98,7 +99,7 @@ const navItems = [
   { name: "About Us", submenu: about },
   { name: "Services", href: "/services", submenu: services },
   { name: "New Clients", submenu: newClients },
-  { name: "Misc.", submenu: misc },
+  { name: "Requests", submenu: requests },
   { name: "Contact", href: "/contact" },
 ];
 

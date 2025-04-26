@@ -235,13 +235,14 @@ export default function AppointmentForm() {
           {/* Animal 2 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <select name="animal2" className="input-field block w-full" value={formData.animal2} onChange={handleChange}>
-              <option value="GenderofAnimal1">Gender of Animal 2</option>
+              <option value="GenderofAnimal1">Animal 2</option>
               <option value="Dog">Dog</option>
               <option value="Cat">Cat</option>
               <option value="Other">Other</option>
             </select>
             <input type="text" name="animal2Breed" placeholder="Breed of Animal 2" className="input-field block w-full" value={formData.animal2Breed} onChange={handleChange} />
             <select name="animal2Sex" className="input-field block w-full" value={formData.animal2Sex} onChange={handleChange}>
+              <option value="GenderofAnimal1">Gender of Animal 2</option>
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>

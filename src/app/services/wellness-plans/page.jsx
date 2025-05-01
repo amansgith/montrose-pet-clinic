@@ -2,13 +2,13 @@ import Link from "next/link";
 
 const WellnessPlans = () => {
   const plans = [
-    { name: "Kitten Wellness Plans", href: "/misc/wellness-plans/kitten-wellness" },
-    { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy-wellness" },
-    { name: "Feline Wellness Plans", href: "/misc/wellness-plans/feline-wellness" },
-    { name: "Canine Wellness Plans", href: "/misc/wellness-plans/canine-wellness" },
-    { name: "Senior Wellness Plans", href: "/misc/wellness-plans/geriatric-plans" },
-    { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
-    { name: "Reproductive Surgery Plans", href: "/misc/wellness-plans/reproductive-plans" },
+    { name: "Kitten Wellness Plans", href: "/services/wellness-plans/kitten-wellness" },
+    { name: "Puppy Wellness Plans", href: "/services/wellness-plans/puppy-wellness" },
+    { name: "Feline Wellness Plans", href: "/services/wellness-plans/feline-wellness" },
+    { name: "Canine Wellness Plans", href: "/services/wellness-plans/canine-wellness" },
+    { name: "Senior Wellness Plans", href: "/services/wellness-plans/geriatric-plans" },
+    { name: "Dental Plans", href: "/services/wellness-plans/dental-plans" },
+    { name: "Reproductive Surgery Plans", href: "/services/wellness-plans/reproductive-plans" },
   ];
 
   return (

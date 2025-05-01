@@ -24,7 +24,7 @@ const WellnessExam = () => {
           <ul className="list-disc list-outside pl-4 mt-4">
           <li>Comprehensive physical examination</li>
           <li>Questionning the owner</li>
-          <li>Diagnosetive testing</li>
+          <li>Diagnostive testing</li>
           <li>Vaccinations</li>
           <li>Preventive care</li>
           <li>Weight check and dental health</li>

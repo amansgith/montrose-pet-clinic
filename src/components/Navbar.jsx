@@ -44,22 +44,22 @@ const about = [
 const wellnessplans = [
   {
     name: "Kitten Wellness Plans",
-    href: "/misc/wellness-plans/kitten-wellness",
+    href: "/services/wellness-plans/kitten-wellness",
   },
-  { name: "Puppy Wellness Plans", href: "/misc/wellness-plans/puppy-wellness" },
+  { name: "Puppy Wellness Plans", href: "/services/wellness-plans/puppy-wellness" },
   {
     name: "Feline Wellness Plans",
-    href: "/misc/wellness-plans/feline-wellness",
+    href: "/services/wellness-plans/feline-wellness",
   },
   {
     name: "Canine Wellness Plans",
-    href: "/misc/wellness-plans/canine-wellness",
+    href: "/services/wellness-plans/canine-wellness",
   },
-  { name: "Dental Plans", href: "/misc/wellness-plans/dental-plans" },
-  { name: "Geriatric Plans", href: "/misc/wellness-plans/geriatric-plans" },
+  { name: "Dental Plans", href: "/services/wellness-plans/dental-plans" },
+  { name: "Geriatric Plans", href: "/services/wellness-plans/geriatric-plans" },
   {
     name: "Reproductive Surgery Plans",
-    href: "/misc/wellness-plans/reproductive-plans",
+    href: "/services/wellness-plans/reproductive-plans",
   },
 ];
 
@@ -73,7 +73,7 @@ const services = [
   { name: "Laboratory Services", href: "/services/laboratory" },
   {
     name: "Wellness Plans",
-    href: "/requests/wellness-plans",
+    href: "/services/wellness-plans",
     submenu: wellnessplans,
   },
   { name: "End of Life Services", href: "/services/eolservices" },

@@ -19,9 +19,9 @@ const blogs = [
   },
   {
     id: 3,
-    title: "Best Foods for Your Pet",
+    title: "Protect your pets and family with regular deworming.",
     image: "https://images.unsplash.com/photo-1596854331442-3cf47265cefb?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "A guide to nutritious food options for cats and dogs.",
+    description: "The Imperative of Regular Deworming for Dogs and Cats",
     href: "/blogs/blog3",
   },
 ];

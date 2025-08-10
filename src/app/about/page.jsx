@@ -23,7 +23,7 @@ export default function AboutMontrose() {
             </li>
             <li>Monthly promotions to help you save money.</li>
             <li>Wellness plans for all pets (call us for more details).</li>
-            <li>In-clinic lab and pharmacy srvices for faster diagnosis and treatment.</li>
+            <li>In-clinic lab and pharmacy services for faster diagnosis and treatment.</li>
           </ul>
           <p className="text-gray-700 mt-4 leading-relaxed">
             Montrose Pet Clinic always welcomes new clients and patients!

@@ -19,8 +19,8 @@ const Surgery = () => {
         </div>
         <div className="md:w-1/2 md:pl-8">
           <p className="text-gray-700 leading-relaxed mb-4 font-bold">
-            At Montrose Pet Clinnic, we offer a wide range of surgical services, including routine procedures like spays and neuters, dental work and emergency surgeries.
-            Common surgical procudures:
+            At Montrose Pet Clinic, we offer a wide range of surgical services, including routine procedures like spays and neuters, dental work and emergency surgeries.
+            Common surgical procedures:
           </p>
           <h3 className="text-2xl font-semibold text-secondary mb-2">
             1. Spaying & Neutering

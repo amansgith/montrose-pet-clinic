@@ -93,7 +93,7 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="bg-black text-white text-center py-4 mt-10">
         <p className="text-sm md:text-base">
-          Developed and Maintained by Techzoto Solutions Inc.
+          Developed and Maintained by <Link href="https://www.techzoto.com">Techzoto</Link>.
         </p>
       </div>
     </footer>
